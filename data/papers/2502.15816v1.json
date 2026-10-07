@@ -1,0 +1,15 @@
+{
+    "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
+    "authors": [
+        "Mozhgan Navardi",
+        "Romina Aalishah",
+        "Yuzhe Fu",
+        "Yueqian Lin",
+        "Hai Li",
+        "Yiran Chen",
+        "Tinoosh Mohsenin"
+    ],
+    "summary": "Generative Artificial Intelligence (GenAI) applies models and algorithms such as Large Language Model (LLM) and Foundation Model (FM) to generate new data. GenAI, as a promising approach, enables advanced capabilities in various applications, including text generation and image processing. In current practice, GenAI algorithms run mainly on the cloud server, leading to high latency and raising security concerns. Consequently, these challenges encourage the deployment of GenAI algorithms directly on edge devices. However, the large size of such models and their significant computational resource requirements pose obstacles when deploying them in resource-constrained systems. This survey provides a comprehensive overview of recent proposed techniques that optimize GenAI for efficient deployment on resource-constrained edge devices. For this aim, this work highlights three main categories for bringing GenAI to the edge: software optimization, hardware optimization, and frameworks. The main takeaways for readers of this survey will be a clear roadmap to design, implement, and refine GenAI systems for real-world implementation on edge devices.",
+    "published": "2025-02-19",
+    "url": "http://arxiv.org/abs/2502.15816v1"
+}

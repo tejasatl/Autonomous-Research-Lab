@@ -1,0 +1,22 @@
+{
+  "topics": [
+    "Vision Transformers",
+    "Edge AI",
+    "GraphRAG"
+  ],
+
+  "authors": [
+    "Zihao Ding",
+    "Yao Liu"
+  ],
+
+  "papers": [
+    "2512.09309v1",
+    "2502.15816v1"
+  ],
+
+  "gaps": [
+    "Privacy Preserving Edge AI",
+    "Efficient GraphRAG"
+  ]
+}

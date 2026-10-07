@@ -1,0 +1,624 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "paper",
+      "title": "A Distributed Framework for Privacy-Enhanced Vision Transformers on the Edge",
+      "id": "2512.09309v1"
+    },
+    {
+      "type": "concept",
+      "id": "Visual intelligence tools"
+    },
+    {
+      "type": "concept",
+      "id": "Computational requirements"
+    },
+    {
+      "type": "concept",
+      "id": "Resource-constrained devices"
+    },
+    {
+      "type": "concept",
+      "id": "Cloud offloading"
+    },
+    {
+      "type": "concept",
+      "id": "Privacy vulnerabilities"
+    },
+    {
+      "type": "concept",
+      "id": "Distributed hierarchical offloading framework"
+    },
+    {
+      "type": "concept",
+      "id": "Vision Transformers (ViTs)"
+    },
+    {
+      "type": "concept",
+      "id": "Edge orchestrator"
+    },
+    {
+      "type": "concept",
+      "id": "Data partitioning"
+    },
+    {
+      "type": "concept",
+      "id": "Multiple independent cloud servers"
+    },
+    {
+      "type": "concept",
+      "id": "Data merging and aggregation"
+    },
+    {
+      "type": "concept",
+      "id": "Segment Anything Model (SAM)"
+    },
+    {
+      "type": "concept",
+      "id": "Content privacy"
+    },
+    {
+      "type": "concept",
+      "id": "Segmentation performance"
+    },
+    {
+      "type": "concept",
+      "id": "Content reconstruction risk"
+    },
+    {
+      "type": "concept",
+      "id": "User data exposure"
+    },
+    {
+      "type": "concept",
+      "id": "Scalable privacy-preserving solution"
+    },
+    {
+      "type": "concept",
+      "id": "Edge-cloud continuum"
+    },
+    {
+      "type": "paper",
+      "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications",
+      "id": "2601.03290v1"
+    },
+    {
+      "type": "concept",
+      "id": "Lightweight transformer architectures"
+    },
+    {
+      "type": "concept",
+      "id": "Edge device deployment"
+    },
+    {
+      "type": "concept",
+      "id": "Model compression"
+    },
+    {
+      "type": "concept",
+      "id": "Quantization"
+    },
+    {
+      "type": "concept",
+      "id": "Pruning"
+    },
+    {
+      "type": "concept",
+      "id": "Knowledge distillation"
+    },
+    {
+      "type": "concept",
+      "id": "Sparse attention mechanisms"
+    },
+    {
+      "type": "concept",
+      "id": "Hardware-aware neural architecture search"
+    },
+    {
+      "type": "concept",
+      "id": "Memory-bandwidth bottleneck analysis"
+    },
+    {
+      "type": "concept",
+      "id": "Energy efficiency"
+    },
+    {
+      "type": "concept",
+      "id": "Real-time AI applications"
+    },
+    {
+      "type": "concept",
+      "id": "Deployment pipelines"
+    },
+    {
+      "type": "paper",
+      "title": "AMED: Automatic Mixed-Precision Quantization for Edge Devices",
+      "id": "2205.15437v2"
+    },
+    {
+      "type": "concept",
+      "id": "Quantized neural networks"
+    },
+    {
+      "type": "concept",
+      "id": "Mixed-precision quantization"
+    },
+    {
+      "type": "concept",
+      "id": "Latency reduction"
+    },
+    {
+      "type": "concept",
+      "id": "Power consumption reduction"
+    },
+    {
+      "type": "concept",
+      "id": "Model size reduction"
+    },
+    {
+      "type": "concept",
+      "id": "Resource-constrained systems"
+    },
+    {
+      "type": "concept",
+      "id": "Loss manifold assumption"
+    },
+    {
+      "type": "concept",
+      "id": "Optimal minimum shift with precision"
+    },
+    {
+      "type": "concept",
+      "id": "Quantization as a random process"
+    },
+    {
+      "type": "concept",
+      "id": "Bit allocation as Markov Decision Process"
+    },
+    {
+      "type": "concept",
+      "id": "Hardware-aware quantization"
+    },
+    {
+      "type": "concept",
+      "id": "Neural network accuracy"
+    },
+    {
+      "type": "concept",
+      "id": "Hardware efficiency"
+    },
+    {
+      "type": "concept",
+      "id": "Accuracy-efficiency trade-off"
+    },
+    {
+      "type": "concept",
+      "id": "Automatic Mixed-Precision Quantization for Edge Devices (AMED)"
+    },
+    {
+      "type": "paper",
+      "title": "Edge-state enhanced transport in a 2-dimensional quantum walk",
+      "id": "1411.3958v3"
+    },
+    {
+      "type": "concept",
+      "id": "Quantum walks"
+    },
+    {
+      "type": "concept",
+      "id": "Quadratic speedup"
+    },
+    {
+      "type": "concept",
+      "id": "Disorder"
+    },
+    {
+      "type": "concept",
+      "id": "Efficient transport"
+    },
+    {
+      "type": "concept",
+      "id": "Cutting links"
+    },
+    {
+      "type": "concept",
+      "id": "Topologically protected chiral edge states"
+    },
+    {
+      "type": "concept",
+      "id": "Bulk Chern number"
+    },
+    {
+      "type": "concept",
+      "id": "Periodically driven lattice Hamiltonian"
+    },
+    {
+      "type": "concept",
+      "id": "Bulk topological invariant"
+    },
+    {
+      "type": "concept",
+      "id": "Quasienergy winding"
+    },
+    {
+      "type": "paper",
+      "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
+      "id": "2502.15816v1"
+    },
+    {
+      "type": "concept",
+      "id": "Generative Artificial Intelligence (GenAI)"
+    },
+    {
+      "type": "concept",
+      "id": "Large Language Model (LLM)"
+    },
+    {
+      "type": "concept",
+      "id": "Foundation Model (FM)"
+    },
+    {
+      "type": "concept",
+      "id": "Cloud server"
+    },
+    {
+      "type": "concept",
+      "id": "Edge devices"
+    },
+    {
+      "type": "concept",
+      "id": "Model size"
+    },
+    {
+      "type": "concept",
+      "id": "Computational resource requirements"
+    },
+    {
+      "type": "concept",
+      "id": "Software optimization"
+    },
+    {
+      "type": "concept",
+      "id": "Hardware optimization"
+    },
+    {
+      "type": "concept",
+      "id": "Frameworks"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Visual intelligence tools"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Computational requirements"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Resource-constrained devices"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Cloud offloading"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Privacy vulnerabilities"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Distributed hierarchical offloading framework"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Vision Transformers (ViTs)"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Edge orchestrator"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Data partitioning"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Multiple independent cloud servers"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Data merging and aggregation"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Segment Anything Model (SAM)"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Content privacy"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Segmentation performance"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Content reconstruction risk"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "User data exposure"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Scalable privacy-preserving solution"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Edge-cloud continuum"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Lightweight transformer architectures"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Edge device deployment"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Model compression"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Quantization"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Pruning"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Knowledge distillation"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Sparse attention mechanisms"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Hardware-aware neural architecture search"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Memory-bandwidth bottleneck analysis"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Energy efficiency"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Real-time AI applications"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "Deployment pipelines"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Quantized neural networks"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Mixed-precision quantization"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Latency reduction"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Power consumption reduction"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Model size reduction"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Resource-constrained systems"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Loss manifold assumption"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Optimal minimum shift with precision"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Quantization as a random process"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Bit allocation as Markov Decision Process"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Hardware-aware quantization"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Neural network accuracy"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Hardware efficiency"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Accuracy-efficiency trade-off"
+    },
+    {
+      "relation": "uses",
+      "source": "2205.15437v2",
+      "target": "Automatic Mixed-Precision Quantization for Edge Devices (AMED)"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Quantum walks"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Quadratic speedup"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Disorder"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Efficient transport"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Cutting links"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Topologically protected chiral edge states"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Bulk Chern number"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Periodically driven lattice Hamiltonian"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Bulk topological invariant"
+    },
+    {
+      "relation": "uses",
+      "source": "1411.3958v3",
+      "target": "Quasienergy winding"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Generative Artificial Intelligence (GenAI)"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Large Language Model (LLM)"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Foundation Model (FM)"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Cloud server"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Edge devices"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Resource-constrained systems"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Model size"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Computational resource requirements"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Software optimization"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Hardware optimization"
+    },
+    {
+      "relation": "uses",
+      "source": "2502.15816v1",
+      "target": "Frameworks"
+    }
+  ]
+}
