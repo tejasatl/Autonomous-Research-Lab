@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 const SECTIONS = [
   "Abstract",
@@ -121,7 +122,7 @@ export default function WritingAssistant() {
           : JSON.stringify(res.data?.output || res.data, null, 2)
       );
     } catch {
-      setSectionResult("⚠️ Unable to generate academic section.");
+      setSectionResult("Unable to generate academic section.");
     }
     setSectionLoading(false);
   }
@@ -147,14 +148,14 @@ export default function WritingAssistant() {
               padding: "8px 16px",
               borderRadius: "8px",
               border: "none",
-              background: activeTab === "manuscript" ? "#3b82f6" : "rgba(255, 255, 255, 0.05)",
-              color: activeTab === "manuscript" ? "white" : "#94a3b8",
+              background: activeTab === "manuscript" ? "#2563eb" : "#f1f5f9",
+              color: activeTab === "manuscript" ? "white" : "#475569",
               fontWeight: "600",
               fontSize: "13px",
               cursor: "pointer",
             }}
           >
-            📄 Full Conference Manuscript (Overleaf ZIP)
+            Full Conference Manuscript (Overleaf ZIP)
           </button>
           <button
             onClick={() => setActiveTab("review")}
@@ -162,14 +163,14 @@ export default function WritingAssistant() {
               padding: "8px 16px",
               borderRadius: "8px",
               border: "none",
-              background: activeTab === "review" ? "#3b82f6" : "rgba(255, 255, 255, 0.05)",
-              color: activeTab === "review" ? "white" : "#94a3b8",
+              background: activeTab === "review" ? "#2563eb" : "#f1f5f9",
+              color: activeTab === "review" ? "white" : "#475569",
               fontWeight: "600",
               fontSize: "13px",
               cursor: "pointer",
             }}
           >
-            🧐 Simulated Peer Review Committee
+            Simulated Peer Review Committee
           </button>
           <button
             onClick={() => setActiveTab("sections")}
@@ -177,14 +178,14 @@ export default function WritingAssistant() {
               padding: "8px 16px",
               borderRadius: "8px",
               border: "none",
-              background: activeTab === "sections" ? "#3b82f6" : "rgba(255, 255, 255, 0.05)",
-              color: activeTab === "sections" ? "white" : "#94a3b8",
+              background: activeTab === "sections" ? "#2563eb" : "#f1f5f9",
+              color: activeTab === "sections" ? "white" : "#475569",
               fontWeight: "600",
               fontSize: "13px",
               cursor: "pointer",
             }}
           >
-            ✍️ Section Drafting & Polishing
+            Section Drafting & Polishing
           </button>
         </div>
 
@@ -192,16 +193,20 @@ export default function WritingAssistant() {
           onClick={handleDownloadBibtex}
           style={{
             padding: "6px 14px",
-            background: "rgba(168, 85, 247, 0.15)",
-            border: "1px solid #a855f7",
-            color: "#c084fc",
-            borderRadius: "6px",
+            background: "#eff6ff",
+            border: "1px solid #bfdbfe",
+            color: "#1d4ed8",
+            borderRadius: "8px",
             fontSize: "12px",
             fontWeight: "600",
             cursor: "pointer",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
           }}
         >
-          📚 Export Lab BibTeX (.bib)
+          <Icon name="search" size={13} color="#2563eb" />
+          <span>Export Lab BibTeX (.bib)</span>
         </button>
       </div>
 
@@ -277,31 +282,37 @@ export default function WritingAssistant() {
                   fontWeight: "600",
                   fontSize: "13.5px",
                   cursor: "pointer",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
                 }}
               >
-                {manuscriptLoading ? "Synthesizing 8-Page Manuscript..." : "⚡ Synthesize Complete Manuscript"}
+                <Icon name="sparkles" size={14} color="#ffffff" />
+                <span>{manuscriptLoading ? "Synthesizing 8-Page Manuscript..." : "Synthesize Complete Manuscript"}</span>
               </button>
             </div>
           </div>
 
           {manuscriptLoading && (
-            <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#94a3b8" }}>
-              <div style={{ fontSize: "32px", marginBottom: "12px" }}>📄</div>
-              <h3 style={{ color: "#f8fafc" }}>Synthesizing Complete Conference Manuscript...</h3>
-              <p style={{ fontSize: "14px", color: "#94a3b8" }}>
+            <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#64748b" }}>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}>
+                <Icon name="proposal" size={32} color="#2563eb" />
+              </div>
+              <h3 style={{ color: "#0f172a" }}>Synthesizing Complete Conference Manuscript...</h3>
+              <p style={{ fontSize: "14px", color: "#64748b" }}>
                 Structuring formal problem formulation, integrating verified citations, drafting methodology, and compiling LaTeX macros.
               </p>
             </div>
           )}
 
           {manuscriptData && !manuscriptLoading && (
-            <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "16px", borderLeft: "4px solid #3b82f6" }}>
+            <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "16px", borderLeft: "4px solid #2563eb" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div>
-                  <h3 style={{ fontSize: "18px", color: "#f8fafc", margin: 0 }}>
-                    ✓ Manuscript Draft Ready ({manuscriptData.target_venue})
+                  <h3 style={{ fontSize: "18px", color: "#0f172a", margin: 0, fontWeight: "700" }}>
+                    Manuscript Draft Ready ({manuscriptData.target_venue})
                   </h3>
-                  <div style={{ fontSize: "12px", color: "#94a3b8", marginTop: "4px" }}>
+                  <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>
                     ID: {manuscriptData.manuscript_id} • Package: {manuscriptData.zip_filename}
                   </div>
                 </div>
@@ -312,15 +323,19 @@ export default function WritingAssistant() {
                     style={{
                       padding: "8px 16px",
                       background: "#10b981",
-                      color: "#0f172a",
+                      color: "#ffffff",
                       border: "none",
-                      borderRadius: "6px",
+                      borderRadius: "8px",
                       fontWeight: "700",
                       fontSize: "13px",
                       cursor: "pointer",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
                     }}
                   >
-                    ⬇️ Download Overleaf ZIP Bundle
+                    <Icon name="download" size={13} color="#ffffff" />
+                    <span>Download Overleaf ZIP Bundle</span>
                   </button>
 
                   <button
@@ -330,16 +345,20 @@ export default function WritingAssistant() {
                     }}
                     style={{
                       padding: "8px 16px",
-                      background: "rgba(168, 85, 247, 0.2)",
-                      border: "1px solid #a855f7",
-                      color: "#c084fc",
-                      borderRadius: "6px",
+                      background: "#eff6ff",
+                      border: "1px solid #bfdbfe",
+                      color: "#1d4ed8",
+                      borderRadius: "8px",
                       fontWeight: "600",
                       fontSize: "13px",
                       cursor: "pointer",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
                     }}
                   >
-                    🚀 Submit to Peer Review Committee
+                    <Icon name="gaps" size={13} color="#2563eb" />
+                    <span>Submit to Peer Review Committee</span>
                   </button>
                 </div>
               </div>
@@ -364,7 +383,7 @@ export default function WritingAssistant() {
                       cursor: "pointer",
                     }}
                   >
-                    {copiedTex ? "✓ Copied to Clipboard" : "📋 Copy LaTeX"}
+                    {copiedTex ? "Copied to Clipboard" : "Copy LaTeX"}
                   </button>
                 </div>
                 <textarea
@@ -434,14 +453,14 @@ export default function WritingAssistant() {
                   cursor: "pointer",
                 }}
               >
-                {reviewLoading ? "Deliberating Committee..." : "⚖️ Deliberate Committee Review"}
+                {reviewLoading ? "Deliberating Committee..." : "Deliberate Committee Review"}
               </button>
             </div>
           </div>
 
           {reviewLoading && (
             <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#94a3b8" }}>
-              <div style={{ fontSize: "32px", marginBottom: "12px" }}>⚖️</div>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}><Icon name="scale" size={32} color="#2563eb" /></div>
               <h3 style={{ color: "#f8fafc" }}>Reviewers Deliberating in Parallel...</h3>
               <p style={{ fontSize: "14px", color: "#94a3b8" }}>
                 Reviewer 1 checking mathematical formalism • Reviewer 2 auditing baselines • Reviewer 3 comparing prior art • Area Chair synthesizing meta-review.
@@ -485,7 +504,7 @@ export default function WritingAssistant() {
                 {reviewData.rebuttal_strategy && reviewData.rebuttal_strategy.length > 0 && (
                   <div style={{ marginTop: "16px", background: "rgba(59, 130, 246, 0.08)", border: "1px solid rgba(59, 130, 246, 0.2)", borderRadius: "8px", padding: "14px" }}>
                     <div style={{ fontSize: "12px", fontWeight: "700", color: "#60a5fa", textTransform: "uppercase" }}>
-                      🎯 Author Rebuttal Strategy (Action Plan to Flip Reviewers):
+                      Author Rebuttal Strategy (Action Plan to Flip Reviewers):
                     </div>
                     <ul style={{ margin: "8px 0 0", paddingLeft: "20px", color: "#e2e8f0", fontSize: "13px", lineHeight: "1.6" }}>
                       {reviewData.rebuttal_strategy.map((strat, sIdx) => (
@@ -513,7 +532,7 @@ export default function WritingAssistant() {
 
                     <div>
                       <div style={{ fontSize: "11px", color: "#34d399", fontWeight: "700", textTransform: "uppercase" }}>
-                        ✓ Strengths
+                        Strengths
                       </div>
                       <ul style={{ margin: "4px 0 0", paddingLeft: "18px", fontSize: "12.5px", color: "#cbd5e1" }}>
                         {(rev.strengths || []).map((st, i) => (
@@ -524,7 +543,7 @@ export default function WritingAssistant() {
 
                     <div>
                       <div style={{ fontSize: "11px", color: "#f87171", fontWeight: "700", textTransform: "uppercase" }}>
-                        ✗ Weaknesses
+                        Weaknesses
                       </div>
                       <ul style={{ margin: "4px 0 0", paddingLeft: "18px", fontSize: "12.5px", color: "#cbd5e1" }}>
                         {(rev.weaknesses || []).map((wk, i) => (

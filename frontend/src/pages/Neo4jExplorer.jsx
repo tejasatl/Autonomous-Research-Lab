@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 const SAMPLE_IDS = ["2312.00752", "1706.03762", "2103.00020", "2005.14165"];
 
@@ -133,7 +134,7 @@ export default function Neo4jExplorer() {
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                    <span style={{ fontSize: "20px" }}>⚡</span>
+                    <Icon name="database" size={18} color="#9333ea" />
                     <span style={{ fontSize: "14.5px", color: "#f8fafc", fontWeight: "500" }}>
                       {label}
                     </span>

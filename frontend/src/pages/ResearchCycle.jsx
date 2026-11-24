@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 const PRESETS = [
   "Edge Vision Transformers with 4-bit Quantization",
@@ -21,31 +22,31 @@ export default function ResearchCycle() {
       key: "objective",
       title: "Research Directive",
       description: "Research Director establishes high-impact research goals and scope constraints.",
-      icon: "👑",
+      iconKey: "sparkles",
     },
     {
       key: "idea",
       title: "Novel Hypothesis",
       description: "Idea Agent hypothesizes technical innovations addressing identified gaps.",
-      icon: "💡",
+      iconKey: "intelligence",
     },
     {
       key: "plan",
       title: "Experiment Plan",
       description: "Planner Agent formulates methodology, baselines, and implementation roadmap.",
-      icon: "📋",
+      iconKey: "experiment",
     },
     {
       key: "review",
       title: "Peer Critique",
       description: "Critic Agent provides rigorous academic scrutiny and feasibility analysis.",
-      icon: "🧐",
+      iconKey: "gaps",
     },
     {
       key: "proposal",
       title: "Full Proposal",
       description: "Proposal Generator drafts structured academic proposal ready for grant or submission.",
-      icon: "📄",
+      iconKey: "proposal",
     },
   ];
 
@@ -86,7 +87,7 @@ export default function ResearchCycle() {
           Autonomous 5-Stage Research Cycle
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
-          End-to-end autonomous closed loop: Director ➔ Idea ➔ Planner ➔ Critic ➔ Proposal synthesis.
+          End-to-end autonomous closed loop: Director &rarr; Idea &rarr; Planner &rarr; Critic &rarr; Proposal synthesis.
         </p>
       </div>
 
@@ -111,15 +112,20 @@ export default function ResearchCycle() {
               disabled={loading}
               style={{
                 padding: "12px 24px",
-                background: "#3b82f6",
+                background: "#2563eb",
                 color: "white",
                 border: "none",
                 borderRadius: "8px",
                 fontWeight: "600",
                 fontSize: "14px",
+                cursor: loading ? "not-allowed" : "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
               }}
             >
-              {loading ? "Executing Cycle..." : "🚀 Execute Cycle"}
+              <Icon name="play" size={14} color="#ffffff" />
+              <span>{loading ? "Executing Cycle..." : "Execute Cycle"}</span>
             </button>
           </div>
         </div>
@@ -195,19 +201,19 @@ export default function ResearchCycle() {
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                    <span>{step.icon}</span>
-                    <h4 style={{ margin: 0, fontSize: "14px", color: isSelected ? "#93c5fd" : "#f8fafc" }}>
+                    <Icon name={step.iconKey} size={16} color={isSelected ? "#2563eb" : "#64748b"} />
+                    <h4 style={{ margin: 0, fontSize: "14px", color: isSelected ? "#1d4ed8" : "#0f172a" }}>
                       {step.title}
                     </h4>
                   </div>
                   {hasData && (
                     <span className="arl-badge arl-badge-green" style={{ fontSize: "10px" }}>
-                      ✓ Generated
+                      Generated
                     </span>
                   )}
                 </div>
 
-                <p style={{ margin: "6px 0 0 0", fontSize: "12px", color: "#94a3b8", lineHeight: "1.4" }}>
+                <p style={{ margin: "6px 0 0 0", fontSize: "12px", color: "#64748b", lineHeight: "1.4" }}>
                   {step.description}
                 </p>
               </div>
@@ -217,12 +223,12 @@ export default function ResearchCycle() {
 
         {/* Step Content Card */}
         <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "16px", minHeight: "480px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(255, 255, 255, 0.08)", paddingBottom: "12px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #e2e8f0", paddingBottom: "12px" }}>
             <div>
-              <h2 style={{ fontSize: "18px", color: "#f8fafc", margin: 0 }}>
-                {steps[selected].icon} Stage {selected + 1}: {steps[selected].title}
+              <h2 style={{ fontSize: "18px", color: "#0f172a", margin: 0, fontWeight: "700" }}>
+                Stage {selected + 1}: {steps[selected].title}
               </h2>
-              <p style={{ color: "#94a3b8", margin: "4px 0 0 0", fontSize: "13px" }}>
+              <p style={{ color: "#64748b", margin: "4px 0 0 0", fontSize: "13px" }}>
                 {steps[selected].description}
               </p>
             </div>
@@ -232,23 +238,30 @@ export default function ResearchCycle() {
                 onClick={copyStageContent}
                 style={{
                   padding: "6px 14px",
-                  background: copied ? "rgba(16, 185, 129, 0.2)" : "rgba(255, 255, 255, 0.08)",
-                  border: "1px solid rgba(255, 255, 255, 0.15)",
-                  color: copied ? "#34d399" : "#f8fafc",
-                  borderRadius: "6px",
+                  background: copied ? "#ecfdf5" : "#f1f5f9",
+                  border: "1px solid #cbd5e1",
+                  color: copied ? "#059669" : "#334155",
+                  borderRadius: "8px",
                   fontSize: "12.5px",
+                  fontWeight: "600",
                   cursor: "pointer",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
                 }}
               >
-                {copied ? "✓ Copied!" : "📋 Copy Stage"}
+                <Icon name={copied ? "check" : "copy"} size={13} />
+                <span>{copied ? "Copied" : "Copy Stage"}</span>
               </button>
             )}
           </div>
 
           {loading && (
-            <div style={{ textAlign: "center", padding: "60px 20px", color: "#94a3b8" }}>
-              <div style={{ fontSize: "36px", marginBottom: "12px" }}>🔄</div>
-              <h3>Coordinating Autonomous Multi-Agent Loop...</h3>
+            <div style={{ textAlign: "center", padding: "60px 20px", color: "#64748b" }}>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}>
+                <Icon name="cycle" size={36} color="#2563eb" />
+              </div>
+              <h3 style={{ color: "#0f172a" }}>Coordinating Autonomous Multi-Agent Loop...</h3>
               <p style={{ fontSize: "14px", marginTop: "4px" }}>
                 The Director is orchestrating Idea, Planner, and Critic agents to synthesize an end-to-end scientific proposal.
               </p>
@@ -259,9 +272,9 @@ export default function ResearchCycle() {
             <pre
               style={{
                 whiteSpace: "pre-wrap",
-                fontSize: "14px",
+                fontSize: "13.5px",
                 lineHeight: "1.7",
-                color: "#e2e8f0",
+                color: "#1e293b",
                 maxHeight: "550px",
                 overflowY: "auto",
               }}
@@ -273,8 +286,10 @@ export default function ResearchCycle() {
           )}
 
           {!loading && (!cycleData || !cycleData[steps[selected].key]) && (
-            <div style={{ textAlign: "center", padding: "80px 20px", color: "#64748b" }}>
-              <div style={{ fontSize: "32px", marginBottom: "8px" }}>🚀</div>
+            <div style={{ textAlign: "center", padding: "80px 20px", color: "#94a3b8" }}>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}>
+                <Icon name="cycle" size={32} color="#94a3b8" />
+              </div>
               <p style={{ fontSize: "14px" }}>
                 Click "Execute Cycle" above to generate the full automated research loop for your topic.
               </p>

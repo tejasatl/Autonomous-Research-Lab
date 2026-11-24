@@ -1,43 +1,45 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import Icon from "./Icons";
 
 const navSections = [
   {
     title: "Lab Cockpit",
     items: [
-      { name: "Dashboard", path: "/", icon: "📊" },
-      { name: "Projects", path: "/projects", icon: "📁" },
-      { name: "Research Cycle", path: "/research_cycle", icon: "🔄" },
+      { name: "Dashboard", path: "/", iconKey: "dashboard" },
+      { name: "Projects", path: "/projects", iconKey: "projects" },
+      { name: "Research Cycle", path: "/research_cycle", iconKey: "cycle" },
     ]
   },
   {
     title: "AI & Agents",
     items: [
-      { name: "Research Copilot", path: "/copilot", icon: "🚀" },
-      { name: "Multi-Agent Team", path: "/research-team", icon: "🤖" },
-      { name: "GraphRAG Chat", path: "/chat", icon: "💬" },
-      { name: "Intelligence Hub", path: "/research-intelligence", icon: "🧠" },
+      { name: "Research Copilot", path: "/copilot", iconKey: "copilot" },
+      { name: "Multi-Agent Team", path: "/research-team", iconKey: "team" },
+      { name: "GraphRAG Chat", path: "/chat", iconKey: "chat" },
+      { name: "Intelligence Hub", path: "/research-intelligence", iconKey: "intelligence" },
     ]
   },
   {
     title: "Knowledge Graphs",
     items: [
-      { name: "Visual Graph (2D)", path: "/graph", icon: "🌐" },
-      { name: "Research Clusters", path: "/clusters", icon: "🔬" },
-      { name: "Communities", path: "/communities", icon: "👥" },
-      { name: "Neo4j Database", path: "/neo4j", icon: "⚡" },
-      { name: "Author Network", path: "/authors", icon: "👨‍🔬" },
-      { name: "Paper Timeline", path: "/timeline", icon: "📈" },
+      { name: "Visual Graph (2D)", path: "/graph", iconKey: "graph" },
+      { name: "Research Clusters", path: "/clusters", iconKey: "clusters" },
+      { name: "Communities", path: "/communities", iconKey: "communities" },
+      { name: "Neo4j Database", path: "/neo4j", iconKey: "database" },
+      { name: "Author Network", path: "/authors", iconKey: "authors" },
+      { name: "Paper Timeline", path: "/timeline", iconKey: "timeline" },
     ]
   },
   {
     title: "Lab Operations",
     items: [
-      { name: "Paper Search & Ingest", path: "/search", icon: "🔍" },
-      { name: "Research Gaps", path: "/gaps", icon: "🎯" },
-      { name: "Experiment Planner", path: "/experiment-planner", icon: "🧪" },
-      { name: "Proposal Generator", path: "/proposal", icon: "📄" },
-      { name: "Writing Assistant", path: "/writing", icon: "✍️" },
-      { name: "Lab Memory", path: "/memory", icon: "💾" },
+      { name: "Paper Search & Ingest", path: "/search", iconKey: "search" },
+      { name: "Research Gaps", path: "/gaps", iconKey: "gaps" },
+      { name: "Experiment Planner", path: "/experiment-planner", iconKey: "experiment" },
+      { name: "Proposal Generator", path: "/proposal", iconKey: "proposal" },
+      { name: "Writing Assistant", path: "/writing", iconKey: "writing" },
+      { name: "Lab Memory", path: "/memory", iconKey: "memory" },
     ]
   }
 ];
@@ -48,50 +50,48 @@ export default function Sidebar() {
   return (
     <aside
       style={{
-        width: "260px",
-        minWidth: "260px",
-        background: "#0c121e",
-        borderRight: "1px solid rgba(255, 255, 255, 0.08)",
+        width: "256px",
+        minWidth: "256px",
+        background: "#ffffff",
+        borderRight: "1px solid #e2e8f0",
         display: "flex",
         flexDirection: "column",
-        height: "100vh",
-        position: "sticky",
-        top: 0,
-        zIndex: 50,
-        userSelect: "none"
+        height: "100%",
+        userSelect: "none",
+        boxShadow: "2px 0 16px rgba(15, 23, 42, 0.02)",
       }}
     >
       {/* Brand Header */}
       <div
         style={{
-          padding: "20px 18px",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
+          padding: "22px 20px 18px 20px",
+          borderBottom: "1px solid #f1f5f9",
           display: "flex",
           alignItems: "center",
-          gap: "12px"
+          gap: "12px",
         }}
       >
         <div
           style={{
-            width: "36px",
-            height: "36px",
-            borderRadius: "10px",
-            background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+            width: "38px",
+            height: "38px",
+            borderRadius: "12px",
+            background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 100%)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "18px",
-            boxShadow: "0 0 15px rgba(99, 102, 241, 0.4)"
+            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.25)",
+            color: "#ffffff",
           }}
         >
-          ⚛
+          <Icon name="sparkles" size={20} color="#ffffff" strokeWidth={2} />
         </div>
         <div>
-          <div style={{ fontWeight: "700", fontSize: "15px", color: "#f8fafc", letterSpacing: "-0.01em" }}>
+          <div style={{ fontWeight: "700", fontSize: "15px", color: "#0f172a", letterSpacing: "-0.01em" }}>
             Autonomous Lab
           </div>
-          <div style={{ fontSize: "11px", color: "#06b6d4", fontWeight: "600", letterSpacing: "0.04em" }}>
-            MULTI-AGENT AI v2.0
+          <div style={{ fontSize: "11px", color: "#64748b", fontWeight: "600", letterSpacing: "0.04em" }}>
+            RESEARCH OS v2.4
           </div>
         </div>
       </div>
@@ -101,10 +101,10 @@ export default function Sidebar() {
         style={{
           flex: 1,
           overflowY: "auto",
-          padding: "16px 10px",
+          padding: "16px 12px",
           display: "flex",
           flexDirection: "column",
-          gap: "18px"
+          gap: "18px",
         }}
       >
         {navSections.map((section) => (
@@ -113,16 +113,16 @@ export default function Sidebar() {
               style={{
                 fontSize: "11px",
                 fontWeight: "700",
-                color: "#64748b",
+                color: "#94a3b8",
                 textTransform: "uppercase",
                 letterSpacing: "0.06em",
-                padding: "0 12px 6px 12px"
+                padding: "0 10px 6px 10px",
               }}
             >
               {section.title}
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
               {section.items.map((item) => {
                 const isActive = location.pathname === item.path;
                 return (
@@ -134,18 +134,22 @@ export default function Sidebar() {
                       alignItems: "center",
                       gap: "10px",
                       padding: "8px 12px",
-                      borderRadius: "8px",
-                      color: isActive ? "#ffffff" : "#94a3b8",
-                      background: isActive
-                        ? "linear-gradient(90deg, rgba(59, 130, 246, 0.22) 0%, rgba(59, 130, 246, 0.08) 100%)"
-                        : "transparent",
-                      borderLeft: isActive ? "3px solid #3b82f6" : "3px solid transparent",
+                      borderRadius: "10px",
+                      color: isActive ? "#2563eb" : "#475569",
+                      background: isActive ? "#eff6ff" : "transparent",
+                      border: isActive ? "1px solid #dbeafe" : "1px solid transparent",
                       fontSize: "13.5px",
                       fontWeight: isActive ? "600" : "500",
+                      textDecoration: "none",
                       transition: "all 0.15s ease",
                     }}
                   >
-                    <span style={{ fontSize: "15px" }}>{item.icon}</span>
+                    <Icon
+                      name={item.iconKey}
+                      size={16}
+                      color={isActive ? "#2563eb" : "#64748b"}
+                      strokeWidth={isActive ? 2.1 : 1.8}
+                    />
                     <span>{item.name}</span>
                   </Link>
                 );
@@ -158,18 +162,26 @@ export default function Sidebar() {
       {/* Footer Info */}
       <div
         style={{
-          padding: "14px 16px",
-          borderTop: "1px solid rgba(255, 255, 255, 0.06)",
-          background: "rgba(0, 0, 0, 0.2)",
+          padding: "14px 18px",
+          borderTop: "1px solid #f1f5f9",
+          background: "#fafbfd",
           fontSize: "12px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
         }}
       >
-        <span style={{ color: "#64748b" }}>Backend Engine</span>
-        <span style={{ color: "#10b981", fontWeight: "600", display: "flex", alignItems: "center", gap: "6px" }}>
-          <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#10b981" }}></span>
+        <span style={{ color: "#64748b", fontWeight: "500" }}>System Core</span>
+        <span style={{ color: "#059669", fontWeight: "600", display: "flex", alignItems: "center", gap: "6px" }}>
+          <span
+            style={{
+              width: "7px",
+              height: "7px",
+              borderRadius: "50%",
+              background: "#10b981",
+              boxShadow: "0 0 6px rgba(16, 185, 129, 0.5)",
+            }}
+          />
           Online
         </span>
       </div>

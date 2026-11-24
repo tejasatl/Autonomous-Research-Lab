@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import api from "../services/api";
+import Icon from "./Icons";
 
 export default function Topbar() {
   const location = useLocation();
@@ -18,9 +19,9 @@ export default function Topbar() {
   if (token) {
     try {
       const payload = JSON.parse(atob(token.split(".")[1]));
-      username = payload.sub || payload.username || "Researcher";
+      username = payload.sub || payload.username || "Lead Researcher";
     } catch {
-      username = "Researcher";
+      username = "Lead Researcher";
     }
   }
 
@@ -78,7 +79,7 @@ export default function Topbar() {
 
   const pageTitle = () => {
     const p = location.pathname;
-    if (p === "/" || p === "/dashboard") return "Research Cockpit Dashboard";
+    if (p === "/" || p === "/dashboard") return "Research Cockpit";
     if (p === "/projects") return "Research Projects Workspace";
     if (p === "/research_cycle") return "Autonomous 5-Stage Research Cycle";
     if (p === "/copilot") return "AI Research Copilot";
@@ -105,9 +106,9 @@ export default function Topbar() {
     <>
       <header
         style={{
-          background: "#0c121e",
-          padding: "14px 28px",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+          background: "#ffffff",
+          padding: "16px 28px",
+          borderBottom: "1px solid #e2e8f0",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -116,13 +117,13 @@ export default function Topbar() {
           zIndex: 40,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <h2 style={{ fontSize: "16px", fontWeight: "600", color: "#f8fafc", margin: 0 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+          <h1 style={{ fontSize: "17px", fontWeight: "700", color: "#0f172a", margin: 0, letterSpacing: "-0.01em" }}>
             {pageTitle()}
-          </h2>
+          </h1>
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           {/* Interactive LLM Selector Button */}
           <button
             onClick={() => setShowLlmModal(true)}
@@ -130,12 +131,12 @@ export default function Topbar() {
               display: "flex",
               alignItems: "center",
               gap: "8px",
-              padding: "6px 14px",
-              borderRadius: "20px",
-              background: "rgba(59, 130, 246, 0.12)",
-              border: "1px solid rgba(59, 130, 246, 0.3)",
+              padding: "7px 14px",
+              borderRadius: "9999px",
+              background: "#f1f5f9",
+              border: "1px solid #e2e8f0",
               fontSize: "12.5px",
-              color: "#93c5fd",
+              color: "#1e293b",
               cursor: "pointer",
               transition: "all 0.2s ease",
             }}
@@ -147,65 +148,70 @@ export default function Topbar() {
                 height: "7px",
                 borderRadius: "50%",
                 background: "#10b981",
-                boxShadow: "0 0 6px #10b981",
               }}
             />
             <span style={{ fontWeight: "600" }}>
-              🤖 LLM: {llmInfo?.name || systemStatus?.llm_backend?.toUpperCase() || "GEMINI"} ▾
+              Engine: {llmInfo?.name || systemStatus?.llm_backend?.toUpperCase() || "GEMINI"}
             </span>
+            <Icon name="chevron-down" size={12} color="#64748b" />
           </button>
 
           {/* User Account Controls */}
           {token ? (
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <Link
                 to="/profile"
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "8px",
-                  padding: "6px 12px",
-                  background: "rgba(255, 255, 255, 0.05)",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
-                  borderRadius: "8px",
-                  color: "#e2e8f0",
-                  fontSize: "13px",
-                  fontWeight: "500",
+                  gap: "7px",
+                  padding: "6px 14px",
+                  background: "#f8fafc",
+                  border: "1px solid #e2e8f0",
+                  borderRadius: "9999px",
+                  color: "#334155",
+                  fontSize: "12.5px",
+                  fontWeight: "600",
                   textDecoration: "none",
                 }}
               >
-                <span>👤</span>
+                <Icon name="user" size={14} color="#64748b" />
                 <span>{username}</span>
               </Link>
 
               <button
                 onClick={logout}
                 style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
                   padding: "6px 12px",
-                  background: "rgba(239, 68, 68, 0.15)",
-                  color: "#f87171",
-                  border: "1px solid rgba(239, 68, 68, 0.3)",
-                  borderRadius: "8px",
+                  background: "#fff1f2",
+                  color: "#e11d48",
+                  border: "1px solid #fecdd3",
+                  borderRadius: "9999px",
                   fontSize: "12px",
                   fontWeight: "600",
                   cursor: "pointer",
                 }}
               >
-                Sign out
+                <Icon name="log-out" size={13} color="#e11d48" />
+                <span>Sign out</span>
               </button>
             </div>
           ) : (
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <Link
                 to="/login"
                 style={{
-                  padding: "6px 14px",
-                  background: "#3b82f6",
+                  padding: "7px 16px",
+                  background: "#2563eb",
                   color: "white",
-                  borderRadius: "6px",
-                  fontSize: "13px",
+                  borderRadius: "9999px",
+                  fontSize: "12.5px",
                   fontWeight: "600",
                   textDecoration: "none",
+                  boxShadow: "0 2px 8px rgba(37, 99, 235, 0.2)",
                 }}
               >
                 Sign in
@@ -213,13 +219,13 @@ export default function Topbar() {
               <Link
                 to="/register"
                 style={{
-                  padding: "6px 14px",
-                  background: "rgba(255, 255, 255, 0.08)",
-                  color: "#e2e8f0",
-                  border: "1px solid rgba(255, 255, 255, 0.15)",
-                  borderRadius: "6px",
-                  fontSize: "13px",
-                  fontWeight: "500",
+                  padding: "7px 16px",
+                  background: "#ffffff",
+                  color: "#334155",
+                  border: "1px solid #cbd5e1",
+                  borderRadius: "9999px",
+                  fontSize: "12.5px",
+                  fontWeight: "600",
                   textDecoration: "none",
                 }}
               >
@@ -239,7 +245,7 @@ export default function Topbar() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: "rgba(0, 0, 0, 0.75)",
+            background: "rgba(15, 23, 42, 0.45)",
             backdropFilter: "blur(6px)",
             display: "flex",
             alignItems: "center",
@@ -254,30 +260,45 @@ export default function Topbar() {
               width: "100%",
               maxWidth: "520px",
               padding: "28px",
-              background: "#101726",
-              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.8)",
+              background: "#ffffff",
+              boxShadow: "0 25px 50px -12px rgba(15, 23, 42, 0.25)",
+              borderRadius: "20px",
             }}
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <h2 style={{ fontSize: "18px", color: "#f8fafc", margin: 0 }}>
-                ⚡ Switch Active LLM Provider
-              </h2>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <Icon name="sparkles" size={18} color="#2563eb" />
+                <h2 style={{ fontSize: "17px", fontWeight: "700", color: "#0f172a", margin: 0 }}>
+                  Active LLM Engine Provider
+                </h2>
+              </div>
               <button
                 onClick={() => setShowLlmModal(false)}
-                style={{ background: "none", border: "none", color: "#94a3b8", fontSize: "18px", cursor: "pointer" }}
+                style={{
+                  background: "#f1f5f9",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: "28px",
+                  height: "28px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#64748b",
+                  cursor: "pointer",
+                }}
               >
-                ✕
+                <Icon name="x" size={14} />
               </button>
             </div>
-            <p style={{ fontSize: "13px", color: "#94a3b8", marginTop: "4px" }}>
-              Select which AI model powers your multi-agent swarm, GraphRAG queries, and synthesis.
+            <p style={{ fontSize: "13px", color: "#64748b", marginTop: "6px" }}>
+              Select which AI foundation model powers the research agent swarm, GraphRAG queries, and empirical synthesis.
             </p>
 
             <form onSubmit={handleSwitchLlm} style={{ marginTop: "20px", display: "flex", flexDirection: "column", gap: "16px" }}>
               {/* Providers Grid */}
               <div>
-                <label style={{ fontSize: "12.5px", color: "#cbd5e1", display: "block", marginBottom: "8px" }}>
-                  LLM Provider Backend
+                <label style={{ fontSize: "12px", fontWeight: "600", color: "#475569", display: "block", marginBottom: "8px" }}>
+                  Foundation Model Provider
                 </label>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
                   {(llmInfo?.supported_backends || [
@@ -296,19 +317,23 @@ export default function Topbar() {
                           setSelectedModel(provider.default_model || "");
                         }}
                         style={{
-                          padding: "12px",
-                          borderRadius: "8px",
-                          border: isSelected ? "2px solid #3b82f6" : "1px solid rgba(255, 255, 255, 0.1)",
-                          background: isSelected ? "rgba(59, 130, 246, 0.15)" : "rgba(255, 255, 255, 0.03)",
-                          color: isSelected ? "#93c5fd" : "#cbd5e1",
-                          fontWeight: isSelected ? "600" : "500",
+                          padding: "12px 14px",
+                          borderRadius: "12px",
+                          border: isSelected ? "2px solid #2563eb" : "1px solid #e2e8f0",
+                          background: isSelected ? "#eff6ff" : "#f8fafc",
+                          color: isSelected ? "#1d4ed8" : "#334155",
+                          fontWeight: isSelected ? "700" : "500",
                           fontSize: "13px",
                           textAlign: "left",
                           cursor: "pointer",
+                          transition: "all 0.15s ease",
                         }}
                       >
-                        <div>{provider.name}</div>
-                        <div style={{ fontSize: "11px", color: "#64748b", marginTop: "2px" }}>
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                          <span>{provider.name}</span>
+                          {isSelected && <Icon name="check" size={14} color="#2563eb" strokeWidth={2.5} />}
+                        </div>
+                        <div style={{ fontSize: "11px", color: isSelected ? "#3b82f6" : "#94a3b8", marginTop: "3px" }}>
                           {provider.default_model || provider.id}
                         </div>
                       </button>
@@ -319,8 +344,8 @@ export default function Topbar() {
 
               {/* Model selection */}
               <div>
-                <label style={{ fontSize: "12.5px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
-                  Model Version / Tag
+                <label style={{ fontSize: "12px", fontWeight: "600", color: "#475569", display: "block", marginBottom: "6px" }}>
+                  Model Version / Checkpoint Identifier
                 </label>
                 <input
                   value={selectedModel}
@@ -333,14 +358,14 @@ export default function Topbar() {
               {/* Custom API Key input if needed */}
               {selectedBackend !== "local" && (
                 <div>
-                  <label style={{ fontSize: "12.5px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
-                    API Key (Optional override - leave blank to use .env)
+                  <label style={{ fontSize: "12px", fontWeight: "600", color: "#475569", display: "block", marginBottom: "6px" }}>
+                    API Key (Optional override - leave blank to use configured environment)
                   </label>
                   <input
                     type="password"
                     value={customKey}
                     onChange={(e) => setCustomKey(e.target.value)}
-                    placeholder="Enter custom key or leave blank..."
+                    placeholder="Enter custom API key..."
                     style={{ width: "100%", padding: "10px 14px" }}
                   />
                 </div>
@@ -350,28 +375,31 @@ export default function Topbar() {
                 <div
                   style={{
                     padding: "10px 14px",
-                    borderRadius: "8px",
-                    background: switchMessage.type === "success" ? "rgba(16, 185, 129, 0.15)" : "rgba(239, 68, 68, 0.15)",
-                    color: switchMessage.type === "success" ? "#34d399" : "#f87171",
+                    borderRadius: "10px",
+                    background: switchMessage.type === "success" ? "#ecfdf5" : "#fff1f2",
+                    color: switchMessage.type === "success" ? "#065f46" : "#9f1239",
                     fontSize: "13px",
+                    fontWeight: "500",
+                    border: switchMessage.type === "success" ? "1px solid #a7f3d0" : "1px solid #fecdd3",
                   }}
                 >
                   {switchMessage.text}
                 </div>
               )}
 
-              <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px", marginTop: "8px" }}>
+              <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px", marginTop: "6px" }}>
                 <button
                   type="button"
                   onClick={() => setShowLlmModal(false)}
                   style={{
-                    padding: "9px 18px",
-                    borderRadius: "8px",
-                    border: "1px solid rgba(255, 255, 255, 0.15)",
-                    background: "rgba(255, 255, 255, 0.05)",
-                    color: "#cbd5e1",
+                    padding: "8px 18px",
+                    borderRadius: "9999px",
+                    border: "1px solid #cbd5e1",
+                    background: "#ffffff",
+                    color: "#475569",
                     cursor: "pointer",
                     fontSize: "13px",
+                    fontWeight: "600",
                   }}
                 >
                   Cancel
@@ -380,17 +408,18 @@ export default function Topbar() {
                   type="submit"
                   disabled={switching}
                   style={{
-                    padding: "9px 22px",
-                    borderRadius: "8px",
+                    padding: "8px 22px",
+                    borderRadius: "9999px",
                     border: "none",
-                    background: "#3b82f6",
+                    background: "#2563eb",
                     color: "white",
                     fontWeight: "600",
                     cursor: switching ? "not-allowed" : "pointer",
                     fontSize: "13px",
+                    boxShadow: "0 2px 8px rgba(37, 99, 235, 0.25)",
                   }}
                 >
-                  {switching ? "Switching..." : "Apply LLM"}
+                  {switching ? "Switching..." : "Apply Engine"}
                 </button>
               </div>
             </form>

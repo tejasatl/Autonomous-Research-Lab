@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 export default function Authors() {
   const [authors, setAuthors] = useState([]);
@@ -102,7 +103,7 @@ export default function Authors() {
                     color: "#34d399",
                   }}
                 >
-                  👨‍🔬
+                  <Icon name="user" size={18} color="#059669" />
                 </div>
                 <div>
                   <h3 style={{ fontSize: "15px", color: "#f8fafc", margin: 0 }}>

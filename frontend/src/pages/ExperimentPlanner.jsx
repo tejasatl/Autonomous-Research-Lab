@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 const PRESETS = [
   "TinyML for Low-Power Edge Sensors",
@@ -21,7 +22,7 @@ export default function ExperimentPlanner() {
 `import time, json
 import numpy as np
 
-print("⚛ Autonomous PyTorch Benchmark Sandbox Initializing...")
+print("[SANDBOX] Autonomous PyTorch Benchmark Sandbox Initializing...")
 start_time = time.time()
 
 # Synthetic Layer Quantization Simulation
@@ -46,7 +47,7 @@ print(json.dumps({
     "status": "converged"
 }))
 print("---END_METRICS---")
-print("✓ Benchmark completed successfully.")
+print("[STATUS] Benchmark completed successfully.")
 `
   );
   const [sandboxResult, setSandboxResult] = useState(null);
@@ -54,14 +55,14 @@ print("✓ Benchmark completed successfully.")
   const [synthesizingCode, setSynthesizingCode] = useState(false);
 
   const tabs = [
-    { key: "experiments", label: "🔬 Experiment Protocol" },
-    { key: "sandbox", label: "⚡ Closed-Loop Code Sandbox" },
-    { key: "datasets", label: "📦 Datasets" },
-    { key: "baselines", label: "🏆 Baselines" },
-    { key: "hardware", label: "⚡ Hardware & Compute" },
-    { key: "evaluation", label: "📈 Evaluation Metrics" },
-    { key: "timeline", label: "⏱️ Execution Timeline" },
-    { key: "latex", label: "📄 LaTeX Skeleton" },
+    { key: "experiments", label: "Experiment Protocol" },
+    { key: "sandbox", label: "Closed-Loop Code Sandbox" },
+    { key: "datasets", label: "Datasets" },
+    { key: "baselines", label: "Baselines" },
+    { key: "hardware", label: "Hardware & Compute" },
+    { key: "evaluation", label: "Evaluation Metrics" },
+    { key: "timeline", label: "Execution Timeline" },
+    { key: "latex", label: "LaTeX Skeleton" },
   ];
 
   async function generatePlan(customTopic) {
@@ -210,11 +211,13 @@ print("✓ Benchmark completed successfully.")
 
       {loading && (
         <div className="arl-card" style={{ textAlign: "center", padding: "48px" }}>
-          <div style={{ fontSize: "28px", marginBottom: "12px" }}>🤖</div>
-          <h3 style={{ fontSize: "18px", color: "#f8fafc" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}>
+            <Icon name="experiment" size={32} color="#2563eb" />
+          </div>
+          <h3 style={{ fontSize: "18px", color: "#0f172a" }}>
             Autonomous Experiment Swarm Active
           </h3>
-          <p style={{ fontSize: "14px", color: "#94a3b8" }}>
+          <p style={{ fontSize: "14px", color: "#64748b" }}>
             Querying benchmark standards, baseline papers, compute budgets, and compiling LaTeX code.
           </p>
         </div>
@@ -229,7 +232,7 @@ print("✓ Benchmark completed successfully.")
               display: "flex",
               gap: "8px",
               flexWrap: "wrap",
-              borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+              borderBottom: "1px solid #e2e8f0",
               paddingBottom: "12px",
             }}
           >
@@ -241,8 +244,8 @@ print("✓ Benchmark completed successfully.")
                   padding: "8px 16px",
                   borderRadius: "8px",
                   border: "none",
-                  background: activeTab === tab.key ? "#3b82f6" : "rgba(255, 255, 255, 0.05)",
-                  color: activeTab === tab.key ? "white" : "#94a3b8",
+                  background: activeTab === tab.key ? "#2563eb" : "#f1f5f9",
+                  color: activeTab === tab.key ? "white" : "#475569",
                   fontWeight: activeTab === tab.key ? "600" : "500",
                   cursor: "pointer",
                   fontSize: "13px",
@@ -259,10 +262,10 @@ print("✓ Benchmark completed successfully.")
             <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "18px", borderLeft: "4px solid #10b981" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div>
-                  <h3 style={{ fontSize: "17px", color: "#f8fafc", margin: 0 }}>
-                    ⚡ Autonomous Execution Sandbox
+                  <h3 style={{ fontSize: "17px", color: "#0f172a", margin: 0, fontWeight: "700" }}>
+                    Autonomous Execution Sandbox
                   </h3>
-                  <div style={{ fontSize: "13px", color: "#94a3b8", marginTop: "4px" }}>
+                  <div style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
                     Synthesizes runnable Python benchmark code, runs in an isolated subprocess, and self-corrects upon error.
                   </div>
                 </div>
@@ -273,16 +276,20 @@ print("✓ Benchmark completed successfully.")
                     disabled={synthesizingCode}
                     style={{
                       padding: "8px 16px",
-                      background: "rgba(59, 130, 246, 0.15)",
-                      border: "1px solid #3b82f6",
-                      color: "#60a5fa",
-                      borderRadius: "6px",
+                      background: "#eff6ff",
+                      border: "1px solid #bfdbfe",
+                      color: "#1d4ed8",
+                      borderRadius: "8px",
                       fontSize: "13px",
                       fontWeight: "600",
-                      cursor: "pointer"
+                      cursor: "pointer",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
                     }}
                   >
-                    {synthesizingCode ? "Synthesizing..." : "🤖 Synthesize Code via LLM"}
+                    <Icon name="sparkles" size={14} color="#2563eb" />
+                    <span>{synthesizingCode ? "Synthesizing..." : "Synthesize Benchmark Code"}</span>
                   </button>
                   <button
                     onClick={handleRunSandbox}
@@ -291,14 +298,18 @@ print("✓ Benchmark completed successfully.")
                       padding: "8px 18px",
                       background: "#10b981",
                       border: "none",
-                      color: "#0f172a",
-                      borderRadius: "6px",
+                      color: "#ffffff",
+                      borderRadius: "8px",
                       fontSize: "13px",
                       fontWeight: "700",
-                      cursor: "pointer"
+                      cursor: "pointer",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
                     }}
                   >
-                    {runningSandbox ? "Executing in Sandbox..." : "▶️ Execute in Sandbox"}
+                    <Icon name="play" size={13} color="#ffffff" />
+                    <span>{runningSandbox ? "Executing..." : "Execute in Sandbox"}</span>
                   </button>
                 </div>
               </div>
@@ -333,9 +344,9 @@ print("✓ Benchmark completed successfully.")
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                       <span className={`arl-badge ${sandboxResult.success ? "arl-badge-green" : "arl-badge-red"}`}>
-                        {sandboxResult.success ? "✓ Execution Success" : "✗ Execution Failed"}
+                        {sandboxResult.success ? "Execution Success" : "Execution Failed"}
                       </span>
-                      <span style={{ fontSize: "12px", color: "#94a3b8" }}>
+                      <span style={{ fontSize: "12px", color: "#64748b" }}>
                         Time: {sandboxResult.execution_time}s • Attempts: {sandboxResult.total_attempts}
                       </span>
                     </div>
@@ -377,34 +388,38 @@ print("✓ Benchmark completed successfully.")
                   {/* Rendered Matplotlib Empirical Plots */}
                   {sandboxResult.plots && sandboxResult.plots.length > 0 && (
                     <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "6px" }}>
-                      <div style={{ fontSize: "11px", color: "#38bdf8", textTransform: "uppercase", fontWeight: "700" }}>
-                        📈 Generated Empirical Figures & Matplotlib Artifacts:
+                      <div style={{ fontSize: "11px", color: "#2563eb", textTransform: "uppercase", fontWeight: "700" }}>
+                        Generated Empirical Figures & Matplotlib Artifacts:
                       </div>
                       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "14px" }}>
                         {sandboxResult.plots.map((plot, pIdx) => {
                           const plotUrl = typeof plot === "string" 
-                            ? `${api.defaults.baseURL || "http://127.0.0.1:8000"}/experiments/runs/${sandboxResult.run_id}/plots/${plot}`
+                             ? `${api.defaults.baseURL || "http://127.0.0.1:8000"}/experiments/runs/${sandboxResult.run_id}/plots/${plot}`
                             : `${api.defaults.baseURL || "http://127.0.0.1:8000"}${plot.url}`;
                           const plotName = typeof plot === "string" ? plot : plot.filename;
 
                           return (
-                            <div key={pIdx} style={{ background: "#050811", border: "1px solid rgba(56, 189, 248, 0.25)", borderRadius: "8px", overflow: "hidden" }}>
+                            <div key={pIdx} style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "12px", overflow: "hidden", boxShadow: "0 4px 12px rgba(15, 23, 42, 0.04)" }}>
                               <img
                                 src={plotUrl}
                                 alt={plotName}
-                                style={{ width: "100%", maxHeight: "300px", objectFit: "contain", display: "block", background: "#020617" }}
+                                style={{ width: "100%", maxHeight: "300px", objectFit: "contain", display: "block", background: "#f8fafc" }}
                                 onError={(e) => { e.target.style.display = 'none'; }}
                               />
-                              <div style={{ padding: "10px 14px", fontSize: "12px", color: "#cbd5e1", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                                <span>📊 {plotName}</span>
+                              <div style={{ padding: "10px 14px", fontSize: "12px", color: "#334155", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #f1f5f9" }}>
+                                <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                                  <Icon name="graph" size={13} color="#2563eb" />
+                                  <span>{plotName}</span>
+                                </span>
                                 <a
                                   href={plotUrl}
                                   target="_blank"
                                   rel="noreferrer"
                                   download={plotName}
-                                  style={{ color: "#38bdf8", textDecoration: "none", fontWeight: "600" }}
+                                  style={{ color: "#2563eb", textDecoration: "none", fontWeight: "600", display: "flex", alignItems: "center", gap: "4px" }}
                                 >
-                                  ⬇ Download
+                                  <Icon name="download" size={12} color="#2563eb" />
+                                  <span>Download</span>
                                 </a>
                               </div>
                             </div>
@@ -420,7 +435,7 @@ print("✓ Benchmark completed successfully.")
             /* Standard Protocol View */
             <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <h3 style={{ fontSize: "17px", color: "#f8fafc", margin: 0 }}>
+                <h3 style={{ fontSize: "17px", color: "#0f172a", margin: 0, fontWeight: "700" }}>
                   {tabs.find((t) => t.key === activeTab)?.label}
                 </h3>
 
@@ -428,15 +443,20 @@ print("✓ Benchmark completed successfully.")
                   onClick={copyTabContent}
                   style={{
                     padding: "6px 14px",
-                    background: copied ? "rgba(16, 185, 129, 0.2)" : "rgba(255, 255, 255, 0.08)",
-                    border: "1px solid rgba(255, 255, 255, 0.15)",
-                    color: copied ? "#34d399" : "#f8fafc",
-                    borderRadius: "6px",
+                    background: copied ? "#ecfdf5" : "#f1f5f9",
+                    border: "1px solid #cbd5e1",
+                    color: copied ? "#059669" : "#334155",
+                    borderRadius: "8px",
                     fontSize: "12.5px",
+                    fontWeight: "600",
                     cursor: "pointer",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
                   }}
                 >
-                  {copied ? "✓ Copied!" : "📋 Copy Section"}
+                  <Icon name={copied ? "check" : "copy"} size={13} />
+                  <span>{copied ? "Copied" : "Copy Section"}</span>
                 </button>
               </div>
 

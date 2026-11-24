@@ -188,7 +188,7 @@ export default function SearchPapers() {
             cursor: "pointer"
           }}
         >
-          📚 Export Full .bib Library
+          Export Full .bib Library
         </button>
       </div>
 
@@ -197,7 +197,7 @@ export default function SearchPapers() {
         <div style={{ background: "rgba(56, 189, 248, 0.08)", border: "1px solid rgba(56, 189, 248, 0.25)", borderRadius: "10px", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ fontSize: "16px" }}>🛰️</span>
+              <span style={{ fontSize: "16px" }}></span>
               <strong style={{ fontSize: "13.5px", color: "#38bdf8" }}>
                 Autonomous arXiv Daemon Alerts ({alerts.length} Active)
               </strong>
@@ -221,7 +221,7 @@ export default function SearchPapers() {
               cursor: "pointer"
             }}
           >
-            {crawlingArxiv ? "Crawling..." : "⚡ Crawl arXiv Now"}
+            {crawlingArxiv ? "Crawling..." : "Crawl arXiv Now"}
           </button>
         </div>
       )}
@@ -241,7 +241,7 @@ export default function SearchPapers() {
             cursor: "pointer",
           }}
         >
-          🔍 Semantic Search & Verification
+          Semantic Search & Verification
         </button>
         <button
           onClick={() => setActiveTab("arxiv")}
@@ -256,7 +256,7 @@ export default function SearchPapers() {
             cursor: "pointer",
           }}
         >
-          ⚡ Direct arXiv Ingest
+          Direct arXiv Ingest
         </button>
         <button
           onClick={() => setActiveTab("upload")}
@@ -271,7 +271,7 @@ export default function SearchPapers() {
             cursor: "pointer",
           }}
         >
-          📄 Upload PDF Preprint
+           Upload PDF Preprint
         </button>
       </div>
 
@@ -358,7 +358,7 @@ export default function SearchPapers() {
                             cursor: "pointer"
                           }}
                         >
-                          📋 BibTeX
+                          BibTeX
                         </button>
 
                         <button
@@ -375,7 +375,7 @@ export default function SearchPapers() {
                             cursor: "pointer"
                           }}
                         >
-                          {verifyingId === paper.paper_id ? "Verifying NLI..." : "🔍 Verify Grounding (NLI)"}
+                          {verifyingId === paper.paper_id ? "Verifying NLI..." : "Verify Grounding (NLI)"}
                         </button>
 
                         <button
@@ -392,7 +392,7 @@ export default function SearchPapers() {
                             cursor: "pointer"
                           }}
                         >
-                          {loadingMmId === paper.paper_id ? "Extracting..." : "🖼️ Figures & Tables"}
+                          {loadingMmId === paper.paper_id ? "Extracting..." : " Figures & Tables"}
                         </button>
                       </div>
                     </div>
@@ -412,7 +412,7 @@ export default function SearchPapers() {
                             }}
                             style={{ background: "transparent", border: "none", color: copiedBibId === paper.paper_id ? "#34d399" : "#38bdf8", fontSize: "11.5px", cursor: "pointer", fontWeight: "600" }}
                           >
-                            {copiedBibId === paper.paper_id ? "✓ Copied!" : "📋 Copy BibTeX"}
+                            {copiedBibId === paper.paper_id ? "Copied!" : "Copy BibTeX"}
                           </button>
                         </div>
                         <pre style={{ margin: 0, fontSize: "12px", color: "#93c5fd", fontFamily: "monospace", whiteSpace: "pre-wrap" }}>
@@ -462,7 +462,7 @@ export default function SearchPapers() {
                     {mm && (
                       <div style={{ background: "rgba(15, 23, 42, 0.8)", border: "1px solid rgba(168, 85, 247, 0.3)", borderRadius: "8px", padding: "14px" }}>
                         <div style={{ fontSize: "13px", fontWeight: "700", color: "#c084fc", marginBottom: "8px" }}>
-                          🖼️ Extracted Multimodal Assets ({mm.total_figures} Figures, {mm.total_tables} Tables)
+                           Extracted Multimodal Assets ({mm.total_figures} Figures, {mm.total_tables} Tables)
                         </div>
                         {mm.message && (
                           <div style={{ fontSize: "12px", color: "#94a3b8" }}>{mm.message}</div>
@@ -479,7 +479,7 @@ export default function SearchPapers() {
                         )}
                         {mm.tables && mm.tables.length > 0 && (
                           <div style={{ marginTop: "10px", fontSize: "12px", color: "#cbd5e1" }}>
-                            ✓ {mm.tables.length} structured LaTeX/CSV tables indexed for tabular reasoning.
+                            {mm.tables.length} structured LaTeX/CSV tables indexed for tabular reasoning.
                           </div>
                         )}
                       </div>

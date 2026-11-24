@@ -65,7 +65,7 @@ export default function Copilot() {
     } catch {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "⚠️ Unable to contact AI Copilot backend service." },
+        { role: "assistant", content: "Unable to contact AI Copilot backend service." },
       ]);
     }
 
@@ -141,7 +141,7 @@ export default function Copilot() {
               cursor: "pointer",
             }}
           >
-            ✦ {example}
+            {example}
           </button>
         ))}
       </div>
@@ -184,7 +184,7 @@ export default function Copilot() {
                     flexShrink: 0,
                   }}
                 >
-                  🚀
+                  
                 </div>
               )}
 
@@ -225,7 +225,7 @@ export default function Copilot() {
                     flexShrink: 0,
                   }}
                 >
-                  👤
+                  
                 </div>
               )}
             </div>
@@ -246,7 +246,7 @@ export default function Copilot() {
                 fontSize: "14px",
               }}
             >
-              🚀
+              
             </div>
             <div
               style={{

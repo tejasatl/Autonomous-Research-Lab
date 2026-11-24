@@ -70,7 +70,7 @@ export default function ResearchGaps() {
               fontSize: "13px"
             }}
           >
-            🔬 Topological Link Frontiers ({frontiers.length})
+            Topological Link Frontiers ({frontiers.length})
           </button>
           <button
             onClick={() => setActiveTab("bottlenecks")}
@@ -86,7 +86,7 @@ export default function ResearchGaps() {
               fontSize: "13px"
             }}
           >
-            📉 Citation Bottleneck Papers ({gaps.length})
+            Citation Bottleneck Papers ({gaps.length})
           </button>
         </div>
 
@@ -158,7 +158,7 @@ export default function ResearchGaps() {
                   }}
                 >
                   <div style={{ fontSize: "11px", fontWeight: "700", color: "#38bdf8", textTransform: "uppercase" }}>
-                    💡 Cross-Domain Scientific Opportunity
+                    Cross-Domain Scientific Opportunity
                   </div>
                   <p style={{ fontSize: "13.5px", color: "#e2e8f0", marginTop: "4px", lineHeight: "1.5" }}>
                     {f.hypothesis_opportunity}
@@ -179,7 +179,7 @@ export default function ResearchGaps() {
                       cursor: "pointer",
                     }}
                   >
-                    🚀 Investigate with Copilot
+                    Investigate with Copilot
                   </button>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function ResearchGaps() {
                     }}
                   >
                     <div style={{ fontSize: "11px", fontWeight: "700", color: "#c084fc", textTransform: "uppercase" }}>
-                      💡 Why this is an open research opportunity
+                      Why this is an open research opportunity
                     </div>
                     <p style={{ fontSize: "13.5px", color: "#e2e8f0", marginTop: "4px", lineHeight: "1.5" }}>
                       {gap.reason}
@@ -265,7 +265,7 @@ export default function ResearchGaps() {
                       cursor: "pointer",
                     }}
                   >
-                    🚀 Investigate with Copilot
+                    Investigate with Copilot
                   </button>
                 </div>
               </div>

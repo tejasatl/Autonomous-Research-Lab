@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 export default function Profile() {
   const [user, setUser] = useState({
@@ -61,7 +62,7 @@ export default function Profile() {
               boxShadow: "0 0 20px rgba(59, 130, 246, 0.35)",
             }}
           >
-            👤
+            <Icon name="user" size={32} color="#ffffff" />
           </div>
           <div>
             <h2 style={{ fontSize: "20px", color: "#f8fafc", margin: 0 }}>
@@ -120,7 +121,7 @@ export default function Profile() {
                   gap: "8px",
                 }}
               >
-                <span style={{ color: "#10b981" }}>✓</span> {mod}
+                <Icon name="check" size={13} color="#10b981" strokeWidth={2.5} /> {mod}
               </div>
             ))}
           </div>

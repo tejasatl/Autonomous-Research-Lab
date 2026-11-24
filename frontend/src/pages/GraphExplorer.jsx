@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import ForceGraph2D from "react-force-graph-2d";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 export default function GraphExplorer() {
   const [graphData, setGraphData] = useState({ nodes: [], links: [] });
@@ -159,7 +160,10 @@ export default function GraphExplorer() {
               cursor: "pointer",
             }}
           >
-            {viewMode === "graph" ? "📋 Table View" : "🌐 Graph View"}
+            <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <Icon name={viewMode === "graph" ? "dashboard" : "graph"} size={14} />
+              <span>{viewMode === "graph" ? "Table View" : "Graph View"}</span>
+            </span>
           </button>
 
           <button
@@ -301,7 +305,7 @@ export default function GraphExplorer() {
                     cursor: "pointer",
                   }}
                 >
-                  ✕
+                  <Icon name="x" size={16} />
                 </button>
               </div>
 

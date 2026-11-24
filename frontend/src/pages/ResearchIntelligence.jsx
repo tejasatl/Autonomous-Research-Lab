@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 const PRESETS = [
   "Efficient Vision Transformers on Edge Hardware",
@@ -119,10 +120,13 @@ export default function ResearchIntelligence() {
       {/* Intelligence Engine */}
       <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <div>
-          <h2 style={{ fontSize: "18px", color: "#f8fafc", margin: 0 }}>
-            🧠 Deep Topic Intelligence Engine
-          </h2>
-          <p style={{ fontSize: "13px", color: "#94a3b8", marginTop: "4px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <Icon name="intelligence" size={18} color="#2563eb" />
+            <h2 style={{ fontSize: "18px", color: "#0f172a", margin: 0, fontWeight: "700" }}>
+              Deep Topic Intelligence Engine
+            </h2>
+          </div>
+          <p style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
             Synthesize competitive baselines, related literature lineage, novelty metrics, and empirical validation designs for any scientific domain.
           </p>
         </div>
@@ -183,9 +187,11 @@ export default function ResearchIntelligence() {
       </div>
 
       {analyzing && (
-        <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#94a3b8" }}>
-          <div style={{ fontSize: "36px", marginBottom: "12px" }}>🧠</div>
-          <h3>Performing Deep Literature & Novelty Analysis...</h3>
+        <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#64748b" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}>
+            <Icon name="intelligence" size={36} color="#2563eb" />
+          </div>
+          <h3 style={{ color: "#0f172a" }}>Performing Deep Literature & Novelty Analysis...</h3>
           <p style={{ marginTop: "4px", fontSize: "14px" }}>
             Evaluating empirical benchmarks, extracting related work citation chains, and calculating novelty scores.
           </p>
@@ -199,15 +205,15 @@ export default function ResearchIntelligence() {
             style={{
               display: "flex",
               gap: "8px",
-              borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+              borderBottom: "1px solid #e2e8f0",
               paddingBottom: "12px",
             }}
           >
             {[
-              { key: "benchmark", label: "📊 Benchmarks" },
-              { key: "related_work", label: "📚 Related Work" },
-              { key: "novelty", label: "✨ Novelty Score" },
-              { key: "validation", label: "🧪 Validation Plan" },
+              { key: "benchmark", label: "Benchmarks" },
+              { key: "related_work", label: "Related Work" },
+              { key: "novelty", label: "Novelty Score" },
+              { key: "validation", label: "Validation Plan" },
             ].map((tab) => (
               <button
                 key={tab.key}

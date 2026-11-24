@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 const PRESET_TOPICS = [
   "Edge AI for Autonomous Aerial Vehicles",
@@ -122,50 +123,52 @@ export default function ResearchTeam() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ fontSize: "18px" }}>👑</span>
+          <Icon name="sparkles" size={16} color="#2563eb" />
           <div>
-            <div style={{ fontSize: "13px", fontWeight: "600", color: "#f8fafc" }}>Director</div>
-            <div style={{ fontSize: "11px", color: "#60a5fa" }}>Orchestrator</div>
+            <div style={{ fontSize: "13px", fontWeight: "600", color: "#0f172a" }}>Director</div>
+            <div style={{ fontSize: "11px", color: "#2563eb" }}>Orchestrator</div>
           </div>
         </div>
-        <span style={{ color: "#475569" }}>➔</span>
+        <Icon name="arrow-right" size={12} color="#94a3b8" />
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ fontSize: "18px" }}>💡</span>
+          <Icon name="intelligence" size={16} color="#059669" />
           <div>
-            <div style={{ fontSize: "13px", fontWeight: "600", color: "#f8fafc" }}>Idea Agent</div>
-            <div style={{ fontSize: "11px", color: "#34d399" }}>Novel Concept</div>
+            <div style={{ fontSize: "13px", fontWeight: "600", color: "#0f172a" }}>Idea Agent</div>
+            <div style={{ fontSize: "11px", color: "#059669" }}>Novel Concept</div>
           </div>
         </div>
-        <span style={{ color: "#475569" }}>➔</span>
+        <Icon name="arrow-right" size={12} color="#94a3b8" />
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ fontSize: "18px" }}>📋</span>
+          <Icon name="experiment" size={16} color="#d97706" />
           <div>
-            <div style={{ fontSize: "13px", fontWeight: "600", color: "#f8fafc" }}>Planner</div>
-            <div style={{ fontSize: "11px", color: "#fbbf24" }}>Execution Plan</div>
+            <div style={{ fontSize: "13px", fontWeight: "600", color: "#0f172a" }}>Planner</div>
+            <div style={{ fontSize: "11px", color: "#d97706" }}>Execution Plan</div>
           </div>
         </div>
-        <span style={{ color: "#475569" }}>➔</span>
+        <Icon name="arrow-right" size={12} color="#94a3b8" />
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ fontSize: "18px" }}>🧐</span>
+          <Icon name="gaps" size={16} color="#dc2626" />
           <div>
-            <div style={{ fontSize: "13px", fontWeight: "600", color: "#f8fafc" }}>Critic</div>
-            <div style={{ fontSize: "11px", color: "#f87171" }}>Peer Review</div>
+            <div style={{ fontSize: "13px", fontWeight: "600", color: "#0f172a" }}>Critic</div>
+            <div style={{ fontSize: "11px", color: "#dc2626" }}>Peer Review</div>
           </div>
         </div>
-        <span style={{ color: "#475569" }}>➔</span>
+        <Icon name="arrow-right" size={12} color="#94a3b8" />
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ fontSize: "18px" }}>📄</span>
+          <Icon name="proposal" size={16} color="#9333ea" />
           <div>
-            <div style={{ fontSize: "13px", fontWeight: "600", color: "#f8fafc" }}>Proposal</div>
-            <div style={{ fontSize: "11px", color: "#c084fc" }}>Publication Ready</div>
+            <div style={{ fontSize: "13px", fontWeight: "600", color: "#0f172a" }}>Proposal</div>
+            <div style={{ fontSize: "11px", color: "#9333ea" }}>Publication Ready</div>
           </div>
         </div>
       </div>
 
       {loading && (
-        <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#94a3b8" }}>
-          <div style={{ fontSize: "36px", marginBottom: "12px" }}>🤖</div>
-          <h3>Multi-Agent Swarm In Execution...</h3>
+        <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#64748b" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}>
+            <Icon name="team" size={36} color="#2563eb" />
+          </div>
+          <h3 style={{ color: "#0f172a" }}>Multi-Agent Swarm In Execution...</h3>
           <p style={{ fontSize: "14px", marginTop: "6px" }}>
             The Director is synchronizing context across Idea, Planner, and Critic agents.
           </p>
@@ -179,22 +182,23 @@ export default function ResearchTeam() {
           <div style={{ display: "flex", gap: "8px" }}>
             {[
               { id: "all", label: "View All Agents" },
-              { id: "idea", label: "💡 Idea Agent" },
-              { id: "plan", label: "📋 Planner Agent" },
-              { id: "review", label: "🧐 Critic Agent" },
-              { id: "proposal", label: "📄 Proposal Agent" },
+              { id: "idea", label: "Idea Agent" },
+              { id: "plan", label: "Planner Agent" },
+              { id: "review", label: "Critic Agent" },
+              { id: "proposal", label: "Proposal Agent" },
             ].map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 style={{
                   padding: "6px 14px",
-                  background: activeTab === tab.id ? "#3b82f6" : "rgba(255, 255, 255, 0.05)",
+                  background: activeTab === tab.id ? "#2563eb" : "#f1f5f9",
                   border: "none",
-                  borderRadius: "6px",
-                  color: "white",
+                  borderRadius: "8px",
+                  color: activeTab === tab.id ? "white" : "#475569",
                   fontSize: "12.5px",
                   fontWeight: activeTab === tab.id ? "600" : "500",
+                  cursor: "pointer",
                 }}
               >
                 {tab.label}
@@ -203,50 +207,50 @@ export default function ResearchTeam() {
           </div>
 
           {(activeTab === "all" || activeTab === "idea") && (
-            <div className="arl-card" style={{ borderLeft: "4px solid #34d399" }}>
+            <div className="arl-card" style={{ borderLeft: "4px solid #10b981" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                <h3 style={{ fontSize: "16px", color: "#f8fafc" }}>💡 Idea Agent</h3>
+                <h3 style={{ fontSize: "16px", color: "#0f172a", margin: 0, fontWeight: "700" }}>Idea Agent</h3>
                 <span className="arl-badge arl-badge-green">Conceptual Divergence</span>
               </div>
-              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6" }}>
+              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6", color: "#1e293b" }}>
                 {result.idea}
               </pre>
             </div>
           )}
 
           {(activeTab === "all" || activeTab === "plan") && (
-            <div className="arl-card" style={{ borderLeft: "4px solid #fbbf24" }}>
+            <div className="arl-card" style={{ borderLeft: "4px solid #f59e0b" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                <h3 style={{ fontSize: "16px", color: "#f8fafc" }}>📋 Planner Agent</h3>
+                <h3 style={{ fontSize: "16px", color: "#0f172a", margin: 0, fontWeight: "700" }}>Planner Agent</h3>
                 <span className="arl-badge arl-badge-amber">Step-by-Step Architecture</span>
               </div>
-              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6" }}>
+              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6", color: "#1e293b" }}>
                 {result.plan}
               </pre>
             </div>
           )}
 
           {(activeTab === "all" || activeTab === "review") && (
-            <div className="arl-card" style={{ borderLeft: "4px solid #f87171" }}>
+            <div className="arl-card" style={{ borderLeft: "4px solid #ef4444" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                <h3 style={{ fontSize: "16px", color: "#f8fafc" }}>🧐 Critic Agent</h3>
-                <span className="arl-badge" style={{ background: "rgba(239, 68, 68, 0.15)", color: "#f87171", border: "1px solid rgba(239, 68, 68, 0.3)" }}>
+                <h3 style={{ fontSize: "16px", color: "#0f172a", margin: 0, fontWeight: "700" }}>Critic Agent</h3>
+                <span className="arl-badge arl-badge-red">
                   Rigorous Peer Review
                 </span>
               </div>
-              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6" }}>
+              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6", color: "#1e293b" }}>
                 {result.review}
               </pre>
             </div>
           )}
 
           {(activeTab === "all" || activeTab === "proposal") && (
-            <div className="arl-card" style={{ borderLeft: "4px solid #c084fc" }}>
+            <div className="arl-card" style={{ borderLeft: "4px solid #8b5cf6" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                <h3 style={{ fontSize: "16px", color: "#f8fafc" }}>📄 Proposal Agent</h3>
+                <h3 style={{ fontSize: "16px", color: "#0f172a", margin: 0, fontWeight: "700" }}>Proposal Agent</h3>
                 <span className="arl-badge arl-badge-purple">Full Synthesis</span>
               </div>
-              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6" }}>
+              <pre style={{ whiteSpace: "pre-wrap", fontSize: "13.5px", lineHeight: "1.6", color: "#1e293b" }}>
                 {result.proposal}
               </pre>
             </div>

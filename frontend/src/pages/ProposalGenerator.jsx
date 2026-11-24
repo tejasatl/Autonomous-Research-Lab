@@ -150,7 +150,7 @@ export default function ProposalGenerator() {
                 fontWeight: "500",
               }}
             >
-              {copied ? "✓ Copied!" : "📋 Copy Proposal"}
+              {copied ? "Copied" : "Copy Proposal"}
             </button>
           </div>
 
@@ -167,7 +167,7 @@ export default function ProposalGenerator() {
                 fontWeight: "600",
               }}
             >
-              ⚡ Export LaTeX (.tex)
+              Export LaTeX (.tex)
             </button>
             <button
               onClick={downloadMarkdown}
@@ -180,7 +180,7 @@ export default function ProposalGenerator() {
                 fontSize: "13px",
               }}
             >
-              📄 Markdown (.md)
+              Markdown (.md)
             </button>
             <button
               onClick={downloadPDF}
@@ -193,7 +193,7 @@ export default function ProposalGenerator() {
                 fontSize: "13px",
               }}
             >
-              📕 Download PDF
+              Download PDF
             </button>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function ProposalGenerator() {
               color: "#94a3b8",
             }}
           >
-            <div style={{ fontSize: "36px", marginBottom: "12px" }}>📝</div>
+            <div style={{ fontSize: "36px", marginBottom: "12px" }}></div>
             <h3>Ready to Generate Grant Proposal</h3>
             <p style={{ marginTop: "6px", fontSize: "14px" }}>
               Enter a research focus or click one of the suggestions above. The Multi-Agent team will structure background, methodology, hypotheses, and evaluation protocols.
@@ -244,7 +244,7 @@ export default function ProposalGenerator() {
             color: "#94a3b8",
           }}
         >
-          <div style={{ fontSize: "32px", marginBottom: "12px" }}>⚙️</div>
+          <div style={{ fontSize: "14px", fontWeight: "600", color: "#2563eb", marginBottom: "12px" }}>Generating Proposal...</div>
           <h3>Synthesizing Publication Proposal...</h3>
           <p style={{ marginTop: "6px", fontSize: "14px" }}>
             Querying literature, formulating falsifiable hypothesis, and compiling LaTeX structure.

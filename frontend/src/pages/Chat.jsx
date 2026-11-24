@@ -56,7 +56,7 @@ export default function Chat() {
         {
           role: "assistant",
           content:
-            "⚠️ Error querying GraphRAG backend. Please verify backend connection.",
+            "Error querying GraphRAG backend. Please verify backend connection.",
         },
       ]);
     }
@@ -140,7 +140,7 @@ export default function Chat() {
               cursor: "pointer",
             }}
           >
-            ✦ {suggestion}
+            {suggestion}
           </button>
         ))}
       </div>
@@ -183,7 +183,7 @@ export default function Chat() {
                     flexShrink: 0,
                   }}
                 >
-                  ⚡
+                  
                 </div>
               )}
 
@@ -224,7 +224,7 @@ export default function Chat() {
                     flexShrink: 0,
                   }}
                 >
-                  👤
+                  
                 </div>
               )}
             </div>
@@ -245,7 +245,7 @@ export default function Chat() {
                 fontSize: "14px",
               }}
             >
-              ⚡
+              
             </div>
             <div
               style={{

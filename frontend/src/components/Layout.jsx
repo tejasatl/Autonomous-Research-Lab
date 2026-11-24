@@ -1,3 +1,4 @@
+import React from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
@@ -5,37 +6,51 @@ export default function Layout({ children }) {
   return (
     <div
       style={{
-        display: "flex",
         minHeight: "100vh",
-        background: "var(--bg-app, #090d16)",
-        color: "var(--text-main, #f8fafc)",
-        width: "100%",
+        background: "var(--bg-canvas, #e9edf2)",
+        padding: "16px",
+        display: "flex",
+        boxSizing: "border-box",
       }}
     >
-      <Sidebar />
-
+      {/* Studio Rounded Card Frame */}
       <div
         style={{
-          flex: 1,
+          width: "100%",
+          minHeight: "calc(100vh - 32px)",
+          background: "#ffffff",
+          borderRadius: "24px",
+          boxShadow: "0 20px 50px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.03)",
           display: "flex",
-          flexDirection: "column",
-          minWidth: 0,
-          height: "100vh",
           overflow: "hidden",
+          border: "1px solid rgba(226, 232, 240, 0.8)",
         }}
       >
-        <Topbar />
+        <Sidebar />
 
-        <main
+        <div
           style={{
             flex: 1,
-            overflowY: "auto",
-            padding: "24px 32px",
-            background: "var(--bg-app, #090d16)",
+            display: "flex",
+            flexDirection: "column",
+            minWidth: 0,
+            height: "calc(100vh - 32px)",
+            overflow: "hidden",
           }}
         >
-          {children}
-        </main>
+          <Topbar />
+
+          <main
+            style={{
+              flex: 1,
+              overflowY: "auto",
+              padding: "24px 30px",
+              background: "#f8fafc",
+            }}
+          >
+            {children}
+          </main>
+        </div>
       </div>
     </div>
   );

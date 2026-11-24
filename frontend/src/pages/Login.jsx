@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -67,7 +68,7 @@ export default function Login() {
               boxShadow: "0 0 20px rgba(59, 130, 246, 0.4)",
             }}
           >
-            ⚛
+            <Icon name="sparkles" size={24} color="#ffffff" />
           </div>
           <h1 style={{ fontSize: "22px", color: "#f8fafc" }}>
             Sign In to Autonomous Lab

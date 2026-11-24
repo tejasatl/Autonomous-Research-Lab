@@ -129,7 +129,7 @@ export default function Projects() {
 
       {!loading && filteredProjects.length === 0 && (
         <div className="arl-card" style={{ textAlign: "center", padding: "60px", color: "#94a3b8" }}>
-          <div style={{ fontSize: "32px", marginBottom: "8px" }}>📁</div>
+          <div style={{ fontSize: "32px", marginBottom: "8px" }}></div>
           <h3>No research projects found</h3>
           <p style={{ fontSize: "13.5px", marginTop: "4px" }}>
             Create a new initiative above to link literature, formulate hypotheses, and execute experiments.
@@ -181,7 +181,7 @@ export default function Projects() {
                     fontSize: "16px",
                   }}
                 >
-                  ✕
+                  x
                 </button>
               </div>
 
@@ -202,9 +202,9 @@ export default function Projects() {
 
             <div style={{ borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "14px" }}>
               <div style={{ display: "flex", gap: "16px", fontSize: "12px", color: "#64748b", marginBottom: "12px" }}>
-                <span>📅 {proj.created_at || "Recent"}</span>
-                <span>📄 {proj.papers_count || 0} Papers</span>
-                <span>🔍 {proj.gaps_count || 0} Gaps</span>
+                <span>{proj.created_at || "Recent"}</span>
+                <span>{proj.papers_count || 0} Papers</span>
+                <span>{proj.gaps_count || 0} Gaps</span>
               </div>
 
               <div style={{ display: "flex", gap: "8px" }}>
@@ -223,7 +223,7 @@ export default function Projects() {
                     fontWeight: "600",
                   }}
                 >
-                  🚀 Copilot
+                  Copilot
                 </Link>
 
                 <Link
@@ -241,7 +241,7 @@ export default function Projects() {
                     fontWeight: "600",
                   }}
                 >
-                  🤖 Team
+                  Team
                 </Link>
 
                 <Link
@@ -259,7 +259,7 @@ export default function Projects() {
                     fontWeight: "600",
                   }}
                 >
-                  ✍ Write
+                  Write
                 </Link>
               </div>
             </div>

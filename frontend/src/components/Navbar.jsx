@@ -233,7 +233,7 @@ export default function Navbar() {
                 fontWeight: "bold"
               }}
             >
-              👋 {username}
+              {username}
             </span>
 
             <Link

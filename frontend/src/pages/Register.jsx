@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
+import Icon from "../components/Icons";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -86,7 +87,7 @@ export default function Register() {
               boxShadow: "0 0 20px rgba(16, 185, 129, 0.4)",
             }}
           >
-            🧪
+            <Icon name="experiment" size={24} color="#ffffff" />
           </div>
           <h1 style={{ fontSize: "22px", color: "#f8fafc" }}>
             Join the Research Lab
