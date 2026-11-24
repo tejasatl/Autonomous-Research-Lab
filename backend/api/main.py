@@ -1196,5 +1196,61 @@ def synthesize_experiment_code(payload: dict):
     return {"topic": topic, "code": code}
 
 
+# ==========================================
+# Pillar 5: Conference LaTeX & BibTeX Overleaf Exporter
+# ==========================================
+from backend.services.latex_manuscript_generator import get_latex_manuscript_generator
+
+@app.post("/manuscript/generate")
+def generate_latex_manuscript(payload: dict):
+    topic = payload.get("topic", "")
+    venue = payload.get("target_venue", "NeurIPS / ICLR")
+    if not topic:
+        raise HTTPException(status_code=400, detail="'topic' is required.")
+    generator = get_latex_manuscript_generator()
+    return generator.synthesize_manuscript(topic=topic, target_venue=venue)
+
+@app.get("/manuscript/download/{manuscript_id}")
+def download_manuscript_bundle(manuscript_id: str):
+    zip_path = Path("data/manuscripts") / f"{manuscript_id}.zip"
+    if not zip_path.exists():
+        raise HTTPException(status_code=404, detail="Manuscript ZIP bundle not found.")
+    return FileResponse(
+        str(zip_path),
+        media_type="application/zip",
+        filename=f"{manuscript_id}_overleaf.zip"
+    )
+
+@app.get("/manuscript/history")
+def get_manuscripts_history():
+    generator = get_latex_manuscript_generator()
+    return {"manuscripts": generator.get_manuscripts_history()}
+
+@app.get("/bibtex/library")
+def get_bibtex_library():
+    generator = get_latex_manuscript_generator()
+    return generator.build_bibtex_library()
+
+
+# ==========================================
+# Pillar 6: Simulated Conference Peer Review Committee
+# ==========================================
+from backend.agents.peer_review_committee import get_peer_review_committee
+
+@app.post("/review/paper")
+def review_paper_committee(payload: dict):
+    title = payload.get("paper_title", "Submitted Paper")
+    text = payload.get("manuscript_text", "")
+    if not text:
+        raise HTTPException(status_code=400, detail="'manuscript_text' is required.")
+    committee = get_peer_review_committee()
+    return committee.review_manuscript(manuscript_text=text, paper_title=title)
+
+@app.get("/review/history")
+def get_review_history(limit: int = 15):
+    committee = get_peer_review_committee()
+    return {"reviews": committee.get_review_history(limit=limit)}
+
+
 from backend.auth.auth import router as auth_router
 app.include_router(auth_router)

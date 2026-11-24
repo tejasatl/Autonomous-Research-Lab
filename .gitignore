@@ -93,6 +93,9 @@ data/validations/*.md
 data/reports/*.md
 data/experiments/runs/
 data/figures/*
+data/manuscripts/*.zip
+data/manuscripts/ms_*
+data/reviews/rev_*
 memory/research_cycles/*.json
 
 # Ensure .gitkeep files are always tracked

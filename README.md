@@ -105,6 +105,18 @@ python scripts/benchmark_arl.py
 | Hybrid GraphRAG (ARL v2.0) | 74.5% | 18.2% | 6 | 72.0% |
 | **ARL v3.0 (Ours + NLI + LinkPred)** | **53.1%** | **25.1%** | **12** | **100.0%** |
 
+### 6. Conference-Grade LaTeX Manuscript & Overleaf Exporter
+- **Synthesis**: Transforms research proposals into complete, double-column 8-page LaTeX manuscripts (`\documentclass{article}`) with introduction, methodology, formal equations, and formatted tables.
+- **BibTeX Integration**: Automatically builds a unified `references.bib` with verified citation keys mapped to the lab's paper library.
+- **Overleaf Bundling**: Exports compile-ready ZIP archives with `main.tex`, `references.bib`, and setup instructions for 1-click import into Overleaf.
+
+### 7. Simulated Conference Peer Review Committee (ICLR / NeurIPS PC)
+- **Multi-Agent Deliberation**: Submits manuscripts to a 4-agent committee:
+  - **Reviewer 1 (Theory)**: Audits proofs, assumptions, and mathematical formalism.
+  - **Reviewer 2 (Empirical)**: Scrutinizes baseline fairness, dataset biases, and compute reporting.
+  - **Reviewer 3 (Novelty)**: Evaluates originality against prior art.
+  - **Senior Area Chair (Meta-Reviewer)**: Synthesizes final score (1-10), delivers consensus decision (*Strong Accept*, *Weak Accept*, *Borderline*), and drafts an actionable **Author Rebuttal Strategy Plan** to flip skeptical reviewers.
+
 ---
 
 ## 🤖 The Multi-Agent Research Swarm
