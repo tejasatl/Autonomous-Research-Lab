@@ -91,6 +91,8 @@ data/hypotheses/*.md
 data/gaps/*.md
 data/validations/*.md
 data/reports/*.md
+data/experiments/runs/
+data/figures/*
 memory/research_cycles/*.json
 
 # Ensure .gitkeep files are always tracked

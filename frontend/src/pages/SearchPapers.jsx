@@ -12,6 +12,12 @@ export default function SearchPapers() {
   const [fileToUpload, setFileToUpload] = useState(null);
   const [uploadStatus, setUploadStatus] = useState(null);
 
+  // NLI Verification and Multimodal State
+  const [verifications, setVerifications] = useState({});
+  const [verifyingId, setVerifyingId] = useState(null);
+  const [multimodals, setMultimodals] = useState({});
+  const [loadingMmId, setLoadingMmId] = useState(null);
+
   async function search() {
     if (!query.trim()) return;
     setLoading(true);
@@ -24,6 +30,28 @@ export default function SearchPapers() {
       setPapers([]);
     }
     setLoading(false);
+  }
+
+  async function handleVerify(paperId) {
+    setVerifyingId(paperId);
+    try {
+      const res = await api.post(`/verify/paper/${paperId}`);
+      setVerifications(prev => ({ ...prev, [paperId]: res.data }));
+    } catch (err) {
+      alert("Verification error: " + (err.response?.data?.detail || err.message));
+    }
+    setVerifyingId(null);
+  }
+
+  async function handleLoadMultimodal(paperId) {
+    setLoadingMmId(paperId);
+    try {
+      const res = await api.get(`/papers/${paperId}/multimodal`);
+      setMultimodals(prev => ({ ...prev, [paperId]: res.data }));
+    } catch (err) {
+      alert("Multimodal load error: " + (err.response?.data?.detail || err.message));
+    }
+    setLoadingMmId(null);
   }
 
   async function handleArxivIngest() {
@@ -59,25 +87,25 @@ export default function SearchPapers() {
       const res = await api.post("/upload_paper_pdf", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      setUploadStatus(`Success: ${res.data.message || "PDF uploaded and indexed!"}`);
+      setUploadStatus(`Success: ${res.data.message || "PDF uploaded and indexed successfully!"}`);
       setFileToUpload(null);
     } catch (err) {
       setUploadStatus(
-        `Upload error: ${err.response?.data?.detail || "Failed to process PDF."}`
+        `Upload error: ${err.response?.data?.detail || "Could not process PDF file."}`
       );
     }
     setLoading(false);
   }
 
   return (
-    <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
+    <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
         <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
-          Literature Search & Ingestion Studio
+          Literature Search & Multimodal Ingestion
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
-          Explore indexed research papers, ingest new papers directly from arXiv, or upload PDF preprints.
+          Query your vector index, verify atomic citation grounding with NLI, extract figures and tables, and ingest new preprints.
         </p>
       </div>
 
@@ -93,9 +121,10 @@ export default function SearchPapers() {
             color: "white",
             fontSize: "13px",
             fontWeight: "600",
+            cursor: "pointer",
           }}
         >
-          🔍 Search Local & ArXiv Papers
+          🔍 Semantic Search & Verification
         </button>
         <button
           onClick={() => setActiveTab("arxiv")}
@@ -107,6 +136,7 @@ export default function SearchPapers() {
             color: "white",
             fontSize: "13px",
             fontWeight: "600",
+            cursor: "pointer",
           }}
         >
           ⚡ Direct arXiv Ingest
@@ -121,6 +151,7 @@ export default function SearchPapers() {
             color: "white",
             fontSize: "13px",
             fontWeight: "600",
+            cursor: "pointer",
           }}
         >
           📄 Upload PDF Preprint
@@ -137,7 +168,7 @@ export default function SearchPapers() {
               onKeyDown={(e) => {
                 if (e.key === "Enter") search();
               }}
-              placeholder="Search by keywords, concept, or author (e.g., Transformer, Edge AI, Mamba)..."
+              placeholder="Search by keywords, concept, or author (e.g., Transformer, Edge AI, Privacy)..."
               style={{ flex: 1, padding: "12px 16px" }}
             />
             <button
@@ -150,6 +181,7 @@ export default function SearchPapers() {
                 border: "none",
                 borderRadius: "8px",
                 fontWeight: "600",
+                cursor: "pointer",
               }}
             >
               {loading ? "Searching..." : "Search"}
@@ -161,36 +193,142 @@ export default function SearchPapers() {
               Found {papers.length} results
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-              {papers.map((paper, index) => (
-                <div key={index} className="arl-card">
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "16px" }}>
-                    <div>
-                      <h3 style={{ fontSize: "17px", color: "#f8fafc" }}>
-                        {paper.title || "Untitled Paper"}
-                      </h3>
-                      <div style={{ fontSize: "13px", color: "#34d399", marginTop: "4px" }}>
-                        {(paper.authors || []).join(", ") || "Unknown Authors"}
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              {papers.map((paper, index) => {
+                const ver = verifications[paper.paper_id];
+                const mm = multimodals[paper.paper_id];
+
+                return (
+                  <div key={index} className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "16px" }}>
+                      <div>
+                        <h3 style={{ fontSize: "17px", color: "#f8fafc", margin: 0 }}>
+                          {paper.title || "Untitled Paper"}
+                        </h3>
+                        <div style={{ fontSize: "13px", color: "#34d399", marginTop: "4px" }}>
+                          {(paper.authors || []).join(", ") || "Unknown Authors"}
+                        </div>
+                      </div>
+                      <span className="arl-badge arl-badge-blue">
+                        {paper.published || "2024"}
+                      </span>
+                    </div>
+
+                    {paper.abstract && (
+                      <p style={{ fontSize: "13.5px", color: "#cbd5e1", margin: 0, lineHeight: "1.5" }}>
+                        {paper.abstract}
+                      </p>
+                    )}
+
+                    {/* Action Bar */}
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "12px" }}>
+                      <span style={{ fontSize: "12px", color: "#64748b" }}>
+                        ID: {paper.paper_id}
+                      </span>
+
+                      <div style={{ display: "flex", gap: "8px" }}>
+                        <button
+                          onClick={() => handleVerify(paper.paper_id)}
+                          disabled={verifyingId === paper.paper_id}
+                          style={{
+                            padding: "6px 14px",
+                            background: "rgba(16, 185, 129, 0.15)",
+                            border: "1px solid #10b981",
+                            color: "#34d399",
+                            borderRadius: "6px",
+                            fontSize: "12px",
+                            fontWeight: "600",
+                            cursor: "pointer"
+                          }}
+                        >
+                          {verifyingId === paper.paper_id ? "Verifying NLI..." : "🔍 Verify Grounding (NLI)"}
+                        </button>
+
+                        <button
+                          onClick={() => handleLoadMultimodal(paper.paper_id)}
+                          disabled={loadingMmId === paper.paper_id}
+                          style={{
+                            padding: "6px 14px",
+                            background: "rgba(168, 85, 247, 0.15)",
+                            border: "1px solid #a855f7",
+                            color: "#c084fc",
+                            borderRadius: "6px",
+                            fontSize: "12px",
+                            fontWeight: "600",
+                            cursor: "pointer"
+                          }}
+                        >
+                          {loadingMmId === paper.paper_id ? "Extracting..." : "🖼️ Figures & Tables"}
+                        </button>
                       </div>
                     </div>
-                    <span className="arl-badge arl-badge-blue">
-                      {paper.published || "2024"}
-                    </span>
-                  </div>
 
-                  {paper.abstract && (
-                    <p style={{ fontSize: "13.5px", color: "#cbd5e1", marginTop: "12px", lineHeight: "1.5" }}>
-                      {paper.abstract}
-                    </p>
-                  )}
+                    {/* NLI Verification Panel */}
+                    {ver && (
+                      <div style={{ background: "rgba(15, 23, 42, 0.8)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", padding: "14px" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                            <span style={{ fontSize: "13px", fontWeight: "700", color: "#f8fafc" }}>
+                              Citation Factuality Report:
+                            </span>
+                            <span className={`arl-badge ${ver.risk_level === "LOW" ? "arl-badge-green" : ver.risk_level === "MODERATE" ? "arl-badge-amber" : "arl-badge-red"}`}>
+                              {ver.risk_level} Risk
+                            </span>
+                          </div>
+                          <div style={{ fontSize: "12px", color: "#94a3b8" }}>
+                            Grounding: <strong style={{ color: "#34d399" }}>{ver.grounding_score}%</strong> • Hallucination: <strong style={{ color: "#f87171" }}>{ver.hallucination_rate}%</strong>
+                          </div>
+                        </div>
 
-                  <div style={{ marginTop: "14px", display: "flex", gap: "10px", alignItems: "center" }}>
-                    <span style={{ fontSize: "12px", color: "#64748b" }}>
-                      ID: {paper.paper_id}
-                    </span>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px", maxHeight: "240px", overflowY: "auto" }}>
+                          {(ver.verified_claims || []).slice(0, 5).map((c, i) => (
+                            <div key={i} style={{ fontSize: "12px", padding: "8px", borderRadius: "6px", background: c.verdict === "ENTAILMENT" ? "rgba(16, 185, 129, 0.08)" : c.verdict === "CONTRADICTION" ? "rgba(239, 68, 68, 0.08)" : "rgba(245, 158, 11, 0.08)", borderLeft: `3px solid ${c.verdict === "ENTAILMENT" ? "#10b981" : c.verdict === "CONTRADICTION" ? "#ef4444" : "#f59e0b"}` }}>
+                              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "3px" }}>
+                                <strong style={{ color: c.verdict === "ENTAILMENT" ? "#34d399" : c.verdict === "CONTRADICTION" ? "#f87171" : "#fbbf24" }}>
+                                  [{c.verdict}] (Confidence: {Math.round(c.confidence * 100)}%)
+                                </strong>
+                              </div>
+                              <div style={{ color: "#e2e8f0" }}>{c.claim}</div>
+                              {c.matched_source_span && (
+                                <div style={{ color: "#94a3b8", fontSize: "11px", marginTop: "4px", fontStyle: "italic" }}>
+                                  ↳ Evidence: "{c.matched_source_span}"
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Multimodal Panel */}
+                    {mm && (
+                      <div style={{ background: "rgba(15, 23, 42, 0.8)", border: "1px solid rgba(168, 85, 247, 0.3)", borderRadius: "8px", padding: "14px" }}>
+                        <div style={{ fontSize: "13px", fontWeight: "700", color: "#c084fc", marginBottom: "8px" }}>
+                          🖼️ Extracted Multimodal Assets ({mm.total_figures} Figures, {mm.total_tables} Tables)
+                        </div>
+                        {mm.message && (
+                          <div style={{ fontSize: "12px", color: "#94a3b8" }}>{mm.message}</div>
+                        )}
+                        {mm.figures && mm.figures.length > 0 && (
+                          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "10px", marginTop: "10px" }}>
+                            {mm.figures.map((fig, fIdx) => (
+                              <div key={fIdx} style={{ background: "#050811", borderRadius: "6px", padding: "8px", border: "1px solid rgba(255,255,255,0.08)" }}>
+                                <div style={{ fontSize: "11px", color: "#38bdf8", marginBottom: "4px" }}>{fig.figure_id} (Page {fig.page})</div>
+                                <div style={{ fontSize: "10px", color: "#64748b" }}>Dimensions: {fig.width} x {fig.height} px</div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {mm.tables && mm.tables.length > 0 && (
+                          <div style={{ marginTop: "10px", fontSize: "12px", color: "#cbd5e1" }}>
+                            ✓ {mm.tables.length} structured LaTeX/CSV tables indexed for tabular reasoning.
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
 
               {papers.length === 0 && !loading && (
                 <div className="arl-card" style={{ textAlign: "center", padding: "40px", color: "#94a3b8" }}>
@@ -281,7 +419,7 @@ export default function SearchPapers() {
             Upload Research PDF
           </h2>
           <p style={{ fontSize: "13px", color: "#94a3b8", marginBottom: "20px" }}>
-            Upload your local PDF preprints or whitepapers. PyMuPDF will extract sections, abstracts, and authors, storing them in your lab knowledge base.
+            Upload your local PDF preprints or whitepapers. PyMuPDF will extract sections, abstracts, figures, and authors, storing them in your lab knowledge base.
           </p>
 
           <form onSubmit={handleFileUpload} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -298,21 +436,11 @@ export default function SearchPapers() {
                 type="file"
                 accept=".pdf"
                 onChange={(e) => setFileToUpload(e.target.files[0])}
-                style={{ display: "none" }}
-                id="pdf-upload"
+                style={{ display: "block", margin: "0 auto 10px" }}
               />
-              <label
-                htmlFor="pdf-upload"
-                style={{ cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}
-              >
-                <span style={{ fontSize: "36px" }}>📄</span>
-                <span style={{ color: "#60a5fa", fontWeight: "600", fontSize: "14px" }}>
-                  {fileToUpload ? fileToUpload.name : "Click to select a PDF file"}
-                </span>
-                <span style={{ color: "#64748b", fontSize: "12px" }}>
-                  Supported format: .pdf (Up to 50MB)
-                </span>
-              </label>
+              <span style={{ fontSize: "13px", color: "#64748b" }}>
+                Select a .pdf document from your computer
+              </span>
             </div>
 
             <button
@@ -320,7 +448,7 @@ export default function SearchPapers() {
               disabled={loading || !fileToUpload}
               style={{
                 padding: "12px",
-                background: "#8b5cf6",
+                background: "#3b82f6",
                 color: "white",
                 border: "none",
                 borderRadius: "8px",
@@ -328,7 +456,7 @@ export default function SearchPapers() {
                 cursor: "pointer",
               }}
             >
-              {loading ? "Processing PDF..." : "Upload & Vectorize PDF"}
+              {loading ? "Analyzing PDF..." : "Upload & Extract Multimodal Assets"}
             </button>
 
             {uploadStatus && (

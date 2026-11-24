@@ -1091,5 +1091,110 @@ def delete_project(project_id: str):
     return {"message": "Project deleted"}
 
 
+# ==========================================
+# Pillar 1: Citation & Grounding NLI Verifier
+# ==========================================
+from backend.services.citation_verifier import get_citation_verifier
+
+@app.post("/verify/paper/{paper_id}")
+def verify_paper(paper_id: str, payload: dict = None):
+    summary_text = (payload or {}).get("summary") if payload else None
+    verifier = get_citation_verifier()
+    try:
+        return verifier.verify_paper_summary(paper_id=paper_id, summary_text=summary_text)
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/verify/claims")
+def verify_custom_claims(payload: dict):
+    gen_text = payload.get("generated_text", "")
+    src_text = payload.get("source_text", "")
+    if not gen_text or not src_text:
+        raise HTTPException(status_code=400, detail="Both 'generated_text' and 'source_text' are required.")
+    verifier = get_citation_verifier()
+    return verifier.verify_document(gen_text, src_text)
+
+@app.get("/verify/benchmark")
+def get_benchmark_report():
+    bench_file = Path("data/reports/arl_bench_results.json")
+    if bench_file.exists():
+        with open(bench_file, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {"message": "Run scripts/benchmark_arl.py to generate benchmark results."}
+
+
+# ==========================================
+# Pillar 2: Multimodal Scientific Ingestion
+# ==========================================
+from backend.services.multimodal_paper_extractor import get_multimodal_extractor
+
+@app.get("/papers/{paper_id}/multimodal")
+def get_paper_multimodal(paper_id: str):
+    extractor = get_multimodal_extractor()
+    return extractor.get_paper_multimodal_data(paper_id)
+
+@app.get("/papers/{paper_id}/figures/{filename}")
+def get_paper_figure(paper_id: str, filename: str):
+    fig_path = Path("data/figures") / paper_id / filename
+    if not fig_path.exists():
+        raise HTTPException(status_code=404, detail="Figure not found")
+    return FileResponse(str(fig_path))
+
+@app.post("/papers/{paper_id}/interpret-figure")
+def interpret_paper_figure(paper_id: str, payload: dict):
+    filename = payload.get("figure_filename")
+    context = payload.get("context", "")
+    if not filename:
+        raise HTTPException(status_code=400, detail="'figure_filename' is required.")
+    extractor = get_multimodal_extractor()
+    return extractor.interpret_figure(paper_id=paper_id, figure_filename=filename, context=context)
+
+
+# ==========================================
+# Pillar 3: Graph Link Prediction & Frontiers
+# ==========================================
+from backend.services.graph_link_predictor import get_graph_link_predictor
+
+@app.get("/graph/link-predictions")
+def get_link_predictions(top_k: int = 15):
+    predictor = get_graph_link_predictor()
+    return {"predictions": predictor.predict_links(top_k=top_k)}
+
+@app.get("/graph/frontiers")
+def get_graph_frontiers():
+    predictor = get_graph_link_predictor()
+    return predictor.get_discovery_frontiers()
+
+
+# ==========================================
+# Pillar 4: Sandboxed Experiment Execution
+# ==========================================
+from backend.services.experiment_sandbox import get_experiment_sandbox
+
+@app.post("/experiments/execute")
+def execute_experiment(payload: dict):
+    topic = payload.get("topic", "Autonomous PyTorch Benchmark")
+    code = payload.get("code")
+    sandbox = get_experiment_sandbox()
+    return sandbox.execute_closed_loop(experiment_topic=topic, custom_code=code)
+
+@app.get("/experiments/runs")
+def get_experiment_runs(limit: int = 20):
+    sandbox = get_experiment_sandbox()
+    return {"runs": sandbox.get_experiment_runs(limit=limit)}
+
+@app.post("/experiments/synthesize-code")
+def synthesize_experiment_code(payload: dict):
+    topic = payload.get("topic", "")
+    instructions = payload.get("instructions", "")
+    if not topic:
+        raise HTTPException(status_code=400, detail="'topic' is required.")
+    sandbox = get_experiment_sandbox()
+    code = sandbox.synthesize_code(topic, instructions)
+    return {"topic": topic, "code": code}
+
+
 from backend.auth.auth import router as auth_router
 app.include_router(auth_router)
