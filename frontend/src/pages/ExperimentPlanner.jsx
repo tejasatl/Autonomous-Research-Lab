@@ -373,6 +373,46 @@ print("✓ Benchmark completed successfully.")
                       </pre>
                     )}
                   </div>
+
+                  {/* Rendered Matplotlib Empirical Plots */}
+                  {sandboxResult.plots && sandboxResult.plots.length > 0 && (
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "6px" }}>
+                      <div style={{ fontSize: "11px", color: "#38bdf8", textTransform: "uppercase", fontWeight: "700" }}>
+                        📈 Generated Empirical Figures & Matplotlib Artifacts:
+                      </div>
+                      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "14px" }}>
+                        {sandboxResult.plots.map((plot, pIdx) => {
+                          const plotUrl = typeof plot === "string" 
+                            ? `${api.defaults.baseURL || "http://127.0.0.1:8000"}/experiments/runs/${sandboxResult.run_id}/plots/${plot}`
+                            : `${api.defaults.baseURL || "http://127.0.0.1:8000"}${plot.url}`;
+                          const plotName = typeof plot === "string" ? plot : plot.filename;
+
+                          return (
+                            <div key={pIdx} style={{ background: "#050811", border: "1px solid rgba(56, 189, 248, 0.25)", borderRadius: "8px", overflow: "hidden" }}>
+                              <img
+                                src={plotUrl}
+                                alt={plotName}
+                                style={{ width: "100%", maxHeight: "300px", objectFit: "contain", display: "block", background: "#020617" }}
+                                onError={(e) => { e.target.style.display = 'none'; }}
+                              />
+                              <div style={{ padding: "10px 14px", fontSize: "12px", color: "#cbd5e1", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+                                <span>📊 {plotName}</span>
+                                <a
+                                  href={plotUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  download={plotName}
+                                  style={{ color: "#38bdf8", textDecoration: "none", fontWeight: "600" }}
+                                >
+                                  ⬇ Download
+                                </a>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

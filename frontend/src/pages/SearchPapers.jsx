@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import api from "../services/api";
 
 export default function SearchPapers() {
@@ -17,6 +17,71 @@ export default function SearchPapers() {
   const [verifyingId, setVerifyingId] = useState(null);
   const [multimodals, setMultimodals] = useState({});
   const [loadingMmId, setLoadingMmId] = useState(null);
+
+  // BibTeX & ArXiv Daemon Alerts State
+  const [bibtexMap, setBibtexMap] = useState({});
+  const [copiedBibId, setCopiedBibId] = useState(null);
+  const [alerts, setAlerts] = useState([]);
+  const [crawlingArxiv, setCrawlingArxiv] = useState(false);
+
+  useEffect(() => {
+    loadAlerts();
+  }, []);
+
+  async function loadAlerts() {
+    try {
+      const res = await api.get("/arxiv/alerts");
+      setAlerts(res.data.alerts || []);
+    } catch {
+      setAlerts([]);
+    }
+  }
+
+  async function handleTriggerArxivCrawl() {
+    setCrawlingArxiv(true);
+    try {
+      const res = await api.post("/arxiv/crawl-now", { limit: 5 });
+      alert(`arXiv Crawler Finished: Scanned ${res.data.preprints_scanned} preprints. Indexed ${res.data.new_papers_indexed} new papers with ${res.data.new_alerts_generated} gap alerts.`);
+      loadAlerts();
+    } catch (err) {
+      alert("Crawl failed: " + (err.response?.data?.detail || err.message));
+    }
+    setCrawlingArxiv(false);
+  }
+
+  async function handleExportBibtexLibrary() {
+    try {
+      const res = await api.get("/bibtex/library");
+      const bibText = res.data.bibtex || "";
+      const blob = new Blob([bibText], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "autonomous_research_lab.bib";
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      alert("Failed to export BibTeX: " + (err.response?.data?.detail || err.message));
+    }
+  }
+
+  async function handleLoadBibtex(paperId) {
+    if (bibtexMap[paperId]) {
+      // Toggle off
+      setBibtexMap(prev => {
+        const next = { ...prev };
+        delete next[paperId];
+        return next;
+      });
+      return;
+    }
+    try {
+      const res = await api.get(`/bibtex/paper/${paperId}`);
+      setBibtexMap(prev => ({ ...prev, [paperId]: res.data.bibtex }));
+    } catch (err) {
+      alert("Failed to load BibTeX: " + (err.response?.data?.detail || err.message));
+    }
+  }
 
   async function search() {
     if (!query.trim()) return;
@@ -100,14 +165,66 @@ export default function SearchPapers() {
   return (
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
-      <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
-          Literature Search & Multimodal Ingestion
-        </h1>
-        <p style={{ fontSize: "14px", color: "#94a3b8" }}>
-          Query your vector index, verify atomic citation grounding with NLI, extract figures and tables, and ingest new preprints.
-        </p>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+        <div>
+          <h1 style={{ fontSize: "24px", color: "#f8fafc", margin: 0 }}>
+            Literature Search & Citation Library Manager
+          </h1>
+          <p style={{ fontSize: "14px", color: "#94a3b8", marginTop: "6px" }}>
+            Query vector index, verify citation grounding with NLI, extract multimodal figures, and export standardized BibTeX libraries.
+          </p>
+        </div>
+
+        <button
+          onClick={handleExportBibtexLibrary}
+          style={{
+            padding: "8px 16px",
+            background: "rgba(168, 85, 247, 0.15)",
+            border: "1px solid #a855f7",
+            color: "#c084fc",
+            borderRadius: "6px",
+            fontSize: "12.5px",
+            fontWeight: "600",
+            cursor: "pointer"
+          }}
+        >
+          📚 Export Full .bib Library
+        </button>
       </div>
+
+      {/* Autonomous ArXiv Daemon Alerts Banner */}
+      {alerts.length > 0 && (
+        <div style={{ background: "rgba(56, 189, 248, 0.08)", border: "1px solid rgba(56, 189, 248, 0.25)", borderRadius: "10px", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <span style={{ fontSize: "16px" }}>🛰️</span>
+              <strong style={{ fontSize: "13.5px", color: "#38bdf8" }}>
+                Autonomous arXiv Daemon Alerts ({alerts.length} Active)
+              </strong>
+            </div>
+            <div style={{ fontSize: "12.5px", color: "#cbd5e1", marginTop: "4px" }}>
+              Latest: <strong>{alerts[0].paper_title}</strong> (arXiv:{alerts[0].paper_id}) correlates with frontier: <span style={{ color: "#34d399" }}>{alerts[0].matched_gap}</span>
+            </div>
+          </div>
+
+          <button
+            onClick={handleTriggerArxivCrawl}
+            disabled={crawlingArxiv}
+            style={{
+              padding: "6px 14px",
+              background: "#38bdf8",
+              color: "#0f172a",
+              border: "none",
+              borderRadius: "6px",
+              fontSize: "12px",
+              fontWeight: "700",
+              cursor: "pointer"
+            }}
+          >
+            {crawlingArxiv ? "Crawling..." : "⚡ Crawl arXiv Now"}
+          </button>
+        </div>
+      )}
 
       {/* Tabs */}
       <div style={{ display: "flex", gap: "8px", borderBottom: "1px solid rgba(255, 255, 255, 0.08)", paddingBottom: "12px" }}>
@@ -197,6 +314,7 @@ export default function SearchPapers() {
               {papers.map((paper, index) => {
                 const ver = verifications[paper.paper_id];
                 const mm = multimodals[paper.paper_id];
+                const bib = bibtexMap[paper.paper_id];
 
                 return (
                   <div key={index} className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
@@ -227,6 +345,22 @@ export default function SearchPapers() {
                       </span>
 
                       <div style={{ display: "flex", gap: "8px" }}>
+                        <button
+                          onClick={() => handleLoadBibtex(paper.paper_id)}
+                          style={{
+                            padding: "6px 14px",
+                            background: bib ? "rgba(59, 130, 246, 0.2)" : "rgba(255, 255, 255, 0.08)",
+                            border: "1px solid rgba(255, 255, 255, 0.15)",
+                            color: bib ? "#60a5fa" : "#f8fafc",
+                            borderRadius: "6px",
+                            fontSize: "12px",
+                            fontWeight: "600",
+                            cursor: "pointer"
+                          }}
+                        >
+                          📋 BibTeX
+                        </button>
+
                         <button
                           onClick={() => handleVerify(paper.paper_id)}
                           disabled={verifyingId === paper.paper_id}
@@ -262,6 +396,30 @@ export default function SearchPapers() {
                         </button>
                       </div>
                     </div>
+
+                    {/* BibTeX Code Panel */}
+                    {bib && (
+                      <div style={{ background: "#050811", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", padding: "12px" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
+                          <span style={{ fontSize: "11px", color: "#64748b", textTransform: "uppercase", fontWeight: "700" }}>
+                            Standardized BibTeX Citation:
+                          </span>
+                          <button
+                            onClick={() => {
+                              navigator.clipboard.writeText(bib);
+                              setCopiedBibId(paper.paper_id);
+                              setTimeout(() => setCopiedBibId(null), 2000);
+                            }}
+                            style={{ background: "transparent", border: "none", color: copiedBibId === paper.paper_id ? "#34d399" : "#38bdf8", fontSize: "11.5px", cursor: "pointer", fontWeight: "600" }}
+                          >
+                            {copiedBibId === paper.paper_id ? "✓ Copied!" : "📋 Copy BibTeX"}
+                          </button>
+                        </div>
+                        <pre style={{ margin: 0, fontSize: "12px", color: "#93c5fd", fontFamily: "monospace", whiteSpace: "pre-wrap" }}>
+                          {bib}
+                        </pre>
+                      </div>
+                    )}
 
                     {/* NLI Verification Panel */}
                     {ver && (

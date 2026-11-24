@@ -1231,6 +1231,45 @@ def get_bibtex_library():
     generator = get_latex_manuscript_generator()
     return generator.build_bibtex_library()
 
+@app.get("/bibtex/paper/{paper_id}")
+def get_paper_bibtex(paper_id: str):
+    generator = get_latex_manuscript_generator()
+    lib = generator.build_bibtex_library()
+    # Search for this paper's key in bibtex
+    key = lib.get("key_map", {}).get(paper_id)
+    if not key:
+        raise HTTPException(status_code=404, detail="Paper not found in library.")
+    # Extract entry
+    entries = lib["bibtex"].split("\n\n")
+    for entry in entries:
+        if f"{{{key}," in entry:
+            return {"paper_id": paper_id, "bib_key": key, "bibtex": entry}
+    return {"paper_id": paper_id, "bib_key": key, "bibtex": f"@article{{{key},\n  title = {{Paper {paper_id}}}\n}}"}
+
+
+# ==========================================
+# Pillar 7: Sandbox Plots & ArXiv Daemon
+# ==========================================
+from backend.services.arxiv_daemon import get_arxiv_daemon
+
+@app.get("/experiments/runs/{run_id}/plots/{filename}")
+def get_sandbox_plot(run_id: str, filename: str):
+    plot_path = Path("data/experiments/runs") / run_id / filename
+    if not plot_path.exists():
+        raise HTTPException(status_code=404, detail="Plot artifact not found.")
+    return FileResponse(str(plot_path), media_type="image/png")
+
+@app.get("/arxiv/alerts")
+def get_arxiv_alerts():
+    daemon = get_arxiv_daemon()
+    return {"alerts": daemon.get_alerts()}
+
+@app.post("/arxiv/crawl-now")
+def trigger_arxiv_crawl(payload: dict = None):
+    limit = (payload or {}).get("limit", 6)
+    daemon = get_arxiv_daemon()
+    return daemon.run_cycle(max_results=limit)
+
 
 # ==========================================
 # Pillar 6: Simulated Conference Peer Review Committee

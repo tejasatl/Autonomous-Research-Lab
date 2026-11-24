@@ -36,20 +36,19 @@ class TopicRecommender:
 
                 paper = json.load(f)
 
+            summary_text = paper.get("summary") or paper.get("abstract", "")
+            title_text = paper.get("title", "")
+
             self.papers.append(
                 {
                     "id": file.stem,
-                    "title": paper["title"],
-                    "summary": paper["summary"]
+                    "title": title_text,
+                    "summary": summary_text
                 }
             )
 
         self.paper_texts = [
-
-            paper["title"] +
-            " " +
-            paper["summary"]
-
+            paper["title"] + " " + paper["summary"]
             for paper in self.papers
         ]
 

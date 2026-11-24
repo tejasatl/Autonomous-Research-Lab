@@ -117,6 +117,19 @@ python scripts/benchmark_arl.py
   - **Reviewer 3 (Novelty)**: Evaluates originality against prior art.
   - **Senior Area Chair (Meta-Reviewer)**: Synthesizes final score (1-10), delivers consensus decision (*Strong Accept*, *Weak Accept*, *Borderline*), and drafts an actionable **Author Rebuttal Strategy Plan** to flip skeptical reviewers.
 
+### 8. Empirical Matplotlib Plot Synthesis & Artifact Serving
+- **Synthesis**: Code generation agent synthesizes benchmark code that writes real scientific plots (loss curves, Pareto frontiers, latency comparisons) via Matplotlib (`Agg` backend).
+- **Execution & Visualization**: Sandboxed subprocess captures the generated `.png` artifacts, serves them via `/experiments/runs/{run_id}/plots/{filename}`, and renders the visual plots directly inside the web UI with a download option.
+
+### 9. Autonomous Overnight arXiv Research Daemon (`arxiv_watcher.py`)
+- **Proactive Ingestion**: A background daemon that polls arXiv Atom feeds for categories (`cs.AI`, `cs.LG`, `cs.CV`).
+- **Gap Correlation**: Cross-references incoming preprints against open research gaps in the lab's knowledge base and generates real-time alerts when new preprints address open frontiers.
+- **CLI & API**: Can be run as a daemon (`python scripts/arxiv_watcher.py --interval 3600`) or triggered on demand via UI (`POST /arxiv/crawl-now`).
+
+### 10. Standardized BibTeX & Citation Library Manager
+- **Export**: Auto-formats all papers in the lab's library into standardized `@article{...}` BibTeX entries with author lists, years, and clean sanitized keys.
+- **Zotero / Overleaf Ready**: 1-click **"Export .bib Library"** downloads the full bibliography ready to drop into reference managers or LaTeX editors.
+
 ---
 
 ## 🤖 The Multi-Agent Research Swarm

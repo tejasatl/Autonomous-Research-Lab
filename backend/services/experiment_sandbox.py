@@ -38,15 +38,21 @@ Experiment Objective: {experiment_topic}
 Specific Instructions: {instructions}
 
 Requirements:
-1. Use standard libraries: numpy, torch, scikit-learn, math, time, or json.
-2. If datasets are required, generate a synthetic or standard toy dataset (e.g. synthetic embeddings or classification tensors).
-3. Print clear, formatted scientific metrics to stdout (e.g., Latency (ms), Accuracy / Loss, Memory Bandwidth, Parameters).
-4. Optionally generate a summary dictionary printed as:
+1. Use standard scientific libraries: numpy, torch, matplotlib.pyplot (using 'Agg' backend: import matplotlib; matplotlib.use('Agg')), math, time, json.
+2. If datasets are required, generate a realistic synthetic or standard toy benchmark dataset (e.g. synthetic embeddings or classification tensors).
+3. Generate a high-resolution empirical comparison plot using matplotlib:
+   - Create a clean scientific plot (e.g. Loss Curves over epochs, Latency vs Accuracy Pareto Frontier, or Compression Ratios).
+   - Use a modern dark or clean scientific theme with labeled axes and legends.
+   - Save the figure directly to the working directory:
+     plt.savefig("benchmark_plot.png", dpi=150, bbox_inches="tight")
+     plt.close()
+4. Print clear, formatted scientific metrics to stdout (e.g., Latency (ms), Accuracy / Loss, Memory Bandwidth, Parameters).
+5. Output a summary dictionary printed as:
    ---METRICS---
    {{"metric_name": value, ...}}
    ---END_METRICS---
-5. Keep execution quick (under 10 seconds).
-6. Return ONLY valid Python code inside a ```python ``` block. Do not include introductory conversational text.
+6. Keep execution quick (under 10 seconds).
+7. Return ONLY valid Python code inside a ```python ``` block. Do not include conversational text.
 """
         response = llm.generate(prompt)
 
@@ -200,7 +206,13 @@ Fix the code completely. Return ONLY the corrected executable Python code inside
             "stdout": final_result["stdout"],
             "stderr": final_result["stderr"],
             "metrics": final_result["metrics"],
-            "plots": final_result["plots"],
+            "plots": [
+                {
+                    "filename": p,
+                    "url": f"/experiments/runs/{run_id}/plots/{p}"
+                }
+                for p in final_result["plots"]
+            ],
             "execution_time": final_result["execution_time_seconds"],
             "history": iteration_history
         }
