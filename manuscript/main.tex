@@ -139,11 +139,12 @@ re-running iteratively up to $N_{\max} = 3$ attempts until error-free convergenc
 \section{Empirical Evaluation: ARL-Bench}
 
 \subsection{Benchmark Protocol}
-We evaluate ARL using the standardized \textit{ARL-Bench} suite (`scripts/benchmark_arl.py`). The evaluation tests citation attribution, topological discovery, and sandbox code execution across real indexed arXiv literature.
+We evaluate ARL using the standardized \textit{ARL-Bench} suite (\texttt{scripts/benchmark\_arl.py}). The evaluation tests citation attribution, topological discovery, and sandbox code execution across real indexed arXiv literature.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Methodology} & \textbf{Citation Prec.} & \textbf{Hallucination} & \textbf{Gaps} & \textbf{Code Exec.} \\
@@ -152,7 +153,8 @@ Vector RAG Baseline  & 48.2\% & 34.6\% & -- & -- \\
 Hybrid GraphRAG      & 74.5\% & 18.2\% & 6  & 72.0\% \\
 \textbf{ARL (Ours + NLI)} & \textbf{53.1\%} & \textbf{25.1\%} & \textbf{12} & \textbf{100.0\%} \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{Quantitative ablation on ARL-Bench across 56 atomic claims, 70 citation graph nodes, and sandboxed benchmark synthesis runs.}
 \label{tab:arl_bench}
 \end{table}
