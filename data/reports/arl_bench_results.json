@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-24 22:21:23",
+  "timestamp": "2026-11-25 17:19:05",
   "papers_evaluated": 5,
   "avg_grounding_score": 53.08,
   "avg_hallucination_rate": 25.1,
@@ -48,6 +48,6 @@
       "risk_level": "LOW"
     }
   ],
-  "elapsed_benchmark_time_seconds": 11.38,
+  "elapsed_benchmark_time_seconds": 18.09,
   "latex_ablation_table": "\n% =====================================================================\n% ARL-BENCH ABLATION TABLE (AUTONOMOUS RESEARCH LAB v3.0)\n% =====================================================================\n\\begin{table}[h]\n\\centering\n\\small\n\\begin{tabular}{lcccc}\n\\toprule\n\\textbf{Methodology} & \\textbf{Citation Prec. (\\%)} & \\textbf{Hallucination Rate (\\%)} & \\textbf{Gaps Discovered} & \\textbf{Code Exec. (\\%)} \\\\\n\\midrule\nStandard Vector RAG (Baseline)     & 48.2 & 34.6 & --   & --   \\\\\nHybrid GraphRAG (ARL v2.0)         & 74.5 & 18.2 & 6    & 72.0 \\\\\n\\textbf{ARL v3.0 (Ours + NLI)} & \\textbf{53.08} & \\textbf{25.1} & \\textbf{12} & \\textbf{100.0} \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Quantitative ablation across scientific literature ingestion, topological discovery, and sandboxed code synthesis.}\n\\label{tab:arl_bench}\n\\end{table}\n"
 }
