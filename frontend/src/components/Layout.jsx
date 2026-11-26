@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
 export default function Layout({ children }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div
       style={{
         minHeight: "100vh",
         background: "var(--bg-canvas, #e9edf2)",
-        padding: "16px",
         display: "flex",
         boxSizing: "border-box",
+        width: "100%",
       }}
     >
+      {/* Mobile Drawer Backdrop */}
+      {sidebarOpen && (
+        <div
+          className="arl-sidebar-overlay"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Studio Rounded Card Frame */}
       <div
+        className="arl-layout-frame"
         style={{
           width: "100%",
           minHeight: "calc(100vh - 32px)",
@@ -24,9 +35,13 @@ export default function Layout({ children }) {
           display: "flex",
           overflow: "hidden",
           border: "1px solid rgba(226, 232, 240, 0.8)",
+          position: "relative",
         }}
       >
-        <Sidebar />
+        <Sidebar
+          isOpen={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+        />
 
         <div
           style={{
@@ -38,9 +53,10 @@ export default function Layout({ children }) {
             overflow: "hidden",
           }}
         >
-          <Topbar />
+          <Topbar onToggleSidebar={() => setSidebarOpen((prev) => !prev)} />
 
           <main
+            className="arl-main-area"
             style={{
               flex: 1,
               overflowY: "auto",

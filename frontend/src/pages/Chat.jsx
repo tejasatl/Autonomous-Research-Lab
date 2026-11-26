@@ -83,7 +83,7 @@ export default function Chat() {
         }}
       >
         <div>
-          <h1 style={{ fontSize: "22px", color: "#f8fafc" }}>
+          <h1 style={{ fontSize: "22px", color: "#0f172a" }}>
             GraphRAG Knowledge Chat
           </h1>
           <p style={{ fontSize: "13px", color: "#94a3b8" }}>
@@ -197,7 +197,7 @@ export default function Chat() {
                   background: isUser
                     ? "linear-gradient(135deg, #2563eb, #1d4ed8)"
                     : "#172136",
-                  color: "#f8fafc",
+                  color: "#0f172a",
                   fontSize: "14px",
                   lineHeight: "1.6",
                   border: isUser

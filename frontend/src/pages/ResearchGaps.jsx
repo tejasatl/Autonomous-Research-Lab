@@ -45,7 +45,7 @@ export default function ResearchGaps() {
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Topological Gap Discovery & Research Frontiers
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -127,14 +127,14 @@ export default function ResearchGaps() {
                   <div>
                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                       <span className="arl-badge arl-badge-blue">{f.source_type}</span>
-                      <strong style={{ fontSize: "16px", color: "#f8fafc" }}>{f.source_name}</strong>
+                      <strong style={{ fontSize: "16px", color: "#0f172a" }}>{f.source_name}</strong>
                       <span style={{ color: "#94a3b8" }}>⟷</span>
                       <span className="arl-badge arl-badge-purple">{f.target_type}</span>
-                      <strong style={{ fontSize: "16px", color: "#f8fafc" }}>{f.target_name}</strong>
+                      <strong style={{ fontSize: "16px", color: "#0f172a" }}>{f.target_name}</strong>
                     </div>
                     {f.shared_intermediaries && f.shared_intermediaries.length > 0 && (
                       <div style={{ fontSize: "12px", color: "#64748b", marginTop: "6px" }}>
-                        Topological Bridge Nodes: <span style={{ color: "#cbd5e1" }}>{f.shared_intermediaries.join(", ")}</span>
+                        Topological Bridge Nodes: <span style={{ color: "#334155" }}>{f.shared_intermediaries.join(", ")}</span>
                       </div>
                     )}
                   </div>
@@ -160,7 +160,7 @@ export default function ResearchGaps() {
                   <div style={{ fontSize: "11px", fontWeight: "700", color: "#38bdf8", textTransform: "uppercase" }}>
                     Cross-Domain Scientific Opportunity
                   </div>
-                  <p style={{ fontSize: "13.5px", color: "#e2e8f0", marginTop: "4px", lineHeight: "1.5" }}>
+                  <p style={{ fontSize: "13.5px", color: "#334155", marginTop: "4px", lineHeight: "1.5" }}>
                     {f.hypothesis_opportunity}
                   </p>
                 </div>
@@ -207,7 +207,7 @@ export default function ResearchGaps() {
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "16px" }}>
                   <div>
-                    <h3 style={{ fontSize: "17px", color: "#f8fafc", margin: 0 }}>
+                    <h3 style={{ fontSize: "17px", color: "#0f172a", margin: 0 }}>
                       {gap.title || "Untitled Frontier Paper"}
                     </h3>
                     <div style={{ fontSize: "13px", color: "#34d399", marginTop: "4px" }}>
@@ -233,7 +233,7 @@ export default function ResearchGaps() {
                     <div style={{ fontSize: "11px", fontWeight: "700", color: "#c084fc", textTransform: "uppercase" }}>
                       Why this is an open research opportunity
                     </div>
-                    <p style={{ fontSize: "13.5px", color: "#e2e8f0", marginTop: "4px", lineHeight: "1.5" }}>
+                    <p style={{ fontSize: "13.5px", color: "#334155", marginTop: "4px", lineHeight: "1.5" }}>
                       {gap.reason}
                     </p>
                   </div>

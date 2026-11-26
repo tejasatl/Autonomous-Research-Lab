@@ -36,7 +36,7 @@ export default function Authors() {
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Researcher Collaboration Network
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -106,7 +106,7 @@ export default function Authors() {
                   <Icon name="user" size={18} color="#059669" />
                 </div>
                 <div>
-                  <h3 style={{ fontSize: "15px", color: "#f8fafc", margin: 0 }}>
+                  <h3 style={{ fontSize: "15px", color: "#0f172a", margin: 0 }}>
                     {author.name}
                   </h3>
                   <span style={{ fontSize: "11px", color: "#64748b" }}>

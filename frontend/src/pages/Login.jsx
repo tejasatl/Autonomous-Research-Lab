@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
 import Icon from "../components/Icons";
+import ProjectLogo from "../components/ProjectLogo";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -38,7 +39,7 @@ export default function Login() {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        background: "radial-gradient(ellipse at top, #111a2f, #090d16)",
+        background: "var(--bg-app, #e9edf2)",
         padding: "20px",
       }}
     >
@@ -48,39 +49,26 @@ export default function Login() {
           width: "420px",
           maxWidth: "100%",
           padding: "36px",
-          background: "#101726",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.7)",
+          background: "#ffffff",
+          border: "1px solid #e2e8f0",
+          boxShadow: "0 20px 45px rgba(15, 23, 42, 0.08)",
         }}
       >
         <div style={{ textAlign: "center", marginBottom: "28px" }}>
-          <div
-            style={{
-              width: "44px",
-              height: "44px",
-              borderRadius: "12px",
-              background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "22px",
-              marginBottom: "12px",
-              boxShadow: "0 0 20px rgba(59, 130, 246, 0.4)",
-            }}
-          >
-            <Icon name="sparkles" size={24} color="#ffffff" />
+          <div style={{ display: "inline-flex", marginBottom: "12px" }}>
+            <ProjectLogo size={46} />
           </div>
-          <h1 style={{ fontSize: "22px", color: "#f8fafc" }}>
+          <h1 style={{ fontSize: "22px", color: "#0f172a", fontWeight: "700" }}>
             Sign In to Autonomous Lab
           </h1>
-          <p style={{ fontSize: "13px", color: "#94a3b8", marginTop: "4px" }}>
+          <p style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
             Autonomous Multi-Agent AI Scientific Discovery Platform
           </p>
         </div>
 
         <form onSubmit={login} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <div>
-            <label style={{ fontSize: "12.5px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+            <label style={{ fontSize: "12.5px", color: "#334155", display: "block", marginBottom: "6px" }}>
               Username or Email
             </label>
             <input
@@ -96,7 +84,7 @@ export default function Login() {
           </div>
 
           <div>
-            <label style={{ fontSize: "12.5px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+            <label style={{ fontSize: "12.5px", color: "#334155", display: "block", marginBottom: "6px" }}>
               Password
             </label>
             <input

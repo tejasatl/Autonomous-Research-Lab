@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import api from "../services/api";
 import Icon from "./Icons";
 
-export default function Topbar() {
+export default function Topbar({ onToggleSidebar }) {
   const location = useLocation();
   const token = localStorage.getItem("token");
   const [systemStatus, setSystemStatus] = useState(null);
@@ -105,6 +105,7 @@ export default function Topbar() {
   return (
     <>
       <header
+        className="arl-topbar"
         style={{
           background: "#ffffff",
           padding: "16px 28px",
@@ -117,8 +118,19 @@ export default function Topbar() {
           zIndex: 40,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-          <h1 style={{ fontSize: "17px", fontWeight: "700", color: "#0f172a", margin: 0, letterSpacing: "-0.01em" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <button
+            onClick={onToggleSidebar}
+            className="arl-mobile-menu-btn"
+            aria-label="Open Navigation"
+            title="Menu"
+          >
+            <Icon name="menu" size={19} color="#0f172a" strokeWidth={2} />
+          </button>
+          <h1
+            className="arl-topbar-title"
+            style={{ fontSize: "17px", fontWeight: "700", color: "#0f172a", margin: 0, letterSpacing: "-0.01em" }}
+          >
             {pageTitle()}
           </h1>
         </div>

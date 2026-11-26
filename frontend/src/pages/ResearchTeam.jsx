@@ -41,7 +41,7 @@ export default function ResearchTeam() {
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Multi-Agent Research Swarm
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -52,7 +52,7 @@ export default function ResearchTeam() {
       {/* Control Card */}
       <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <div>
-          <label style={{ fontSize: "13px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+          <label style={{ fontSize: "13px", color: "#334155", display: "block", marginBottom: "6px" }}>
             Research Topic or Domain
           </label>
           <div style={{ display: "flex", gap: "10px" }}>

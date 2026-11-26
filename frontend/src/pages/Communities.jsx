@@ -26,7 +26,7 @@ export default function Communities() {
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Louvain Modularity Communities
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -63,7 +63,7 @@ export default function Communities() {
             return (
               <div key={index} className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <h3 style={{ fontSize: "16px", color: "#f8fafc", margin: 0 }}>{name}</h3>
+                  <h3 style={{ fontSize: "16px", color: "#0f172a", margin: 0 }}>{name}</h3>
                   <span className="arl-badge arl-badge-blue">
                     Modularity #{index + 1}
                   </span>
@@ -80,7 +80,7 @@ export default function Communities() {
                           background: "rgba(255, 255, 255, 0.05)",
                           border: "1px solid rgba(255, 255, 255, 0.08)",
                           borderRadius: "6px",
-                          color: "#cbd5e1",
+                          color: "#334155",
                         }}
                       >
                         {typeof m === "string" ? m : m.name || m.id || JSON.stringify(m)}

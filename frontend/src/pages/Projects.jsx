@@ -73,7 +73,7 @@ export default function Projects() {
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
         <div>
-          <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+          <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
             Research Projects Workspace
           </h1>
           <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -185,11 +185,11 @@ export default function Projects() {
                 </button>
               </div>
 
-              <h2 style={{ fontSize: "18px", color: "#f8fafc", marginTop: "12px", marginBottom: "6px" }}>
+              <h2 style={{ fontSize: "18px", color: "#0f172a", marginTop: "12px", marginBottom: "6px" }}>
                 {proj.title}
               </h2>
 
-              <p style={{ color: "#cbd5e1", fontSize: "13.5px", lineHeight: "1.5" }}>
+              <p style={{ color: "#334155", fontSize: "13.5px", lineHeight: "1.5" }}>
                 <strong>Topic:</strong> {proj.topic}
               </p>
 
@@ -294,10 +294,10 @@ export default function Projects() {
               background: "#101726",
             }}
           >
-            <h2 style={{ color: "#f8fafc", fontSize: "18px", margin: 0 }}>Create Research Project</h2>
+            <h2 style={{ color: "#0f172a", fontSize: "18px", margin: 0 }}>Create Research Project</h2>
             <form onSubmit={createProject} style={{ marginTop: "18px", display: "flex", flexDirection: "column", gap: "14px" }}>
               <div>
-                <label style={{ display: "block", color: "#cbd5e1", fontSize: "12.5px", marginBottom: "6px" }}>
+                <label style={{ display: "block", color: "#334155", fontSize: "12.5px", marginBottom: "6px" }}>
                   Project Title
                 </label>
                 <input
@@ -309,7 +309,7 @@ export default function Projects() {
               </div>
 
               <div>
-                <label style={{ display: "block", color: "#cbd5e1", fontSize: "12.5px", marginBottom: "6px" }}>
+                <label style={{ display: "block", color: "#334155", fontSize: "12.5px", marginBottom: "6px" }}>
                   Research Topic / Domain
                 </label>
                 <input
@@ -321,7 +321,7 @@ export default function Projects() {
               </div>
 
               <div>
-                <label style={{ display: "block", color: "#cbd5e1", fontSize: "12.5px", marginBottom: "6px" }}>
+                <label style={{ display: "block", color: "#334155", fontSize: "12.5px", marginBottom: "6px" }}>
                   Description / Hypothesis Notes
                 </label>
                 <textarea
@@ -342,7 +342,7 @@ export default function Projects() {
                     borderRadius: "6px",
                     border: "1px solid rgba(255, 255, 255, 0.15)",
                     background: "rgba(255, 255, 255, 0.05)",
-                    color: "#cbd5e1",
+                    color: "#334155",
                     cursor: "pointer",
                     fontSize: "13px",
                   }}

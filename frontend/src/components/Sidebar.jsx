@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Icon from "./Icons";
+import ProjectLogo from "./ProjectLogo";
 
 const navSections = [
   {
@@ -44,11 +45,12 @@ const navSections = [
   }
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen = false, onClose }) {
   const location = useLocation();
 
   return (
     <aside
+      className={`arl-sidebar ${isOpen ? "arl-sidebar-open" : ""}`}
       style={{
         width: "256px",
         minWidth: "256px",
@@ -64,28 +66,14 @@ export default function Sidebar() {
       {/* Brand Header */}
       <div
         style={{
-          padding: "22px 20px 18px 20px",
+          padding: "20px 18px",
           borderBottom: "1px solid #f1f5f9",
           display: "flex",
           alignItems: "center",
           gap: "12px",
         }}
       >
-        <div
-          style={{
-            width: "38px",
-            height: "38px",
-            borderRadius: "12px",
-            background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 100%)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 4px 12px rgba(37, 99, 235, 0.25)",
-            color: "#ffffff",
-          }}
-        >
-          <Icon name="sparkles" size={20} color="#ffffff" strokeWidth={2} />
-        </div>
+        <ProjectLogo size={38} />
         <div>
           <div style={{ fontWeight: "700", fontSize: "15px", color: "#0f172a", letterSpacing: "-0.01em" }}>
             Autonomous Lab
@@ -94,6 +82,16 @@ export default function Sidebar() {
             RESEARCH OS v2.4
           </div>
         </div>
+
+        {/* Mobile Close Button */}
+        <button
+          onClick={onClose}
+          className="arl-mobile-close-btn"
+          aria-label="Close navigation"
+          title="Close menu"
+        >
+          <Icon name="x" size={18} color="#64748b" />
+        </button>
       </div>
 
       {/* Nav List */}
@@ -129,6 +127,7 @@ export default function Sidebar() {
                   <Link
                     key={item.path}
                     to={item.path}
+                    onClick={() => onClose && onClose()}
                     style={{
                       display: "flex",
                       alignItems: "center",

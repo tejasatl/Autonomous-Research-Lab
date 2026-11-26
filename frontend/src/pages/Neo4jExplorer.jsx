@@ -31,7 +31,7 @@ export default function Neo4jExplorer() {
     <div style={{ maxWidth: "1050px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Neo4j Graph Database Explorer
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -42,7 +42,7 @@ export default function Neo4jExplorer() {
       {/* Query Card */}
       <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <div>
-          <label style={{ fontSize: "13px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+          <label style={{ fontSize: "13px", color: "#334155", display: "block", marginBottom: "6px" }}>
             Target Paper ID or arXiv identifier
           </label>
           <div style={{ display: "flex", gap: "10px" }}>
@@ -102,7 +102,7 @@ export default function Neo4jExplorer() {
       {/* Results Feed */}
       <div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
-          <h2 style={{ fontSize: "18px", color: "#f8fafc" }}>
+          <h2 style={{ fontSize: "18px", color: "#0f172a" }}>
             Related Graph Entities ({papers.length})
           </h2>
           <span className="arl-badge arl-badge-blue">
@@ -135,7 +135,7 @@ export default function Neo4jExplorer() {
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                     <Icon name="database" size={18} color="#9333ea" />
-                    <span style={{ fontSize: "14.5px", color: "#f8fafc", fontWeight: "500" }}>
+                    <span style={{ fontSize: "14.5px", color: "#0f172a", fontWeight: "500" }}>
                       {label}
                     </span>
                   </div>

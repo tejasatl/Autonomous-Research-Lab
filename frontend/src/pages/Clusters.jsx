@@ -26,7 +26,7 @@ export default function Clusters() {
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Topic Clusters & Topological Partitions
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -63,7 +63,7 @@ export default function Clusters() {
             return (
               <div key={index} className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <h3 style={{ fontSize: "16px", color: "#f8fafc", margin: 0 }}>{title}</h3>
+                  <h3 style={{ fontSize: "16px", color: "#0f172a", margin: 0 }}>{title}</h3>
                   <span className="arl-badge arl-badge-purple">Group {index + 1}</span>
                 </div>
 
@@ -78,7 +78,7 @@ export default function Clusters() {
                           background: "rgba(255, 255, 255, 0.05)",
                           border: "1px solid rgba(255, 255, 255, 0.08)",
                           borderRadius: "6px",
-                          color: "#cbd5e1",
+                          color: "#334155",
                         }}
                       >
                         {typeof p === "string" ? p : p.title || p.id || JSON.stringify(p)}

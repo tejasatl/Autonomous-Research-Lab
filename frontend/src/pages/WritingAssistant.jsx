@@ -131,7 +131,7 @@ export default function WritingAssistant() {
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Academic Publishing Suite & Peer Review Committee
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -213,7 +213,7 @@ export default function WritingAssistant() {
       {/* Shared Control Bar */}
       <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
         <div>
-          <label style={{ fontSize: "13px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+          <label style={{ fontSize: "13px", color: "#334155", display: "block", marginBottom: "6px" }}>
             Target Research Paper Topic
           </label>
           <input
@@ -251,7 +251,7 @@ export default function WritingAssistant() {
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <div className="arl-card" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-              <span style={{ fontSize: "13px", color: "#cbd5e1" }}>Target Conference:</span>
+              <span style={{ fontSize: "13px", color: "#334155" }}>Target Conference:</span>
               <select
                 value={venue}
                 onChange={(e) => setVenue(e.target.value)}
@@ -259,7 +259,7 @@ export default function WritingAssistant() {
                   padding: "8px 14px",
                   borderRadius: "6px",
                   background: "#0f172a",
-                  color: "#f8fafc",
+                  color: "#0f172a",
                   border: "1px solid rgba(255,255,255,0.15)",
                 }}
               >
@@ -413,7 +413,7 @@ export default function WritingAssistant() {
       {activeTab === "review" && (
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <h3 style={{ fontSize: "17px", color: "#f8fafc", margin: 0 }}>
+            <h3 style={{ fontSize: "17px", color: "#0f172a", margin: 0 }}>
               NeurIPS / ICLR Program Committee Review
             </h3>
             <p style={{ fontSize: "13px", color: "#94a3b8", margin: 0 }}>
@@ -429,7 +429,7 @@ export default function WritingAssistant() {
                 width: "100%",
                 padding: "12px",
                 background: "#0b1120",
-                color: "#e2e8f0",
+                color: "#334155",
                 borderRadius: "8px",
                 border: "1px solid rgba(255,255,255,0.1)",
                 fontFamily: "monospace",
@@ -461,7 +461,7 @@ export default function WritingAssistant() {
           {reviewLoading && (
             <div className="arl-card" style={{ textAlign: "center", padding: "50px", color: "#94a3b8" }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "12px" }}><Icon name="scale" size={32} color="#2563eb" /></div>
-              <h3 style={{ color: "#f8fafc" }}>Reviewers Deliberating in Parallel...</h3>
+              <h3 style={{ color: "#0f172a" }}>Reviewers Deliberating in Parallel...</h3>
               <p style={{ fontSize: "14px", color: "#94a3b8" }}>
                 Reviewer 1 checking mathematical formalism • Reviewer 2 auditing baselines • Reviewer 3 comparing prior art • Area Chair synthesizing meta-review.
               </p>
@@ -483,20 +483,20 @@ export default function WritingAssistant() {
                     <span style={{ fontSize: "12px", color: "#64748b", textTransform: "uppercase", fontWeight: "700" }}>
                       Area Chair Meta-Review & Decision
                     </span>
-                    <h2 style={{ fontSize: "22px", color: "#f8fafc", margin: "4px 0 0" }}>
+                    <h2 style={{ fontSize: "22px", color: "#0f172a", margin: "4px 0 0" }}>
                       Final Decision: <span style={{ color: reviewData.decision.includes("Accept") ? "#34d399" : reviewData.decision.includes("Borderline") ? "#fbbf24" : "#f87171" }}>{reviewData.decision}</span>
                     </h2>
                   </div>
 
                   <div style={{ textAlign: "right" }}>
-                    <div style={{ fontSize: "28px", fontWeight: "800", color: "#f8fafc" }}>
+                    <div style={{ fontSize: "28px", fontWeight: "800", color: "#0f172a" }}>
                       {reviewData.average_score} <span style={{ fontSize: "14px", color: "#64748b" }}>/ 10</span>
                     </div>
                     <div style={{ fontSize: "12px", color: "#94a3b8" }}>Average Score</div>
                   </div>
                 </div>
 
-                <p style={{ fontSize: "14px", color: "#cbd5e1", marginTop: "12px", lineHeight: "1.6" }}>
+                <p style={{ fontSize: "14px", color: "#334155", marginTop: "12px", lineHeight: "1.6" }}>
                   {reviewData.meta_review}
                 </p>
 
@@ -506,7 +506,7 @@ export default function WritingAssistant() {
                     <div style={{ fontSize: "12px", fontWeight: "700", color: "#60a5fa", textTransform: "uppercase" }}>
                       Author Rebuttal Strategy (Action Plan to Flip Reviewers):
                     </div>
-                    <ul style={{ margin: "8px 0 0", paddingLeft: "20px", color: "#e2e8f0", fontSize: "13px", lineHeight: "1.6" }}>
+                    <ul style={{ margin: "8px 0 0", paddingLeft: "20px", color: "#334155", fontSize: "13px", lineHeight: "1.6" }}>
                       {reviewData.rebuttal_strategy.map((strat, sIdx) => (
                         <li key={sIdx}>{strat}</li>
                       ))}
@@ -520,7 +520,7 @@ export default function WritingAssistant() {
                 {(reviewData.reviewers || []).map((rev, rIdx) => (
                   <div key={rIdx} className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <strong style={{ fontSize: "15px", color: "#f8fafc" }}>{rev.reviewer_id}</strong>
+                      <strong style={{ fontSize: "15px", color: "#0f172a" }}>{rev.reviewer_id}</strong>
                       <span className={`arl-badge ${rev.score >= 7 ? "arl-badge-green" : rev.score >= 5 ? "arl-badge-amber" : "arl-badge-red"}`}>
                         Score: {rev.score}/10
                       </span>
@@ -534,7 +534,7 @@ export default function WritingAssistant() {
                       <div style={{ fontSize: "11px", color: "#34d399", fontWeight: "700", textTransform: "uppercase" }}>
                         Strengths
                       </div>
-                      <ul style={{ margin: "4px 0 0", paddingLeft: "18px", fontSize: "12.5px", color: "#cbd5e1" }}>
+                      <ul style={{ margin: "4px 0 0", paddingLeft: "18px", fontSize: "12.5px", color: "#334155" }}>
                         {(rev.strengths || []).map((st, i) => (
                           <li key={i}>{st}</li>
                         ))}
@@ -545,7 +545,7 @@ export default function WritingAssistant() {
                       <div style={{ fontSize: "11px", color: "#f87171", fontWeight: "700", textTransform: "uppercase" }}>
                         Weaknesses
                       </div>
-                      <ul style={{ margin: "4px 0 0", paddingLeft: "18px", fontSize: "12.5px", color: "#cbd5e1" }}>
+                      <ul style={{ margin: "4px 0 0", paddingLeft: "18px", fontSize: "12.5px", color: "#334155" }}>
                         {(rev.weaknesses || []).map((wk, i) => (
                           <li key={i}>{wk}</li>
                         ))}
@@ -569,7 +569,7 @@ export default function WritingAssistant() {
       {activeTab === "sections" && (
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <div className="arl-card" style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-            <span style={{ fontSize: "13px", color: "#cbd5e1" }}>Section to Draft:</span>
+            <span style={{ fontSize: "13px", color: "#334155" }}>Section to Draft:</span>
             <select
               value={section}
               onChange={(e) => setSection(e.target.value)}
@@ -577,7 +577,7 @@ export default function WritingAssistant() {
                 padding: "8px 14px",
                 borderRadius: "6px",
                 background: "#0f172a",
-                color: "#f8fafc",
+                color: "#0f172a",
                 border: "1px solid rgba(255,255,255,0.15)",
               }}
             >

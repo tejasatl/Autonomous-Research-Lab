@@ -123,7 +123,7 @@ export default function GraphExplorer() {
         }}
       >
         <div>
-          <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+          <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
             Interactive Knowledge Graph
           </h1>
           <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -309,7 +309,7 @@ export default function GraphExplorer() {
                 </button>
               </div>
 
-              <h3 style={{ marginTop: "12px", color: "#f8fafc", fontSize: "16px" }}>
+              <h3 style={{ marginTop: "12px", color: "#0f172a", fontSize: "16px" }}>
                 {selectedNode.name || selectedNode.id}
               </h3>
 
@@ -333,7 +333,7 @@ export default function GraphExplorer() {
                   <p
                     style={{
                       fontSize: "13px",
-                      color: "#cbd5e1",
+                      color: "#334155",
                       marginTop: "4px",
                       lineHeight: "1.5",
                       maxHeight: "160px",
@@ -370,7 +370,7 @@ export default function GraphExplorer() {
                   key={idx}
                   style={{
                     borderBottom: "1px solid rgba(255, 255, 255, 0.04)",
-                    color: "#f8fafc",
+                    color: "#0f172a",
                   }}
                 >
                   <td style={{ padding: "12px", fontWeight: "500", color: "#60a5fa" }}>

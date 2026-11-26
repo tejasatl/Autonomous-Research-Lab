@@ -134,7 +134,7 @@ print("[STATUS] Benchmark completed successfully.")
     <div style={{ maxWidth: "1150px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           AI Experiment Planner & Closed-Loop Code Sandbox
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -145,7 +145,7 @@ print("[STATUS] Benchmark completed successfully.")
       {/* Control Card */}
       <div className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <div>
-          <label style={{ fontSize: "13px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+          <label style={{ fontSize: "13px", color: "#334155", display: "block", marginBottom: "6px" }}>
             Target Research Topic
           </label>
           <div style={{ display: "flex", gap: "10px" }}>
@@ -364,7 +364,7 @@ print("[STATUS] Benchmark completed successfully.")
                       {Object.entries(sandboxResult.metrics).map(([k, v], idx) => (
                         <div key={idx} style={{ background: "rgba(16, 185, 129, 0.08)", border: "1px solid rgba(16, 185, 129, 0.2)", borderRadius: "8px", padding: "10px" }}>
                           <div style={{ fontSize: "11px", color: "#6ee7b7", textTransform: "uppercase" }}>{k}</div>
-                          <div style={{ fontSize: "18px", fontWeight: "700", color: "#f8fafc", marginTop: "2px" }}>{String(v)}</div>
+                          <div style={{ fontSize: "18px", fontWeight: "700", color: "#0f172a", marginTop: "2px" }}>{String(v)}</div>
                         </div>
                       ))}
                     </div>

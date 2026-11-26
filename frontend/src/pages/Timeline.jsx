@@ -23,7 +23,7 @@ export default function Timeline() {
     <div style={{ maxWidth: "1000px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Research Lineage & Citation Timeline
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -91,7 +91,7 @@ export default function Timeline() {
                     <span style={{ fontSize: "11px", color: "#60a5fa", fontWeight: "700", textTransform: "uppercase" }}>
                       Origin Paper
                     </span>
-                    <h3 style={{ fontSize: "16px", color: "#f8fafc", marginTop: "2px" }}>
+                    <h3 style={{ fontSize: "16px", color: "#0f172a", marginTop: "2px" }}>
                       {item.paper}
                     </h3>
                   </div>

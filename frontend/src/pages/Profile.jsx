@@ -38,7 +38,7 @@ export default function Profile() {
     <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "24px" }}>
       {/* Header */}
       <div>
-        <h1 style={{ fontSize: "24px", color: "#f8fafc" }}>
+        <h1 style={{ fontSize: "24px", color: "#0f172a" }}>
           Researcher Profile & Credentials
         </h1>
         <p style={{ fontSize: "14px", color: "#94a3b8" }}>
@@ -65,7 +65,7 @@ export default function Profile() {
             <Icon name="user" size={32} color="#ffffff" />
           </div>
           <div>
-            <h2 style={{ fontSize: "20px", color: "#f8fafc", margin: 0 }}>
+            <h2 style={{ fontSize: "20px", color: "#0f172a", margin: 0 }}>
               {user.username}
             </h2>
             <div style={{ display: "flex", gap: "8px", marginTop: "6px" }}>
@@ -79,7 +79,7 @@ export default function Profile() {
         <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid rgba(255, 255, 255, 0.04)" }}>
             <span style={{ color: "#94a3b8", fontSize: "13.5px" }}>Registered Identifier</span>
-            <span style={{ color: "#f8fafc", fontWeight: "600", fontSize: "13.5px" }}>{user.username}</span>
+            <span style={{ color: "#0f172a", fontWeight: "600", fontSize: "13.5px" }}>{user.username}</span>
           </div>
 
           <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid rgba(255, 255, 255, 0.04)" }}>
@@ -95,7 +95,7 @@ export default function Profile() {
 
         {/* Enabled Modules */}
         <div>
-          <h3 style={{ fontSize: "15px", color: "#f8fafc", marginBottom: "12px" }}>
+          <h3 style={{ fontSize: "15px", color: "#0f172a", marginBottom: "12px" }}>
             Authorized Discovery Subsystems
           </h3>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "10px" }}>
@@ -115,7 +115,7 @@ export default function Profile() {
                   border: "1px solid rgba(255, 255, 255, 0.06)",
                   borderRadius: "8px",
                   fontSize: "12.5px",
-                  color: "#cbd5e1",
+                  color: "#334155",
                   display: "flex",
                   alignItems: "center",
                   gap: "8px",

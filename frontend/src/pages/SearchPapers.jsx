@@ -167,7 +167,7 @@ export default function SearchPapers() {
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
         <div>
-          <h1 style={{ fontSize: "24px", color: "#f8fafc", margin: 0 }}>
+          <h1 style={{ fontSize: "24px", color: "#0f172a", margin: 0 }}>
             Literature Search & Citation Library Manager
           </h1>
           <p style={{ fontSize: "14px", color: "#94a3b8", marginTop: "6px" }}>
@@ -202,7 +202,7 @@ export default function SearchPapers() {
                 Autonomous arXiv Daemon Alerts ({alerts.length} Active)
               </strong>
             </div>
-            <div style={{ fontSize: "12.5px", color: "#cbd5e1", marginTop: "4px" }}>
+            <div style={{ fontSize: "12.5px", color: "#334155", marginTop: "4px" }}>
               Latest: <strong>{alerts[0].paper_title}</strong> (arXiv:{alerts[0].paper_id}) correlates with frontier: <span style={{ color: "#34d399" }}>{alerts[0].matched_gap}</span>
             </div>
           </div>
@@ -320,7 +320,7 @@ export default function SearchPapers() {
                   <div key={index} className="arl-card" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "16px" }}>
                       <div>
-                        <h3 style={{ fontSize: "17px", color: "#f8fafc", margin: 0 }}>
+                        <h3 style={{ fontSize: "17px", color: "#0f172a", margin: 0 }}>
                           {paper.title || "Untitled Paper"}
                         </h3>
                         <div style={{ fontSize: "13px", color: "#34d399", marginTop: "4px" }}>
@@ -333,7 +333,7 @@ export default function SearchPapers() {
                     </div>
 
                     {paper.abstract && (
-                      <p style={{ fontSize: "13.5px", color: "#cbd5e1", margin: 0, lineHeight: "1.5" }}>
+                      <p style={{ fontSize: "13.5px", color: "#334155", margin: 0, lineHeight: "1.5" }}>
                         {paper.abstract}
                       </p>
                     )}
@@ -426,7 +426,7 @@ export default function SearchPapers() {
                       <div style={{ background: "rgba(15, 23, 42, 0.8)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", padding: "14px" }}>
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
                           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                            <span style={{ fontSize: "13px", fontWeight: "700", color: "#f8fafc" }}>
+                            <span style={{ fontSize: "13px", fontWeight: "700", color: "#0f172a" }}>
                               Citation Factuality Report:
                             </span>
                             <span className={`arl-badge ${ver.risk_level === "LOW" ? "arl-badge-green" : ver.risk_level === "MODERATE" ? "arl-badge-amber" : "arl-badge-red"}`}>
@@ -446,7 +446,7 @@ export default function SearchPapers() {
                                   [{c.verdict}] (Confidence: {Math.round(c.confidence * 100)}%)
                                 </strong>
                               </div>
-                              <div style={{ color: "#e2e8f0" }}>{c.claim}</div>
+                              <div style={{ color: "#334155" }}>{c.claim}</div>
                               {c.matched_source_span && (
                                 <div style={{ color: "#94a3b8", fontSize: "11px", marginTop: "4px", fontStyle: "italic" }}>
                                   ↳ Evidence: "{c.matched_source_span}"
@@ -478,7 +478,7 @@ export default function SearchPapers() {
                           </div>
                         )}
                         {mm.tables && mm.tables.length > 0 && (
-                          <div style={{ marginTop: "10px", fontSize: "12px", color: "#cbd5e1" }}>
+                          <div style={{ marginTop: "10px", fontSize: "12px", color: "#334155" }}>
                             {mm.tables.length} structured LaTeX/CSV tables indexed for tabular reasoning.
                           </div>
                         )}
@@ -501,7 +501,7 @@ export default function SearchPapers() {
       {/* Tab: ArXiv Direct Ingest */}
       {activeTab === "arxiv" && (
         <div className="arl-card" style={{ maxWidth: "680px" }}>
-          <h2 style={{ fontSize: "18px", color: "#f8fafc", marginBottom: "8px" }}>
+          <h2 style={{ fontSize: "18px", color: "#0f172a", marginBottom: "8px" }}>
             Ingest Paper Directly from arXiv
           </h2>
           <p style={{ fontSize: "13px", color: "#94a3b8", marginBottom: "20px" }}>
@@ -510,7 +510,7 @@ export default function SearchPapers() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
             <div>
-              <label style={{ fontSize: "13px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+              <label style={{ fontSize: "13px", color: "#334155", display: "block", marginBottom: "6px" }}>
                 arXiv ID (Required)
               </label>
               <input
@@ -522,7 +522,7 @@ export default function SearchPapers() {
             </div>
 
             <div>
-              <label style={{ fontSize: "13px", color: "#cbd5e1", display: "block", marginBottom: "6px" }}>
+              <label style={{ fontSize: "13px", color: "#334155", display: "block", marginBottom: "6px" }}>
                 Paper Title (Optional override)
               </label>
               <input
@@ -573,7 +573,7 @@ export default function SearchPapers() {
       {/* Tab: PDF Upload */}
       {activeTab === "upload" && (
         <div className="arl-card" style={{ maxWidth: "680px" }}>
-          <h2 style={{ fontSize: "18px", color: "#f8fafc", marginBottom: "8px" }}>
+          <h2 style={{ fontSize: "18px", color: "#0f172a", marginBottom: "8px" }}>
             Upload Research PDF
           </h2>
           <p style={{ fontSize: "13px", color: "#94a3b8", marginBottom: "20px" }}>
