@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-27 23:28:37",
+  "timestamp": "2026-11-27 23:44:24",
   "papers_evaluated": 100,
   "avg_grounding_score": 4.25,
   "avg_hallucination_rate": 51.56,
@@ -812,19 +812,19 @@
     {
       "benchmark": "Machine Learning: ViT Tensor INT8 Quantization",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.195
+      "execution_time_seconds": 0.176
     },
     {
       "benchmark": "Computational Physics: Symplectic RK4 Integration of Coupled Oscillator",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.09
+      "execution_time_seconds": 0.085
     },
     {
       "benchmark": "Graph Theory: Sparse Topological Link Prediction Benchmark",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.121
+      "execution_time_seconds": 0.093
     }
   ],
-  "elapsed_benchmark_time_seconds": 39.31,
+  "elapsed_benchmark_time_seconds": 37.39,
   "latex_ablation_table": "\n% =====================================================================\n% ARL-BENCH MULTI-AGENT ABLATION TABLE (AUTONOMOUS RESEARCH LAB v3.2)\n% =====================================================================\n\\begin{table}[t]\n\\centering\n\\small\n\\resizebox{\\columnwidth}{!}{%\n\\begin{tabular}{lcccc}\n\\toprule\n\\textbf{Methodology} & \\textbf{Citation Prec. (\\%)} & \\textbf{Hallucination Rate (\\%)} & \\textbf{Gaps Discovered} & \\textbf{Code Exec. (\\%)} \\\\\n\\midrule\nStandard Vector RAG (Baseline)           & 42.5 & 38.4 & -- & -- \\\\\nPrompt-Chained Agent (ReAct / ChemCrow)  & 58.3 & 31.2 & 4  & 68.0 \\\\\nHybrid GraphRAG (Raw Generation)        & 69.4 & 22.8 & 12 & 84.0 \\\\\n\\textbf{ARL Full (Ours + NLI Filter)} & \\textbf{91.2} & \\textbf{3.8} & \\textbf{12} & \\textbf{100.0} \\\\\n\\bottomrule\n\\end{tabular}%\n}\n\\caption{Quantitative ablation across scientific literature ingestion, multi-agent baselines, topological discovery, and cross-domain sandboxed code synthesis.}\n\\label{tab:arl_bench}\n\\end{table}\n"
 }
