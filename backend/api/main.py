@@ -389,18 +389,14 @@ def authors():
 
         for edge in edges:
 
-            if edge["source"] == author_name:
-
-                papers += 1
-
-            elif edge["target"] == author_name:
+            if edge.get("relation") == "wrote" and (edge["source"] == author_name or edge["target"] == author_name):
 
                 papers += 1
 
         result.append(
             {
                 "name": author_name,
-                "papers": papers
+                "papers": max(1, papers)
             }
         )
 
