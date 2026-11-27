@@ -1,0 +1,11 @@
+{
+    "title": "Self-Refining Python Sandboxes for Autonomous Scientific Computing",
+    "authors": [
+        "Tejas Singh",
+        "Sebastian Wolf",
+        "Elena Vance"
+    ],
+    "published": "2025-04-10",
+    "url": "http://arxiv.org/abs/2504.08902v1",
+    "summary": "Autonomous AI scientists must validate hypotheses through executable code without human intervention. We architect a self-refining execution sandbox equipped with AST analysis, POSIX subprocess sandboxing, and automated reflection loops. Across 300 synthesized evaluation scripts spanning machine learning, physics, and network topology, the reflection loop elevates code execution success from 68.0% to 100.0% within an average of 1.2 self-debugging passes."
+}

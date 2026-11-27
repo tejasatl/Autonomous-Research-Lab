@@ -1,0 +1,3 @@
+{
+    "summary": "1. Main Idea: Multi-agent adversarial committee mimicking premier conference peer review.\n2. Method: Four autonomous agents debate mathematical rigor, empirical fairness, and novelty.\n3. Key Contributions:\n- Achieves 0.86 Spearman rank correlation with actual ICLR decisions.\n- Synthesizes actionable author rebuttal strategies.\n- Identifies subtle methodological flaws overlooked by single-prompt LLMs.\n- Calibrated scoring distribution across accept/borderline/reject.\n4. Quantitative Metrics:\n- Decision correlation: 0.86 Spearman rho.\n- Review generation latency: 14.2s per complete 4-agent committee audit.\n- Precision on reject detection: 91.5%.\n5. Limitations: Reviewer personas require fine-tuning for non-CS disciplines."
+}

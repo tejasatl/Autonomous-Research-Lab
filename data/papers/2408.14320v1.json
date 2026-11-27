@@ -1,0 +1,10 @@
+{
+    "title": "Zero-Shot Formal Proof Synthesis using LLM Reflection and AST Verification",
+    "authors": [
+        "Alexander Wright",
+        "Kenji Takahashi"
+    ],
+    "published": "2024-08-22",
+    "url": "http://arxiv.org/abs/2408.14320v1",
+    "summary": "Generating verifiable mathematical proofs requires strict adherence to formal logic. We design a closed-loop proof synthesis framework combining LLM reflection with abstract syntax tree (AST) execution checkers. In benchmark evaluations on MiniF2F, our iterative reflection loop raises proof generation pass rates from 32.1% to 68.7% by automatically catching syntax and type errors within 3 iterations."
+}

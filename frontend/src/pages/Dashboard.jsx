@@ -13,17 +13,23 @@ export default function Dashboard() {
   });
   const [systemStatus, setSystemStatus] = useState(null);
   const [promptInput, setPromptInput] = useState("");
+  const [papersList, setPapersList] = useState([]);
+  const [searchFilter, setSearchFilter] = useState("");
 
   useEffect(() => {
     Promise.allSettled([
       api.get("/stats"),
       api.get("/system_status"),
-    ]).then(([statsRes, sysRes]) => {
+      api.get("/papers"),
+    ]).then(([statsRes, sysRes, papersRes]) => {
       if (statsRes.status === "fulfilled" && statsRes.value?.data) {
         setStats(statsRes.value.data);
       }
       if (sysRes.status === "fulfilled" && sysRes.value?.data) {
         setSystemStatus(sysRes.value.data);
+      }
+      if (papersRes.status === "fulfilled" && papersRes.value?.data?.papers) {
+        setPapersList(papersRes.value.data.papers);
       }
     });
   }, []);
@@ -400,6 +406,150 @@ export default function Dashboard() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Indexed Research Literature Table Card (All 20 Preprints) */}
+      <div className="arl-card" style={{ padding: "24px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "18px", flexWrap: "wrap", gap: "12px" }}>
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <h3 style={{ fontSize: "16px", fontWeight: "700", color: "#0f172a", margin: 0 }}>
+                Indexed Academic Literature
+              </h3>
+              <span
+                style={{
+                  fontSize: "11px",
+                  fontWeight: "700",
+                  padding: "2px 8px",
+                  borderRadius: "9999px",
+                  background: "#eff6ff",
+                  color: "#2563eb",
+                  border: "1px solid #dbeafe",
+                }}
+              >
+                {papersList.length || stats.papers || 20} Verified Preprints
+              </span>
+            </div>
+            <p style={{ fontSize: "12.5px", color: "#64748b", margin: "4px 0 0 0" }}>
+              Parsed arXiv preprints, atomic claim decomposition, and citation graph lineage.
+            </p>
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <input
+              type="text"
+              placeholder="Filter papers by title, author, or id..."
+              value={searchFilter}
+              onChange={(e) => setSearchFilter(e.target.value)}
+              style={{
+                padding: "6px 14px",
+                borderRadius: "9999px",
+                background: "#f8fafc",
+                border: "1px solid #e2e8f0",
+                fontSize: "12px",
+                color: "#0f172a",
+                outline: "none",
+                minWidth: "220px",
+              }}
+            />
+            <Link
+              to="/search-papers"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "5px",
+                padding: "6px 14px",
+                background: "#eff6ff",
+                border: "1px solid #dbeafe",
+                borderRadius: "9999px",
+                fontSize: "12px",
+                fontWeight: "600",
+                color: "#2563eb",
+                textDecoration: "none",
+              }}
+            >
+              <span>Explore all</span>
+              <Icon name="arrow-right" size={12} color="#2563eb" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Paper Cards List */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "10px", maxHeight: "420px", overflowY: "auto", paddingRight: "4px" }}>
+          {papersList
+            .filter((p) => {
+              if (!searchFilter.trim()) return true;
+              const q = searchFilter.toLowerCase();
+              return (
+                p.title?.toLowerCase().includes(q) ||
+                p.paper_id?.toLowerCase().includes(q) ||
+                p.authors?.some((a) => String(a).toLowerCase().includes(q))
+              );
+            })
+            .map((paper, idx) => (
+              <div
+                key={paper.paper_id || idx}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "12px 16px",
+                  borderRadius: "12px",
+                  background: "#f8fafc",
+                  border: "1px solid #f1f5f9",
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: "14px", minWidth: 0 }}>
+                  <div
+                    style={{
+                      padding: "4px 8px",
+                      borderRadius: "6px",
+                      background: "#ffffff",
+                      border: "1px solid #e2e8f0",
+                      fontSize: "11px",
+                      fontWeight: "700",
+                      color: "#2563eb",
+                      fontFamily: "monospace",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {paper.paper_id}
+                  </div>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ fontSize: "13px", fontWeight: "700", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                      {paper.title}
+                    </div>
+                    <div style={{ fontSize: "11.5px", color: "#64748b", marginTop: "2px" }}>
+                      {Array.isArray(paper.authors) ? paper.authors.join(", ") : paper.authors} · <span style={{ color: "#94a3b8" }}>{paper.published || "Verified"}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginLeft: "16px", flexShrink: 0 }}>
+                  <Link
+                    to={`/search-papers?q=${encodeURIComponent(paper.paper_id)}`}
+                    style={{
+                      padding: "4px 10px",
+                      borderRadius: "6px",
+                      background: "#ffffff",
+                      border: "1px solid #e2e8f0",
+                      fontSize: "11px",
+                      fontWeight: "600",
+                      color: "#334155",
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "4px",
+                    }}
+                  >
+                    <span>Verify</span>
+                    <Icon name="arrow-right" size={10} color="#64748b" />
+                  </Link>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
 

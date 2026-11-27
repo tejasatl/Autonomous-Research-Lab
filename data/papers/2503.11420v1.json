@@ -1,0 +1,10 @@
+{
+    "title": "Adversarial Multi-Agent Peer Review: Simulating Conference Committee Decisions",
+    "authors": [
+        "Gabriel Laurent",
+        "Amina Al-Mansoor"
+    ],
+    "published": "2025-03-15",
+    "url": "http://arxiv.org/abs/2503.11420v1",
+    "summary": "Human peer review suffers from variance and subjective bias. We formalize an adversarial multi-agent peer review committee consisting of three specialized reviewer agents (Theory, Empirical, Novelty) and an Area Chair. Evaluating 400 published ICLR manuscripts, the committee achieves a 0.86 Spearman correlation with actual conference decisions, generating actionable rebuttal roadmaps that improve borderline submissions."
+}

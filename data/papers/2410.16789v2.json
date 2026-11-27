@@ -1,0 +1,10 @@
+{
+    "title": "Bayesian Optimization of High-Dimensional Scientific Experiments in Isolated Sandboxes",
+    "authors": [
+        "David K. Miller",
+        "Hanna Lindqvist"
+    ],
+    "published": "2024-10-25",
+    "url": "http://arxiv.org/abs/2410.16789v2",
+    "summary": "Autonomous experimentation engines frequently struggle with combinatorial hyperparameter exploration. We propose a constrained Bayesian optimization architecture executed inside resource-capped subprocess sandboxes. By fitting sparse Gaussian process surrogates with Mat\u00e9rn-5/2 kernels, the method discovers optimal experimental configurations in 41.5% fewer iterations than standard genetic algorithms while enforcing hard memory ceilings."
+}

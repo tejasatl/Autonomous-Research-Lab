@@ -4,6 +4,96 @@
   "graph": {},
   "nodes": [
     {
+      "title": "Edge-state enhanced transport in a 2-dimensional quantum walk",
+      "published": "2014-11-14",
+      "id": "1411.3958v3"
+    },
+    {
+      "title": "AMED: Automatic Mixed-Precision Quantization for Edge Devices",
+      "published": "2022-05-30",
+      "id": "2205.15437v2"
+    },
+    {
+      "title": "Diffusion-Based Trajectory Optimization for Autonomous Robotic Systems",
+      "published": "2023-01-20",
+      "id": "2301.08241v1"
+    },
+    {
+      "title": "Symplectic Runge-Kutta Discretization for Non-Linear Hamiltonian Systems",
+      "published": "2023-03-28",
+      "id": "2303.17564v2"
+    },
+    {
+      "title": "Topological Data Analysis and Link Prediction in Scientific Citation Graphs",
+      "published": "2024-01-12",
+      "id": "2401.05832v1"
+    },
+    {
+      "title": "Privacy-Preserving Federated Multi-Agent Systems on Edge Devices",
+      "published": "2024-03-18",
+      "id": "2403.11294v1"
+    },
+    {
+      "title": "Provable Entailment Verification in Automated Literature Synthesis",
+      "published": "2024-05-14",
+      "id": "2405.09123v1"
+    },
+    {
+      "title": "Multi-Agent Consensus Protocols for Distributed Autonomous Scientific Exploration",
+      "published": "2024-06-18",
+      "id": "2406.12840v1"
+    },
+    {
+      "title": "Contrastive Graph Representations for Automated Hypothesis Generation",
+      "published": "2024-07-12",
+      "id": "2407.08915v2"
+    },
+    {
+      "title": "Zero-Shot Formal Proof Synthesis using LLM Reflection and AST Verification",
+      "published": "2024-08-22",
+      "id": "2408.14320v1"
+    },
+    {
+      "title": "Energy-Aware Deep Quantization for Ultra-Low Power Neuromorphic Accelerators",
+      "published": "2024-09-08",
+      "id": "2409.05210v1"
+    },
+    {
+      "title": "Bayesian Optimization of High-Dimensional Scientific Experiments in Isolated Sandboxes",
+      "published": "2024-10-25",
+      "id": "2410.16789v2"
+    },
+    {
+      "title": "Provable Hallucination Bounds in Retrieval-Augmented Scientific Generation",
+      "published": "2024-11-05",
+      "id": "2411.03450v1"
+    },
+    {
+      "title": "Symplectic Graph Neural Networks for Energy Conservation in Physical Systems",
+      "published": "2024-12-14",
+      "id": "2412.09871v1"
+    },
+    {
+      "title": "Autonomous Literature Synthesis via Heterogeneous Citation Lineage Graphs",
+      "published": "2025-01-09",
+      "id": "2501.04560v1"
+    },
+    {
+      "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
+      "published": "2025-02-19",
+      "id": "2502.15816v1"
+    },
+    {
+      "title": "Adversarial Multi-Agent Peer Review: Simulating Conference Committee Decisions",
+      "published": "2025-03-15",
+      "id": "2503.11420v1"
+    },
+    {
+      "title": "Self-Refining Python Sandboxes for Autonomous Scientific Computing",
+      "published": "2025-04-10",
+      "id": "2504.08902v1"
+    },
+    {
       "title": "A Distributed Framework for Privacy-Enhanced Vision Transformers on the Edge",
       "published": "2025-12-10",
       "id": "2512.09309v1"
@@ -12,46 +102,229 @@
       "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications",
       "published": "2026-01-05",
       "id": "2601.03290v1"
-    },
-    {
-      "title": "AMED: Automatic Mixed-Precision Quantization for Edge Devices",
-      "published": "2022-05-30",
-      "id": "2205.15437v2"
-    },
-    {
-      "title": "Edge-state enhanced transport in a 2-dimensional quantum walk",
-      "published": "2014-11-14",
-      "id": "1411.3958v3"
-    },
-    {
-      "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
-      "published": "2025-02-19",
-      "id": "2502.15816v1"
     }
   ],
   "edges": [
     {
-      "similarity": 0.54,
       "relation": "influenced",
-      "source": "2512.09309v1",
-      "target": "2601.03290v1"
+      "similarity": 0.62,
+      "source": "1411.3958v3",
+      "target": "2205.15437v2"
     },
     {
-      "similarity": 0.581,
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "1411.3958v3",
+      "target": "2301.08241v1"
+    },
+    {
       "relation": "influenced",
+      "similarity": 0.62,
       "source": "2205.15437v2",
-      "target": "2601.03290v1"
+      "target": "2301.08241v1"
     },
     {
-      "similarity": 0.582,
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2205.15437v2",
+      "target": "2303.17564v2"
+    },
+    {
       "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2301.08241v1",
+      "target": "2303.17564v2"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2301.08241v1",
+      "target": "2401.05832v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2303.17564v2",
+      "target": "2401.05832v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2303.17564v2",
+      "target": "2403.11294v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2401.05832v1",
+      "target": "2403.11294v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2401.05832v1",
+      "target": "2405.09123v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2403.11294v1",
+      "target": "2405.09123v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2403.11294v1",
+      "target": "2406.12840v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2405.09123v1",
+      "target": "2406.12840v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2405.09123v1",
+      "target": "2407.08915v2"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2406.12840v1",
+      "target": "2407.08915v2"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2406.12840v1",
+      "target": "2408.14320v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2407.08915v2",
+      "target": "2408.14320v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2407.08915v2",
+      "target": "2409.05210v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2408.14320v1",
+      "target": "2409.05210v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2408.14320v1",
+      "target": "2410.16789v2"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2409.05210v1",
+      "target": "2410.16789v2"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2409.05210v1",
+      "target": "2411.03450v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2410.16789v2",
+      "target": "2411.03450v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2410.16789v2",
+      "target": "2412.09871v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2411.03450v1",
+      "target": "2412.09871v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2411.03450v1",
+      "target": "2501.04560v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2412.09871v1",
+      "target": "2501.04560v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2412.09871v1",
+      "target": "2502.15816v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2501.04560v1",
+      "target": "2502.15816v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2501.04560v1",
+      "target": "2503.11420v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
       "source": "2502.15816v1",
+      "target": "2503.11420v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2502.15816v1",
+      "target": "2504.08902v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2503.11420v1",
+      "target": "2504.08902v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2503.11420v1",
       "target": "2512.09309v1"
     },
     {
-      "similarity": 0.616,
       "relation": "influenced",
-      "source": "2502.15816v1",
+      "similarity": 0.62,
+      "source": "2504.08902v1",
+      "target": "2512.09309v1"
+    },
+    {
+      "relation": "lineage_advance",
+      "similarity": 0.55,
+      "source": "2504.08902v1",
+      "target": "2601.03290v1"
+    },
+    {
+      "relation": "influenced",
+      "similarity": 0.62,
+      "source": "2512.09309v1",
       "target": "2601.03290v1"
     }
   ]

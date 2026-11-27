@@ -1,0 +1,3 @@
+{
+    "summary": "1. Main Idea: Closed-loop mathematical proof synthesis with interactive AST validation.\n2. Method: Integrates theorem proving kernels with LLM reflection to repair syntax failures.\n3. Key Contributions:\n- Couples neural proof generation with deterministic AST compiler verification.\n- Raises MiniF2F pass rate from 32.1% to 68.7%.\n- Mean repair iterations: 1.8 rounds to successful proof state.\n- Fully automated proof tactic decomposition.\n4. Quantitative Metrics:\n- MiniF2F pass rate: 68.7% (state of the art in zero-shot reflection).\n- Type-check latency: 45ms per proof step.\n- Reflection success rate: 84.1%.\n5. Limitations: Complex inductive proofs requiring non-standard lemmas still require human hints."
+}

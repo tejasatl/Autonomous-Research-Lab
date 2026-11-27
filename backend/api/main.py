@@ -989,13 +989,35 @@ Guidelines:
     }
 
 
+@app.get("/papers")
+def list_all_papers():
+    paper_dir = Path("data/papers")
+    results = []
+    if paper_dir.exists():
+        for file in sorted(paper_dir.glob("*.json")):
+            try:
+                with open(file, "r", encoding="utf-8") as f:
+                    paper = json.load(f)
+                results.append({
+                    "paper_id": file.stem,
+                    "title": paper.get("title", file.stem),
+                    "authors": paper.get("authors", []),
+                    "published": paper.get("published", ""),
+                    "url": paper.get("url", f"https://arxiv.org/abs/{file.stem}"),
+                    "abstract": paper.get("summary", "")
+                })
+            except Exception:
+                continue
+    return {"papers": results, "total": len(results)}
+
+
 @app.get("/search")
-def search_papers(query: str):
-    query_lower = query.lower()
+def search_papers(query: str = ""):
+    query_lower = query.lower().strip()
     results = []
     paper_dir = Path("data/papers")
     if paper_dir.exists():
-        for file in paper_dir.glob("*.json"):
+        for file in sorted(paper_dir.glob("*.json")):
             try:
                 with open(file, "r", encoding="utf-8") as f:
                     paper = json.load(f)
@@ -1003,7 +1025,8 @@ def search_papers(query: str):
                 summary = paper.get("summary", "")
                 authors = paper.get("authors", [])
                 if (
-                    query_lower in title.lower()
+                    not query_lower
+                    or query_lower in title.lower()
                     or query_lower in summary.lower()
                     or any(query_lower in str(a).lower() for a in authors)
                 ):
@@ -1012,12 +1035,13 @@ def search_papers(query: str):
                         "title": title,
                         "authors": authors,
                         "published": paper.get("published", ""),
+                        "url": paper.get("url", f"https://arxiv.org/abs/{file.stem}"),
                         "abstract": summary
                     })
             except Exception:
                 continue
 
-    if not results:
+    if not results and query_lower:
         try:
             arxiv_res = arxiv_client.search(query)
             for item in arxiv_res:
@@ -1026,12 +1050,13 @@ def search_papers(query: str):
                     "title": item.get("title", ""),
                     "authors": item.get("authors", []),
                     "published": item.get("published", ""),
+                    "url": item.get("url", ""),
                     "abstract": item.get("summary", "")
                 })
         except Exception:
             pass
 
-    return {"results": results}
+    return {"results": results, "total": len(results)}
 
 
 PROJECTS_FILE = Path("data/projects.json")

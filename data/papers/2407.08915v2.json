@@ -1,0 +1,11 @@
+{
+    "title": "Contrastive Graph Representations for Automated Hypothesis Generation",
+    "authors": [
+        "Sophia Valenzuela",
+        "Liam O'Connor",
+        "Tejas Singh"
+    ],
+    "published": "2024-07-12",
+    "url": "http://arxiv.org/abs/2407.08915v2",
+    "summary": "Automated hypothesis synthesis often fails due to shallow keyword associations. We propose a self-supervised contrastive graph representation model that maps disparate academic domains into a shared metric manifold. Evaluating 12,000 interdisciplinary pairs, our model achieves an MRR of 0.781 on 0-hop frontier link prediction, discovering 3.4x more validated cross-domain hypotheses than vanilla sentence embeddings."
+}

@@ -1,0 +1,3 @@
+{
+    "summary": "1. Main Idea: Symplectic inductive bias embedded into graph neural network message passing.\n2. Method: Enforces canonical Hamiltonian structure J * grad H on inter-node edges.\n3. Key Contributions:\n- Prevents energy dissipation in long-term physical rollouts.\n- Bounded energy drift < 1.4e-6 across 100,000 integration steps.\n- Empirical convergence order of 4.01 matching 4th-order Runge-Kutta.\n- Scales linearly with physical node count.\n4. Quantitative Metrics:\n- Energy drift: < 1.4e-6 over 100,000 steps.\n- Convergence exponent: 4.01 (O(h^4)).\n- Speedup: 18x over traditional numerical RK4 solvers.\n5. Limitations: Requires explicit knowledge of system generalized coordinates (q, p)."
+}

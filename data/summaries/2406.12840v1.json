@@ -1,0 +1,3 @@
+{
+    "summary": "1. Main Idea: Decentralized consensus protocol for heterogeneous autonomous research swarms.\n2. Method: Asynchronous Byzantine fault-tolerant voting over graph discovery spaces.\n3. Key Contributions:\n- Eliminates redundant experiments across distributed agent workers.\n- Achieves 76.4% reduction in duplicate compute trials.\n- Bounded consensus latency of 1.84 seconds on 64-node clusters.\n- Guarantees eventual consistency across partitioned citation topologies.\n4. Quantitative Metrics:\n- Redundant trials: 76.4% reduction compared to gossip baselines.\n- Latency: 1.84s average convergence.\n- Message overhead: 3.2KB per agent sync cycle.\n5. Limitations: Scalability beyond 1,000 agents requires hierarchical clustering."
+}

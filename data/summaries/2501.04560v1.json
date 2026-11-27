@@ -1,0 +1,3 @@
+{
+    "summary": "1. Main Idea: Heterogeneous temporal lineage graph modeling to predict paradigm breakthroughs.\n2. Method: Directed acyclic graph tracking methodology evolution, dataset transfer, and claim lineage.\n3. Key Contributions:\n- Anticipates scientific breakthroughs 8.2 months prior to citation inflection.\n- Distinguishes incremental iterations from paradigm-shifting methodologies.\n- Generates automated lineage trees in compile-ready LaTeX.\n- Evaluated on 25,000 AI preprints.\n4. Quantitative Metrics:\n- Lead time: 8.2 months predictive advance.\n- Lineage accuracy: 89.4% agreement with expert historical consensus.\n- Graph build latency: 1.2s for 1,000-paper lineages.\n5. Limitations: Dependent on accurate arXiv metadata and citation extraction."
+}

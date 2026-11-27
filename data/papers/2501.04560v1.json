@@ -1,0 +1,10 @@
+{
+    "title": "Autonomous Literature Synthesis via Heterogeneous Citation Lineage Graphs",
+    "authors": [
+        "Maria Santos",
+        "Zhiwei Wang"
+    ],
+    "published": "2025-01-09",
+    "url": "http://arxiv.org/abs/2501.04560v1",
+    "summary": "Understanding technical paradigm shifts requires tracking temporal lineage across scientific literature. We model academic development as a directed heterogeneous lineage graph, tracking methods, datasets, and claims. When applied to 25,000 AI preprints, our topological lineage engine identifies emerging breakthrough paradigms an average of 8.2 months before citation explosion, outperforming baseline citation count velocity."
+}

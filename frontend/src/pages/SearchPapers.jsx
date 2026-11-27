@@ -26,7 +26,19 @@ export default function SearchPapers() {
 
   useEffect(() => {
     loadAlerts();
+    loadAllPapers();
   }, []);
+
+  async function loadAllPapers() {
+    setLoading(true);
+    try {
+      const res = await api.get("/papers");
+      setPapers(res.data.papers || []);
+    } catch {
+      setPapers([]);
+    }
+    setLoading(false);
+  }
 
   async function loadAlerts() {
     try {

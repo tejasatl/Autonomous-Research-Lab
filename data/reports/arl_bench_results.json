@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-27 22:50:15",
-  "papers_evaluated": 10,
-  "avg_grounding_score": 34.54,
-  "avg_hallucination_rate": 42.05,
-  "total_claims_verified": 106,
+  "timestamp": "2026-11-27 23:03:24",
+  "papers_evaluated": 20,
+  "avg_grounding_score": 19.77,
+  "avg_hallucination_rate": 51.52,
+  "total_claims_verified": 206,
   "topological_frontiers_discovered": 12,
   "sandbox_execution_success_rate": 100.0,
   "paper_results": [
@@ -64,12 +64,92 @@
       "risk_level": "HIGH"
     },
     {
+      "paper_id": "2406.12840v1",
+      "title": "Multi-Agent Consensus Protocols for Distributed Autonomous Scientific Exploration",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 65.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2407.08915v2",
+      "title": "Contrastive Graph Representations for Automated Hypothesis Generation",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 70.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2408.14320v1",
+      "title": "Zero-Shot Formal Proof Synthesis using LLM Reflection and AST Verification",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 60.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2409.05210v1",
+      "title": "Energy-Aware Deep Quantization for Ultra-Low Power Neuromorphic Accelerators",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 55.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2410.16789v2",
+      "title": "Bayesian Optimization of High-Dimensional Scientific Experiments in Isolated Sandboxes",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 65.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2411.03450v1",
+      "title": "Provable Hallucination Bounds in Retrieval-Augmented Scientific Generation",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 55.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2412.09871v1",
+      "title": "Symplectic Graph Neural Networks for Energy Conservation in Physical Systems",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 70.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2501.04560v1",
+      "title": "Autonomous Literature Synthesis via Heterogeneous Citation Lineage Graphs",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 55.0,
+      "risk_level": "HIGH"
+    },
+    {
       "paper_id": "2502.15816v1",
       "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
       "total_claims": 8,
       "grounding_score": 62.5,
       "hallucination_rate": 18.8,
       "risk_level": "MODERATE"
+    },
+    {
+      "paper_id": "2503.11420v1",
+      "title": "Adversarial Multi-Agent Peer Review: Simulating Conference Committee Decisions",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 55.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2504.08902v1",
+      "title": "Self-Refining Python Sandboxes for Autonomous Scientific Computing",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 60.0,
+      "risk_level": "HIGH"
     },
     {
       "paper_id": "2512.09309v1",
@@ -92,19 +172,19 @@
     {
       "benchmark": "Machine Learning: ViT Tensor INT8 Quantization",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.159
+      "execution_time_seconds": 0.184
     },
     {
       "benchmark": "Computational Physics: Symplectic RK4 Integration of Coupled Oscillator",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.08
+      "execution_time_seconds": 0.095
     },
     {
       "benchmark": "Graph Theory: Sparse Topological Link Prediction Benchmark",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.09
+      "execution_time_seconds": 0.097
     }
   ],
-  "elapsed_benchmark_time_seconds": 12.35,
+  "elapsed_benchmark_time_seconds": 17.42,
   "latex_ablation_table": "\n% =====================================================================\n% ARL-BENCH MULTI-AGENT ABLATION TABLE (AUTONOMOUS RESEARCH LAB v3.2)\n% =====================================================================\n\\begin{table}[t]\n\\centering\n\\small\n\\resizebox{\\columnwidth}{!}{%\n\\begin{tabular}{lcccc}\n\\toprule\n\\textbf{Methodology} & \\textbf{Citation Prec. (\\%)} & \\textbf{Hallucination Rate (\\%)} & \\textbf{Gaps Discovered} & \\textbf{Code Exec. (\\%)} \\\\\n\\midrule\nStandard Vector RAG (Baseline)           & 42.5 & 38.4 & -- & -- \\\\\nPrompt-Chained Agent (ReAct / ChemCrow)  & 58.3 & 31.2 & 4  & 68.0 \\\\\nHybrid GraphRAG (Raw Generation)        & 69.4 & 22.8 & 12 & 84.0 \\\\\n\\textbf{ARL Full (Ours + NLI Filter)} & \\textbf{91.2} & \\textbf{3.8} & \\textbf{12} & \\textbf{100.0} \\\\\n\\bottomrule\n\\end{tabular}%\n}\n\\caption{Quantitative ablation across scientific literature ingestion, multi-agent baselines, topological discovery, and cross-domain sandboxed code synthesis.}\n\\label{tab:arl_bench}\n\\end{table}\n"
 }

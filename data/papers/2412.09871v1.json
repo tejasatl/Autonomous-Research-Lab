@@ -1,0 +1,10 @@
+{
+    "title": "Symplectic Graph Neural Networks for Energy Conservation in Physical Systems",
+    "authors": [
+        "Viktor Kozlov",
+        "Julian Thorne"
+    ],
+    "published": "2024-12-14",
+    "url": "http://arxiv.org/abs/2412.09871v1",
+    "summary": "Standard neural network dynamics simulators suffer from secular energy drift over extended time horizons. We introduce Symplectic Graph Neural Networks (SGNN), which embed Hamiltonian canonical equations directly into message-passing layers. Across 100,000 rollout steps of non-linear $N$-body gravitational and molecular dynamics, SGNN maintains bounded energy drift below $1.4 \\times 10^{-6}$ while preserving symplectic geometry."
+}

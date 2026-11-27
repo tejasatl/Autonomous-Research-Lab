@@ -1,0 +1,3 @@
+{
+    "summary": "1. Main Idea: Self-supervised contrastive graph neural network for cross-domain scientific gap discovery.\n2. Method: Joint optimization of node topology and semantic abstracts using InfoNCE loss.\n3. Key Contributions:\n- Unifies topological graph structure with semantic literature representations.\n- Achieves Mean Reciprocal Rank (MRR) of 0.781 on 0-hop link prediction.\n- Discovers 3.4x more empirically viable scientific hypotheses.\n- Evaluated across 12,000 interdisciplinary citation pairs.\n4. Quantitative Metrics:\n- MRR: 0.781 on link prediction benchmark.\n- Precision@10: 82.4%.\n- Latency: 4.2ms per candidate query.\n5. Limitations: Requires pre-computed citation subgraphs with degree > 2."
+}

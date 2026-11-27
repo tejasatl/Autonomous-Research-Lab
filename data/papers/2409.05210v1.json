@@ -1,0 +1,11 @@
+{
+    "title": "Energy-Aware Deep Quantization for Ultra-Low Power Neuromorphic Accelerators",
+    "authors": [
+        "Chloe Dubois",
+        "Nikhil Sharma",
+        "Priya Patel"
+    ],
+    "published": "2024-09-08",
+    "url": "http://arxiv.org/abs/2409.05210v1",
+    "summary": "Deploying deep neural networks onto edge neuromorphic hardware demands aggressive parameter compression. We develop a mixed-precision integer quantization framework that dynamically scales bit-widths between 2-bit, 4-bit, and 8-bit based on layer-wise gradient sensitivity. The framework reduces accelerator power dissipation by 62.3% on edge silicon while preserving 98.9% of full-precision ImageNet accuracy."
+}

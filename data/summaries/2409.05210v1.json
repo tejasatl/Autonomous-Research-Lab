@@ -1,0 +1,3 @@
+{
+    "summary": "1. Main Idea: Hardware-aware adaptive mixed-precision quantization for neuromorphic edge processors.\n2. Method: Hessian eigenvalue analysis dictates non-uniform bit allocations across layer weights.\n3. Key Contributions:\n- Reduces edge power dissipation by 62.3%.\n- Maintains 98.9% classification fidelity relative to FP32 baselines.\n- Real-time on-chip dynamic scale adjustment.\n- Validated on physical neuromorphic systolic array prototypes.\n4. Quantitative Metrics:\n- Power reduction: 62.3% lower energy per inference.\n- Accuracy retention: 98.9% on ImageNet validation split.\n- Memory footprint: 3.8x reduction.\n5. Limitations: Calibration phase requires representative calibration datasets."
+}

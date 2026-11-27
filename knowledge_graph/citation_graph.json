@@ -4,8 +4,48 @@
   "graph": {},
   "nodes": [
     {
+      "title": "Adversarial Multi-Agent Peer Review: Simulating Conference Committee Decisions",
+      "id": "2503.11420v1"
+    },
+    {
+      "title": "Self-Refining Python Sandboxes for Autonomous Scientific Computing",
+      "id": "2504.08902v1"
+    },
+    {
+      "title": "Provable Entailment Verification in Automated Literature Synthesis",
+      "id": "2405.09123v1"
+    },
+    {
+      "title": "Privacy-Preserving Federated Multi-Agent Systems on Edge Devices",
+      "id": "2403.11294v1"
+    },
+    {
+      "title": "Symplectic Runge-Kutta Discretization for Non-Linear Hamiltonian Systems",
+      "id": "2303.17564v2"
+    },
+    {
       "title": "A Distributed Framework for Privacy-Enhanced Vision Transformers on the Edge",
       "id": "2512.09309v1"
+    },
+    {
+      "title": "Autonomous Literature Synthesis via Heterogeneous Citation Lineage Graphs",
+      "id": "2501.04560v1"
+    },
+    {
+      "title": "Energy-Aware Deep Quantization for Ultra-Low Power Neuromorphic Accelerators",
+      "id": "2409.05210v1"
+    },
+    {
+      "title": "Bayesian Optimization of High-Dimensional Scientific Experiments in Isolated Sandboxes",
+      "id": "2410.16789v2"
+    },
+    {
+      "title": "Provable Hallucination Bounds in Retrieval-Augmented Scientific Generation",
+      "id": "2411.03450v1"
+    },
+    {
+      "title": "Diffusion-Based Trajectory Optimization for Autonomous Robotic Systems",
+      "id": "2301.08241v1"
     },
     {
       "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications",
@@ -16,8 +56,28 @@
       "id": "2205.15437v2"
     },
     {
+      "title": "Topological Data Analysis and Link Prediction in Scientific Citation Graphs",
+      "id": "2401.05832v1"
+    },
+    {
       "title": "Edge-state enhanced transport in a 2-dimensional quantum walk",
       "id": "1411.3958v3"
+    },
+    {
+      "title": "Symplectic Graph Neural Networks for Energy Conservation in Physical Systems",
+      "id": "2412.09871v1"
+    },
+    {
+      "title": "Contrastive Graph Representations for Automated Hypothesis Generation",
+      "id": "2407.08915v2"
+    },
+    {
+      "title": "Multi-Agent Consensus Protocols for Distributed Autonomous Scientific Exploration",
+      "id": "2406.12840v1"
+    },
+    {
+      "title": "Zero-Shot Formal Proof Synthesis using LLM Reflection and AST Verification",
+      "id": "2408.14320v1"
     },
     {
       "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
@@ -25,6 +85,46 @@
     }
   ],
   "edges": [
+    {
+      "similarity": 0.498,
+      "source": "2504.08902v1",
+      "target": "2410.16789v2"
+    },
+    {
+      "similarity": 0.573,
+      "source": "2405.09123v1",
+      "target": "2501.04560v1"
+    },
+    {
+      "similarity": 0.615,
+      "source": "2405.09123v1",
+      "target": "2411.03450v1"
+    },
+    {
+      "similarity": 0.519,
+      "source": "2405.09123v1",
+      "target": "2407.08915v2"
+    },
+    {
+      "similarity": 0.567,
+      "source": "2403.11294v1",
+      "target": "2512.09309v1"
+    },
+    {
+      "similarity": 0.453,
+      "source": "2403.11294v1",
+      "target": "2406.12840v1"
+    },
+    {
+      "similarity": 0.543,
+      "source": "2303.17564v2",
+      "target": "2412.09871v1"
+    },
+    {
+      "similarity": 0.567,
+      "source": "2512.09309v1",
+      "target": "2403.11294v1"
+    },
     {
       "similarity": 0.54,
       "source": "2512.09309v1",
@@ -36,9 +136,49 @@
       "target": "2502.15816v1"
     },
     {
+      "similarity": 0.573,
+      "source": "2501.04560v1",
+      "target": "2405.09123v1"
+    },
+    {
+      "similarity": 0.661,
+      "source": "2501.04560v1",
+      "target": "2401.05832v1"
+    },
+    {
+      "similarity": 0.549,
+      "source": "2501.04560v1",
+      "target": "2407.08915v2"
+    },
+    {
+      "similarity": 0.589,
+      "source": "2409.05210v1",
+      "target": "2601.03290v1"
+    },
+    {
+      "similarity": 0.711,
+      "source": "2409.05210v1",
+      "target": "2205.15437v2"
+    },
+    {
+      "similarity": 0.498,
+      "source": "2410.16789v2",
+      "target": "2504.08902v1"
+    },
+    {
+      "similarity": 0.615,
+      "source": "2411.03450v1",
+      "target": "2405.09123v1"
+    },
+    {
       "similarity": 0.54,
       "source": "2601.03290v1",
       "target": "2512.09309v1"
+    },
+    {
+      "similarity": 0.589,
+      "source": "2601.03290v1",
+      "target": "2409.05210v1"
     },
     {
       "similarity": 0.581,
@@ -51,9 +191,49 @@
       "target": "2502.15816v1"
     },
     {
+      "similarity": 0.711,
+      "source": "2205.15437v2",
+      "target": "2409.05210v1"
+    },
+    {
       "similarity": 0.581,
       "source": "2205.15437v2",
       "target": "2601.03290v1"
+    },
+    {
+      "similarity": 0.661,
+      "source": "2401.05832v1",
+      "target": "2501.04560v1"
+    },
+    {
+      "similarity": 0.584,
+      "source": "2401.05832v1",
+      "target": "2407.08915v2"
+    },
+    {
+      "similarity": 0.543,
+      "source": "2412.09871v1",
+      "target": "2303.17564v2"
+    },
+    {
+      "similarity": 0.519,
+      "source": "2407.08915v2",
+      "target": "2405.09123v1"
+    },
+    {
+      "similarity": 0.549,
+      "source": "2407.08915v2",
+      "target": "2501.04560v1"
+    },
+    {
+      "similarity": 0.584,
+      "source": "2407.08915v2",
+      "target": "2401.05832v1"
+    },
+    {
+      "similarity": 0.453,
+      "source": "2406.12840v1",
+      "target": "2403.11294v1"
     },
     {
       "similarity": 0.582,

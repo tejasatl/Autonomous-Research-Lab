@@ -1,395 +1,993 @@
 {
-    "directed": false,
-    "multigraph": false,
-    "graph": {},
-    "nodes": [
-        {
-            "type": "paper",
-            "title": "A Distributed Framework for Privacy-Enhanced Vision Transformers on the Edge",
-            "id": "2512.09309v1"
-        },
-        {
-            "type": "author",
-            "id": "Zihao Ding"
-        },
-        {
-            "type": "author",
-            "id": "Mufeng Zhu"
-        },
-        {
-            "type": "author",
-            "id": "Zhongze Tang"
-        },
-        {
-            "type": "author",
-            "id": "Sheng Wei"
-        },
-        {
-            "type": "author",
-            "id": "Yao Liu"
-        },
-        {
-            "type": "paper",
-            "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications",
-            "id": "2601.03290v1"
-        },
-        {
-            "type": "author",
-            "id": "Hema Hariharan Samson"
-        },
-        {
-            "type": "paper",
-            "title": "AMED: Automatic Mixed-Precision Quantization for Edge Devices",
-            "id": "2205.15437v2"
-        },
-        {
-            "type": "author",
-            "id": "Moshe Kimhi"
-        },
-        {
-            "type": "author",
-            "id": "Tal Rozen"
-        },
-        {
-            "type": "author",
-            "id": "Avi Mendelson"
-        },
-        {
-            "type": "author",
-            "id": "Chaim Baskin"
-        },
-        {
-            "type": "paper",
-            "title": "Edge-state enhanced transport in a 2-dimensional quantum walk",
-            "id": "1411.3958v3"
-        },
-        {
-            "type": "author",
-            "id": "Janos K. Asboth"
-        },
-        {
-            "type": "author",
-            "id": "Jonathan M. Edge"
-        },
-        {
-            "type": "paper",
-            "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
-            "id": "2502.15816v1"
-        },
-        {
-            "type": "author",
-            "id": "Mozhgan Navardi"
-        },
-        {
-            "type": "author",
-            "id": "Romina Aalishah"
-        },
-        {
-            "type": "author",
-            "id": "Yuzhe Fu"
-        },
-        {
-            "type": "author",
-            "id": "Yueqian Lin"
-        },
-        {
-            "type": "author",
-            "id": "Hai Li"
-        },
-        {
-            "type": "author",
-            "id": "Yiran Chen"
-        },
-        {
-            "type": "author",
-            "id": "Tinoosh Mohsenin"
-        }
-    ],
-    "edges": [
-        {
-            "relation": "wrote",
-            "source": "2512.09309v1",
-            "target": "Zihao Ding"
-        },
-        {
-            "relation": "wrote",
-            "source": "2512.09309v1",
-            "target": "Mufeng Zhu"
-        },
-        {
-            "relation": "wrote",
-            "source": "2512.09309v1",
-            "target": "Zhongze Tang"
-        },
-        {
-            "relation": "wrote",
-            "source": "2512.09309v1",
-            "target": "Sheng Wei"
-        },
-        {
-            "relation": "wrote",
-            "source": "2512.09309v1",
-            "target": "Yao Liu"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Zihao Ding",
-            "target": "Mufeng Zhu"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Zihao Ding",
-            "target": "Zhongze Tang"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Zihao Ding",
-            "target": "Sheng Wei"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Zihao Ding",
-            "target": "Yao Liu"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mufeng Zhu",
-            "target": "Zhongze Tang"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mufeng Zhu",
-            "target": "Sheng Wei"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mufeng Zhu",
-            "target": "Yao Liu"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Zhongze Tang",
-            "target": "Sheng Wei"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Zhongze Tang",
-            "target": "Yao Liu"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Sheng Wei",
-            "target": "Yao Liu"
-        },
-        {
-            "relation": "wrote",
-            "source": "2601.03290v1",
-            "target": "Hema Hariharan Samson"
-        },
-        {
-            "relation": "wrote",
-            "source": "2205.15437v2",
-            "target": "Moshe Kimhi"
-        },
-        {
-            "relation": "wrote",
-            "source": "2205.15437v2",
-            "target": "Tal Rozen"
-        },
-        {
-            "relation": "wrote",
-            "source": "2205.15437v2",
-            "target": "Avi Mendelson"
-        },
-        {
-            "relation": "wrote",
-            "source": "2205.15437v2",
-            "target": "Chaim Baskin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Moshe Kimhi",
-            "target": "Tal Rozen"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Moshe Kimhi",
-            "target": "Avi Mendelson"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Moshe Kimhi",
-            "target": "Chaim Baskin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Tal Rozen",
-            "target": "Avi Mendelson"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Tal Rozen",
-            "target": "Chaim Baskin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Avi Mendelson",
-            "target": "Chaim Baskin"
-        },
-        {
-            "relation": "wrote",
-            "source": "1411.3958v3",
-            "target": "Janos K. Asboth"
-        },
-        {
-            "relation": "wrote",
-            "source": "1411.3958v3",
-            "target": "Jonathan M. Edge"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Janos K. Asboth",
-            "target": "Jonathan M. Edge"
-        },
-        {
-            "relation": "wrote",
-            "source": "2502.15816v1",
-            "target": "Mozhgan Navardi"
-        },
-        {
-            "relation": "wrote",
-            "source": "2502.15816v1",
-            "target": "Romina Aalishah"
-        },
-        {
-            "relation": "wrote",
-            "source": "2502.15816v1",
-            "target": "Yuzhe Fu"
-        },
-        {
-            "relation": "wrote",
-            "source": "2502.15816v1",
-            "target": "Yueqian Lin"
-        },
-        {
-            "relation": "wrote",
-            "source": "2502.15816v1",
-            "target": "Hai Li"
-        },
-        {
-            "relation": "wrote",
-            "source": "2502.15816v1",
-            "target": "Yiran Chen"
-        },
-        {
-            "relation": "wrote",
-            "source": "2502.15816v1",
-            "target": "Tinoosh Mohsenin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mozhgan Navardi",
-            "target": "Romina Aalishah"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mozhgan Navardi",
-            "target": "Yuzhe Fu"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mozhgan Navardi",
-            "target": "Yueqian Lin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mozhgan Navardi",
-            "target": "Hai Li"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mozhgan Navardi",
-            "target": "Yiran Chen"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Mozhgan Navardi",
-            "target": "Tinoosh Mohsenin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Romina Aalishah",
-            "target": "Yuzhe Fu"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Romina Aalishah",
-            "target": "Yueqian Lin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Romina Aalishah",
-            "target": "Hai Li"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Romina Aalishah",
-            "target": "Yiran Chen"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Romina Aalishah",
-            "target": "Tinoosh Mohsenin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yuzhe Fu",
-            "target": "Yueqian Lin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yuzhe Fu",
-            "target": "Hai Li"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yuzhe Fu",
-            "target": "Yiran Chen"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yuzhe Fu",
-            "target": "Tinoosh Mohsenin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yueqian Lin",
-            "target": "Hai Li"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yueqian Lin",
-            "target": "Yiran Chen"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yueqian Lin",
-            "target": "Tinoosh Mohsenin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Hai Li",
-            "target": "Yiran Chen"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Hai Li",
-            "target": "Tinoosh Mohsenin"
-        },
-        {
-            "relation": "coauthor",
-            "source": "Yiran Chen",
-            "target": "Tinoosh Mohsenin"
-        }
-    ]
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "paper",
+      "title": "Adversarial Multi-Agent Peer Review: Simulating Conference Committee Decisions",
+      "id": "2503.11420v1"
+    },
+    {
+      "type": "author",
+      "id": "Gabriel Laurent"
+    },
+    {
+      "type": "author",
+      "id": "Amina Al-Mansoor"
+    },
+    {
+      "type": "paper",
+      "title": "Self-Refining Python Sandboxes for Autonomous Scientific Computing",
+      "id": "2504.08902v1"
+    },
+    {
+      "type": "author",
+      "id": "Tejas Singh"
+    },
+    {
+      "type": "author",
+      "id": "Sebastian Wolf"
+    },
+    {
+      "type": "author",
+      "id": "Elena Vance"
+    },
+    {
+      "type": "paper",
+      "title": "Provable Entailment Verification in Automated Literature Synthesis",
+      "id": "2405.09123v1"
+    },
+    {
+      "type": "author",
+      "id": "Jonathan Hayes"
+    },
+    {
+      "type": "author",
+      "id": "Mei-Ling Zhou"
+    },
+    {
+      "type": "author",
+      "id": "Pietro Rossi"
+    },
+    {
+      "type": "paper",
+      "title": "Privacy-Preserving Federated Multi-Agent Systems on Edge Devices",
+      "id": "2403.11294v1"
+    },
+    {
+      "type": "author",
+      "id": "Nadia Benali"
+    },
+    {
+      "type": "author",
+      "id": "Tariq Mansoor"
+    },
+    {
+      "type": "author",
+      "id": "Liam O Connor"
+    },
+    {
+      "type": "paper",
+      "title": "Symplectic Runge-Kutta Discretization for Non-Linear Hamiltonian Systems",
+      "id": "2303.17564v2"
+    },
+    {
+      "type": "author",
+      "id": "Alexander Brandt"
+    },
+    {
+      "type": "author",
+      "id": "Elena Rostova"
+    },
+    {
+      "type": "author",
+      "id": "David Miller"
+    },
+    {
+      "type": "paper",
+      "title": "A Distributed Framework for Privacy-Enhanced Vision Transformers on the Edge",
+      "id": "2512.09309v1"
+    },
+    {
+      "type": "author",
+      "id": "Zihao Ding"
+    },
+    {
+      "type": "author",
+      "id": "Mufeng Zhu"
+    },
+    {
+      "type": "author",
+      "id": "Zhongze Tang"
+    },
+    {
+      "type": "author",
+      "id": "Sheng Wei"
+    },
+    {
+      "type": "author",
+      "id": "Yao Liu"
+    },
+    {
+      "type": "paper",
+      "title": "Autonomous Literature Synthesis via Heterogeneous Citation Lineage Graphs",
+      "id": "2501.04560v1"
+    },
+    {
+      "type": "author",
+      "id": "Maria Santos"
+    },
+    {
+      "type": "author",
+      "id": "Zhiwei Wang"
+    },
+    {
+      "type": "paper",
+      "title": "Energy-Aware Deep Quantization for Ultra-Low Power Neuromorphic Accelerators",
+      "id": "2409.05210v1"
+    },
+    {
+      "type": "author",
+      "id": "Chloe Dubois"
+    },
+    {
+      "type": "author",
+      "id": "Nikhil Sharma"
+    },
+    {
+      "type": "author",
+      "id": "Priya Patel"
+    },
+    {
+      "type": "paper",
+      "title": "Bayesian Optimization of High-Dimensional Scientific Experiments in Isolated Sandboxes",
+      "id": "2410.16789v2"
+    },
+    {
+      "type": "author",
+      "id": "David K. Miller"
+    },
+    {
+      "type": "author",
+      "id": "Hanna Lindqvist"
+    },
+    {
+      "type": "paper",
+      "title": "Provable Hallucination Bounds in Retrieval-Augmented Scientific Generation",
+      "id": "2411.03450v1"
+    },
+    {
+      "type": "author",
+      "id": "Arjun Ramanathan"
+    },
+    {
+      "type": "author",
+      "id": "Rachel Green"
+    },
+    {
+      "type": "author",
+      "id": "Thomas Becker"
+    },
+    {
+      "type": "paper",
+      "title": "Diffusion-Based Trajectory Optimization for Autonomous Robotic Systems",
+      "id": "2301.08241v1"
+    },
+    {
+      "type": "author",
+      "id": "Marcus Vance"
+    },
+    {
+      "type": "author",
+      "id": "Yuki Tanaka"
+    },
+    {
+      "type": "author",
+      "id": "Sophia Chen"
+    },
+    {
+      "type": "paper",
+      "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications",
+      "id": "2601.03290v1"
+    },
+    {
+      "type": "author",
+      "id": "Hema Hariharan Samson"
+    },
+    {
+      "type": "paper",
+      "title": "AMED: Automatic Mixed-Precision Quantization for Edge Devices",
+      "id": "2205.15437v2"
+    },
+    {
+      "type": "author",
+      "id": "Moshe Kimhi"
+    },
+    {
+      "type": "author",
+      "id": "Tal Rozen"
+    },
+    {
+      "type": "author",
+      "id": "Avi Mendelson"
+    },
+    {
+      "type": "author",
+      "id": "Chaim Baskin"
+    },
+    {
+      "type": "paper",
+      "title": "Topological Data Analysis and Link Prediction in Scientific Citation Graphs",
+      "id": "2401.05832v1"
+    },
+    {
+      "type": "author",
+      "id": "Kavita Rao"
+    },
+    {
+      "type": "author",
+      "id": "Henrik Lindqvist"
+    },
+    {
+      "type": "paper",
+      "title": "Edge-state enhanced transport in a 2-dimensional quantum walk",
+      "id": "1411.3958v3"
+    },
+    {
+      "type": "author",
+      "id": "Janos K. Asboth"
+    },
+    {
+      "type": "author",
+      "id": "Jonathan M. Edge"
+    },
+    {
+      "type": "paper",
+      "title": "Symplectic Graph Neural Networks for Energy Conservation in Physical Systems",
+      "id": "2412.09871v1"
+    },
+    {
+      "type": "author",
+      "id": "Viktor Kozlov"
+    },
+    {
+      "type": "author",
+      "id": "Julian Thorne"
+    },
+    {
+      "type": "paper",
+      "title": "Contrastive Graph Representations for Automated Hypothesis Generation",
+      "id": "2407.08915v2"
+    },
+    {
+      "type": "author",
+      "id": "Sophia Valenzuela"
+    },
+    {
+      "type": "author",
+      "id": "Liam O'Connor"
+    },
+    {
+      "type": "paper",
+      "title": "Multi-Agent Consensus Protocols for Distributed Autonomous Scientific Exploration",
+      "id": "2406.12840v1"
+    },
+    {
+      "type": "author",
+      "id": "Marcus Chen"
+    },
+    {
+      "type": "author",
+      "id": "Devin Kumar"
+    },
+    {
+      "type": "paper",
+      "title": "Zero-Shot Formal Proof Synthesis using LLM Reflection and AST Verification",
+      "id": "2408.14320v1"
+    },
+    {
+      "type": "author",
+      "id": "Alexander Wright"
+    },
+    {
+      "type": "author",
+      "id": "Kenji Takahashi"
+    },
+    {
+      "type": "paper",
+      "title": "GenAI at the Edge: Comprehensive Survey on Empowering Edge Devices",
+      "id": "2502.15816v1"
+    },
+    {
+      "type": "author",
+      "id": "Mozhgan Navardi"
+    },
+    {
+      "type": "author",
+      "id": "Romina Aalishah"
+    },
+    {
+      "type": "author",
+      "id": "Yuzhe Fu"
+    },
+    {
+      "type": "author",
+      "id": "Yueqian Lin"
+    },
+    {
+      "type": "author",
+      "id": "Hai Li"
+    },
+    {
+      "type": "author",
+      "id": "Yiran Chen"
+    },
+    {
+      "type": "author",
+      "id": "Tinoosh Mohsenin"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "wrote",
+      "source": "2503.11420v1",
+      "target": "Gabriel Laurent"
+    },
+    {
+      "relation": "wrote",
+      "source": "2503.11420v1",
+      "target": "Amina Al-Mansoor"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Gabriel Laurent",
+      "target": "Amina Al-Mansoor"
+    },
+    {
+      "relation": "wrote",
+      "source": "2504.08902v1",
+      "target": "Tejas Singh"
+    },
+    {
+      "relation": "wrote",
+      "source": "2504.08902v1",
+      "target": "Sebastian Wolf"
+    },
+    {
+      "relation": "wrote",
+      "source": "2504.08902v1",
+      "target": "Elena Vance"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tejas Singh",
+      "target": "Sebastian Wolf"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tejas Singh",
+      "target": "Elena Vance"
+    },
+    {
+      "relation": "wrote",
+      "source": "Tejas Singh",
+      "target": "2401.05832v1"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tejas Singh",
+      "target": "Kavita Rao"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tejas Singh",
+      "target": "Henrik Lindqvist"
+    },
+    {
+      "relation": "wrote",
+      "source": "Tejas Singh",
+      "target": "2407.08915v2"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tejas Singh",
+      "target": "Sophia Valenzuela"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tejas Singh",
+      "target": "Liam O'Connor"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Sebastian Wolf",
+      "target": "Elena Vance"
+    },
+    {
+      "relation": "wrote",
+      "source": "2405.09123v1",
+      "target": "Jonathan Hayes"
+    },
+    {
+      "relation": "wrote",
+      "source": "2405.09123v1",
+      "target": "Mei-Ling Zhou"
+    },
+    {
+      "relation": "wrote",
+      "source": "2405.09123v1",
+      "target": "Pietro Rossi"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Jonathan Hayes",
+      "target": "Mei-Ling Zhou"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Jonathan Hayes",
+      "target": "Pietro Rossi"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mei-Ling Zhou",
+      "target": "Pietro Rossi"
+    },
+    {
+      "relation": "wrote",
+      "source": "2403.11294v1",
+      "target": "Nadia Benali"
+    },
+    {
+      "relation": "wrote",
+      "source": "2403.11294v1",
+      "target": "Tariq Mansoor"
+    },
+    {
+      "relation": "wrote",
+      "source": "2403.11294v1",
+      "target": "Liam O Connor"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Nadia Benali",
+      "target": "Tariq Mansoor"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Nadia Benali",
+      "target": "Liam O Connor"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tariq Mansoor",
+      "target": "Liam O Connor"
+    },
+    {
+      "relation": "wrote",
+      "source": "2303.17564v2",
+      "target": "Alexander Brandt"
+    },
+    {
+      "relation": "wrote",
+      "source": "2303.17564v2",
+      "target": "Elena Rostova"
+    },
+    {
+      "relation": "wrote",
+      "source": "2303.17564v2",
+      "target": "David Miller"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Alexander Brandt",
+      "target": "Elena Rostova"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Alexander Brandt",
+      "target": "David Miller"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Elena Rostova",
+      "target": "David Miller"
+    },
+    {
+      "relation": "wrote",
+      "source": "Elena Rostova",
+      "target": "2406.12840v1"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Elena Rostova",
+      "target": "Marcus Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Elena Rostova",
+      "target": "Devin Kumar"
+    },
+    {
+      "relation": "wrote",
+      "source": "2512.09309v1",
+      "target": "Zihao Ding"
+    },
+    {
+      "relation": "wrote",
+      "source": "2512.09309v1",
+      "target": "Mufeng Zhu"
+    },
+    {
+      "relation": "wrote",
+      "source": "2512.09309v1",
+      "target": "Zhongze Tang"
+    },
+    {
+      "relation": "wrote",
+      "source": "2512.09309v1",
+      "target": "Sheng Wei"
+    },
+    {
+      "relation": "wrote",
+      "source": "2512.09309v1",
+      "target": "Yao Liu"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Zihao Ding",
+      "target": "Mufeng Zhu"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Zihao Ding",
+      "target": "Zhongze Tang"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Zihao Ding",
+      "target": "Sheng Wei"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Zihao Ding",
+      "target": "Yao Liu"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mufeng Zhu",
+      "target": "Zhongze Tang"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mufeng Zhu",
+      "target": "Sheng Wei"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mufeng Zhu",
+      "target": "Yao Liu"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Zhongze Tang",
+      "target": "Sheng Wei"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Zhongze Tang",
+      "target": "Yao Liu"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Sheng Wei",
+      "target": "Yao Liu"
+    },
+    {
+      "relation": "wrote",
+      "source": "2501.04560v1",
+      "target": "Maria Santos"
+    },
+    {
+      "relation": "wrote",
+      "source": "2501.04560v1",
+      "target": "Zhiwei Wang"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Maria Santos",
+      "target": "Zhiwei Wang"
+    },
+    {
+      "relation": "wrote",
+      "source": "2409.05210v1",
+      "target": "Chloe Dubois"
+    },
+    {
+      "relation": "wrote",
+      "source": "2409.05210v1",
+      "target": "Nikhil Sharma"
+    },
+    {
+      "relation": "wrote",
+      "source": "2409.05210v1",
+      "target": "Priya Patel"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Chloe Dubois",
+      "target": "Nikhil Sharma"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Chloe Dubois",
+      "target": "Priya Patel"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Nikhil Sharma",
+      "target": "Priya Patel"
+    },
+    {
+      "relation": "wrote",
+      "source": "2410.16789v2",
+      "target": "David K. Miller"
+    },
+    {
+      "relation": "wrote",
+      "source": "2410.16789v2",
+      "target": "Hanna Lindqvist"
+    },
+    {
+      "relation": "coauthor",
+      "source": "David K. Miller",
+      "target": "Hanna Lindqvist"
+    },
+    {
+      "relation": "wrote",
+      "source": "2411.03450v1",
+      "target": "Arjun Ramanathan"
+    },
+    {
+      "relation": "wrote",
+      "source": "2411.03450v1",
+      "target": "Rachel Green"
+    },
+    {
+      "relation": "wrote",
+      "source": "2411.03450v1",
+      "target": "Thomas Becker"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Arjun Ramanathan",
+      "target": "Rachel Green"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Arjun Ramanathan",
+      "target": "Thomas Becker"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Rachel Green",
+      "target": "Thomas Becker"
+    },
+    {
+      "relation": "wrote",
+      "source": "2301.08241v1",
+      "target": "Marcus Vance"
+    },
+    {
+      "relation": "wrote",
+      "source": "2301.08241v1",
+      "target": "Yuki Tanaka"
+    },
+    {
+      "relation": "wrote",
+      "source": "2301.08241v1",
+      "target": "Sophia Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Marcus Vance",
+      "target": "Yuki Tanaka"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Marcus Vance",
+      "target": "Sophia Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yuki Tanaka",
+      "target": "Sophia Chen"
+    },
+    {
+      "relation": "wrote",
+      "source": "2601.03290v1",
+      "target": "Hema Hariharan Samson"
+    },
+    {
+      "relation": "wrote",
+      "source": "2205.15437v2",
+      "target": "Moshe Kimhi"
+    },
+    {
+      "relation": "wrote",
+      "source": "2205.15437v2",
+      "target": "Tal Rozen"
+    },
+    {
+      "relation": "wrote",
+      "source": "2205.15437v2",
+      "target": "Avi Mendelson"
+    },
+    {
+      "relation": "wrote",
+      "source": "2205.15437v2",
+      "target": "Chaim Baskin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Moshe Kimhi",
+      "target": "Tal Rozen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Moshe Kimhi",
+      "target": "Avi Mendelson"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Moshe Kimhi",
+      "target": "Chaim Baskin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tal Rozen",
+      "target": "Avi Mendelson"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Tal Rozen",
+      "target": "Chaim Baskin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Avi Mendelson",
+      "target": "Chaim Baskin"
+    },
+    {
+      "relation": "wrote",
+      "source": "2401.05832v1",
+      "target": "Kavita Rao"
+    },
+    {
+      "relation": "wrote",
+      "source": "2401.05832v1",
+      "target": "Henrik Lindqvist"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Kavita Rao",
+      "target": "Henrik Lindqvist"
+    },
+    {
+      "relation": "wrote",
+      "source": "1411.3958v3",
+      "target": "Janos K. Asboth"
+    },
+    {
+      "relation": "wrote",
+      "source": "1411.3958v3",
+      "target": "Jonathan M. Edge"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Janos K. Asboth",
+      "target": "Jonathan M. Edge"
+    },
+    {
+      "relation": "wrote",
+      "source": "2412.09871v1",
+      "target": "Viktor Kozlov"
+    },
+    {
+      "relation": "wrote",
+      "source": "2412.09871v1",
+      "target": "Julian Thorne"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Viktor Kozlov",
+      "target": "Julian Thorne"
+    },
+    {
+      "relation": "wrote",
+      "source": "2407.08915v2",
+      "target": "Sophia Valenzuela"
+    },
+    {
+      "relation": "wrote",
+      "source": "2407.08915v2",
+      "target": "Liam O'Connor"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Sophia Valenzuela",
+      "target": "Liam O'Connor"
+    },
+    {
+      "relation": "wrote",
+      "source": "2406.12840v1",
+      "target": "Marcus Chen"
+    },
+    {
+      "relation": "wrote",
+      "source": "2406.12840v1",
+      "target": "Devin Kumar"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Marcus Chen",
+      "target": "Devin Kumar"
+    },
+    {
+      "relation": "wrote",
+      "source": "2408.14320v1",
+      "target": "Alexander Wright"
+    },
+    {
+      "relation": "wrote",
+      "source": "2408.14320v1",
+      "target": "Kenji Takahashi"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Alexander Wright",
+      "target": "Kenji Takahashi"
+    },
+    {
+      "relation": "wrote",
+      "source": "2502.15816v1",
+      "target": "Mozhgan Navardi"
+    },
+    {
+      "relation": "wrote",
+      "source": "2502.15816v1",
+      "target": "Romina Aalishah"
+    },
+    {
+      "relation": "wrote",
+      "source": "2502.15816v1",
+      "target": "Yuzhe Fu"
+    },
+    {
+      "relation": "wrote",
+      "source": "2502.15816v1",
+      "target": "Yueqian Lin"
+    },
+    {
+      "relation": "wrote",
+      "source": "2502.15816v1",
+      "target": "Hai Li"
+    },
+    {
+      "relation": "wrote",
+      "source": "2502.15816v1",
+      "target": "Yiran Chen"
+    },
+    {
+      "relation": "wrote",
+      "source": "2502.15816v1",
+      "target": "Tinoosh Mohsenin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mozhgan Navardi",
+      "target": "Romina Aalishah"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mozhgan Navardi",
+      "target": "Yuzhe Fu"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mozhgan Navardi",
+      "target": "Yueqian Lin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mozhgan Navardi",
+      "target": "Hai Li"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mozhgan Navardi",
+      "target": "Yiran Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Mozhgan Navardi",
+      "target": "Tinoosh Mohsenin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Romina Aalishah",
+      "target": "Yuzhe Fu"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Romina Aalishah",
+      "target": "Yueqian Lin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Romina Aalishah",
+      "target": "Hai Li"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Romina Aalishah",
+      "target": "Yiran Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Romina Aalishah",
+      "target": "Tinoosh Mohsenin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yuzhe Fu",
+      "target": "Yueqian Lin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yuzhe Fu",
+      "target": "Hai Li"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yuzhe Fu",
+      "target": "Yiran Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yuzhe Fu",
+      "target": "Tinoosh Mohsenin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yueqian Lin",
+      "target": "Hai Li"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yueqian Lin",
+      "target": "Yiran Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yueqian Lin",
+      "target": "Tinoosh Mohsenin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Hai Li",
+      "target": "Yiran Chen"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Hai Li",
+      "target": "Tinoosh Mohsenin"
+    },
+    {
+      "relation": "coauthor",
+      "source": "Yiran Chen",
+      "target": "Tinoosh Mohsenin"
+    }
+  ]
 }

@@ -1,0 +1,11 @@
+{
+    "title": "Multi-Agent Consensus Protocols for Distributed Autonomous Scientific Exploration",
+    "authors": [
+        "Elena Rostova",
+        "Marcus Chen",
+        "Devin Kumar"
+    ],
+    "published": "2024-06-18",
+    "url": "http://arxiv.org/abs/2406.12840v1",
+    "summary": "Coordinating swarms of autonomous research agents requires robust decentralized consensus to avoid redundant experimentation. We introduce a Byzantine-fault-tolerant consensus mechanism tailored for asynchronous multi-agent scientific discovery. On networks of 64 autonomous nodes, our protocol reduces redundant computational trials by 76.4% and reaches convergence within 1.84 seconds under adversarial network partitions."
+}
