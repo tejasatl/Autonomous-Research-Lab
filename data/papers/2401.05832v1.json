@@ -1,0 +1,11 @@
+{
+    "title": "Topological Data Analysis and Link Prediction in Scientific Citation Graphs",
+    "authors": [
+        "Kavita Rao",
+        "Henrik Lindqvist",
+        "Tejas Singh"
+    ],
+    "published": "2024-01-12",
+    "url": "http://arxiv.org/abs/2401.05832v1",
+    "summary": "Link prediction in scientific citation networks provides an algorithmic mechanism for identifying emerging cross-disciplinary research frontiers. We evaluate topological link prediction heuristics including Adamic-Adar, Jaccard, and Resource Allocation indices across 70 scientific disciplines. By penalizing high-degree hub nodes, the Adamic-Adar formulation achieves an AUC-ROC of 0.887 in predicting zero-hop citation creation across 5-year longitudinal publication windows."
+}

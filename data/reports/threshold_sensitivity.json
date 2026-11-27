@@ -1,0 +1,79 @@
+{
+    "optimal_threshold": 0.85,
+    "optimal_f1": 84.2,
+    "optimal_precision": 91.2,
+    "optimal_recall": 78.2,
+    "residual_hallucination": 8.8,
+    "sweep_data": [
+        {
+            "tau": 0.5,
+            "precision": 54.2,
+            "recall": 96.4,
+            "f1": 69.39,
+            "hallucination": 45.8
+        },
+        {
+            "tau": 0.55,
+            "precision": 59.8,
+            "recall": 95.1,
+            "f1": 73.43,
+            "hallucination": 40.2
+        },
+        {
+            "tau": 0.6,
+            "precision": 66.4,
+            "recall": 93.8,
+            "f1": 77.76,
+            "hallucination": 33.6
+        },
+        {
+            "tau": 0.65,
+            "precision": 72.1,
+            "recall": 91.5,
+            "f1": 80.65,
+            "hallucination": 27.9
+        },
+        {
+            "tau": 0.7,
+            "precision": 78.5,
+            "recall": 88.6,
+            "f1": 83.24,
+            "hallucination": 21.5
+        },
+        {
+            "tau": 0.75,
+            "precision": 83.2,
+            "recall": 85.0,
+            "f1": 84.09,
+            "hallucination": 16.8
+        },
+        {
+            "tau": 0.8,
+            "precision": 87.1,
+            "recall": 81.4,
+            "f1": 84.15,
+            "hallucination": 12.9
+        },
+        {
+            "tau": 0.85,
+            "precision": 91.2,
+            "recall": 78.2,
+            "f1": 84.2,
+            "hallucination": 8.8
+        },
+        {
+            "tau": 0.9,
+            "precision": 94.6,
+            "recall": 69.5,
+            "f1": 80.13,
+            "hallucination": 5.4
+        },
+        {
+            "tau": 0.95,
+            "precision": 97.2,
+            "recall": 54.8,
+            "f1": 70.09,
+            "hallucination": 2.8
+        }
+    ]
+}

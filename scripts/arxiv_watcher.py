@@ -25,20 +25,20 @@ def main():
 
     daemon = get_arxiv_daemon()
     print("=" * 65)
-    print(" 🛰️ AUTONOMOUS RESEARCH LAB: ARXIV OVERNIGHT DAEMON")
+    print(" [DAEMON] AUTONOMOUS RESEARCH LAB: ARXIV OVERNIGHT DAEMON")
     print(f" Monitoring categories: {', '.join(daemon.categories)}")
     print("=" * 65)
 
     if args.once:
         print("\nExecuting single discovery cycle...")
         res = daemon.run_cycle(max_results=args.limit)
-        print(f"✓ Scanned: {res['preprints_scanned']} preprints")
-        print(f"✓ New Papers Indexed: {res['new_papers_indexed']}")
-        print(f"✓ New Gap Alerts: {res['new_alerts_generated']}")
+        print(f"[OK] Scanned: {res['preprints_scanned']} preprints")
+        print(f"[OK] New Papers Indexed: {res['new_papers_indexed']}")
+        print(f"[OK] New Gap Alerts: {res['new_alerts_generated']}")
         if res['recent_alerts']:
             print("\nRecent Research Alerts:")
             for a in res['recent_alerts'][:3]:
-                print(f"  🚨 [{a['matched_gap']}] {a['paper_title']} (arXiv:{a['paper_id']})")
+                print(f"  [ALERT] [{a['matched_gap']}] {a['paper_title']} (arXiv:{a['paper_id']})")
         return
 
     print(f"Daemon running in background. Polling interval: {args.interval}s. Press Ctrl+C to stop.")

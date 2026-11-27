@@ -1,0 +1,11 @@
+{
+    "title": "Symplectic Runge-Kutta Discretization for Non-Linear Hamiltonian Systems",
+    "authors": [
+        "Alexander Brandt",
+        "Elena Rostova",
+        "David Miller"
+    ],
+    "published": "2023-03-28",
+    "url": "http://arxiv.org/abs/2303.17564v2",
+    "summary": "Numerical integration of Hamiltonian and non-linear dynamical systems frequently suffers from long-term secular energy drift under explicit Runge-Kutta schemes. We investigate symplectic 4th-order Runge-Kutta formulations that preserve phase-space volume and energy conservation invariants. Evaluated on double pendulum and Lotka-Volterra dynamics, our scheme bounds energy dissipation to 1e-6 over 100,000 steps with O(h^4) empirical convergence."
+}

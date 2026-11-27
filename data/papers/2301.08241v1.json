@@ -1,0 +1,11 @@
+{
+    "title": "Diffusion-Based Trajectory Optimization for Autonomous Robotic Systems",
+    "authors": [
+        "Marcus Vance",
+        "Yuki Tanaka",
+        "Sophia Chen"
+    ],
+    "published": "2023-01-20",
+    "url": "http://arxiv.org/abs/2301.08241v1",
+    "summary": "Trajectory synthesis in complex non-convex robotic workspaces requires balancing collision avoidance and temporal smoothness. We present a conditional score-based diffusion model that models trajectory generation as reverse stochastic differential equations. By conditioning diffusion steps on geometric obstacles, our approach synthesizes collision-free trajectories in 12ms on edge compute platforms, maintaining a 99.2% feasibility rate across 500 benchmark configurations."
+}

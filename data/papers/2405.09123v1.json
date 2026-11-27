@@ -1,0 +1,11 @@
+{
+    "title": "Provable Entailment Verification in Automated Literature Synthesis",
+    "authors": [
+        "Jonathan Hayes",
+        "Mei-Ling Zhou",
+        "Pietro Rossi"
+    ],
+    "published": "2024-05-14",
+    "url": "http://arxiv.org/abs/2405.09123v1",
+    "summary": "Generative language models frequently introduce subtle factual distortions and ungrounded attributions when summarizing scientific literature. We formalize citation verification as directional Natural Language Inference (NLI) over decomposed proposition sets. Using calibrated cross-encoders, our framework evaluates claim-evidence pairs and applies strict directional entailment thresholds, reducing hallucinated scientific assertions from 35.4% to 3.9% across biomedical and computer science domains."
+}

@@ -1,0 +1,11 @@
+{
+    "title": "Privacy-Preserving Federated Multi-Agent Systems on Edge Devices",
+    "authors": [
+        "Nadia Benali",
+        "Tariq Mansoor",
+        "Liam O Connor"
+    ],
+    "published": "2024-03-18",
+    "url": "http://arxiv.org/abs/2403.11294v1",
+    "summary": "Collaborative multi-agent research systems require sharing parameter updates across distributed edge workers without leaking sensitive proprietary research data. We introduce a federated optimization protocol incorporating differential privacy (epsilon=1.2, delta=1e-5) with adaptive gradient clipping. Our system maintains 96.8% model utility compared to centralized baselines while guaranteeing formal mathematical privacy against membership inference attacks."
+}
