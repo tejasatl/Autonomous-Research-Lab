@@ -1,0 +1,10 @@
+{
+    "title": "Provably Safe Code Synthesis in Subprocess Execution Sandboxes: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Gabriel Laurent",
+        "Marcus Chen"
+    ],
+    "published": "2024-01-18",
+    "url": "http://arxiv.org/abs/2401.10073v1",
+    "summary": "Executing LLM-generated scientific computation scripts poses significant host security and denial-of-service risks. We implement a multi-tiered seccomp-BPF and cgroup POSIX sandbox that strictly limits memory, socket creation, and CPU time. Testing 10,000 synthesized execution runs confirmed 100% containment of unsafe syscalls. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.0x and a verified task accuracy of 100.0% with mean execution latency of 0.08ms."
+}

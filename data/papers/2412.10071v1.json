@@ -1,0 +1,12 @@
+{
+    "title": "Conservative Physics-Informed Splines for Turbulent Navier-Stokes Inversion: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Viktor Kozlov",
+        "Julian Thorne",
+        "Mateo Rossi",
+        "Lucas Meyer"
+    ],
+    "published": "2024-12-16",
+    "url": "http://arxiv.org/abs/2412.10071v1",
+    "summary": "Recovering velocity fields from sparse tracer particles in turbulent flows requires strict mass conservation. We develop divergence-free B-spline neural representations that analytically enforce the incompressibility constraint div(u) = 0. Benchmarks on 3D isotropic turbulence show a 48% reduction in velocity estimation error. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.9x and a verified task accuracy of 92.5% with mean execution latency of 12.4ms."
+}

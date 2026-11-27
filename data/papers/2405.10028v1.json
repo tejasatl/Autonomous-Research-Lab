@@ -1,0 +1,10 @@
+{
+    "title": "Asynchronous Verifiable Consensus for Heterogeneous Research Swarms: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Hiroshi Tanaka",
+        "Dr. Elena Vance"
+    ],
+    "published": "2024-05-01",
+    "url": "http://arxiv.org/abs/2405.10028v1",
+    "summary": "Decentralized swarms of autonomous agents require Byzantine fault tolerance without expensive synchronous barrier synchronization. We formulate an asynchronous directed acyclic graph (DAG) consensus protocol for multi-agent hypothesis exploration. On clusters of 128 autonomous agents, our protocol reaches state finality in 1.12 seconds with zero deadlocks under 25% network packet loss. Across systematic experimental evaluations, our approach achieves an acceleration factor of 2.8x and a verified task accuracy of 97.4% with mean execution latency of 1.12ms."
+}

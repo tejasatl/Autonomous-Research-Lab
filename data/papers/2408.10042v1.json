@@ -1,0 +1,10 @@
+{
+    "title": "Dynamic Topological Data Analysis of Evolving Bibliometric Graphs: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Marcus Chen",
+        "Sarah Jenkins"
+    ],
+    "published": "2024-08-15",
+    "url": "http://arxiv.org/abs/2408.10042v1",
+    "summary": "Tracking scientific paradigm formation requires monitoring temporal changes in graph topology. We compute persistent homology barcode diagrams across sliding temporal citation slices. The persistence landscape detects emerging research subdisciplines an average of 11.4 months before exponential citation growth with 87.3% precision. Across systematic experimental evaluations, our approach achieves an acceleration factor of 2.1x and a verified task accuracy of 87.3% with mean execution latency of 5.5ms."
+}

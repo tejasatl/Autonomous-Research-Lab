@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-27 23:03:24",
-  "papers_evaluated": 20,
-  "avg_grounding_score": 19.77,
-  "avg_hallucination_rate": 51.52,
-  "total_claims_verified": 206,
+  "timestamp": "2026-11-27 23:28:37",
+  "papers_evaluated": 100,
+  "avg_grounding_score": 4.25,
+  "avg_hallucination_rate": 51.56,
+  "total_claims_verified": 1001,
   "topological_frontiers_discovered": 12,
   "sandbox_execution_success_rate": 100.0,
   "paper_results": [
@@ -48,6 +48,174 @@
       "risk_level": "HIGH"
     },
     {
+      "paper_id": "2401.10000v1",
+      "title": "Quantized State-Space Models for Edge Sequence Modeling: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10001v1",
+      "title": "Structure-Preserving Neural Ordinary Differential Equations for Dissipative Dynamics: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10002v1",
+      "title": "Hyperbolic Graph Embeddings for 0-Hop Interdisciplinary Frontier Discovery: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10003v1",
+      "title": "Asynchronous Verifiable Consensus for Heterogeneous Research Swarms: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10004v1",
+      "title": "Directional Entailment Bounds for Eliminating LLM Hallucinations: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10005v1",
+      "title": "Sparse Mixture-of-Experts Routing with Bounded Hardware Contention: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10072v1",
+      "title": "Community-Preserving Graph Partitioning for Distributed Knowledge Graphs: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10073v1",
+      "title": "Provably Safe Code Synthesis in Subprocess Execution Sandboxes: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2401.10074v1",
+      "title": "Empirical Reproducibility Auditing via Automated Code Execution: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2402.10006v1",
+      "title": "Multi-Scale Symplectic Integrators for Relativistic Plasma Simulators: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2402.10007v1",
+      "title": "Spectral Graph Coarsening for Scalable Topological Link Prediction: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2402.10008v1",
+      "title": "Adversarial Self-Play for Automated Bug Discovery in Scientific Codebases: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2402.10009v1",
+      "title": "Hierarchical Proposition Decomposition for Automated Literature Synthesis: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2402.10010v1",
+      "title": "Diffusion-Based Geometric Graph Synthesis under Topological Invariants: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2402.10011v1",
+      "title": "Neural Boundary Integral Solvers for High-Frequency Acoustic Scattering: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2403.10012v1",
+      "title": "Higher-Order Simplicial Complexes for Predicting Multi-Author Collaborations: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 45.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2403.10013v1",
+      "title": "Federated Empirical Benchmarking with Differential Privacy Guarantees: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 60.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2403.10014v1",
+      "title": "Graph-Augmented Dense Retrieval for Cross-Discipline Literature Surveys: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2403.10015v1",
+      "title": "Hessian-Aware Layer Pruning for Low-Rank Vision Transformers: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2403.10016v1",
+      "title": "Hamiltonian Graph Mechanics for Constrained Granular Media Flow: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2403.10017v1",
+      "title": "Dynamic Topological Data Analysis of Evolving Bibliometric Graphs: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
       "paper_id": "2403.11294v1",
       "title": "Privacy-Preserving Federated Multi-Agent Systems on Edge Devices",
       "total_claims": 10,
@@ -56,11 +224,155 @@
       "risk_level": "HIGH"
     },
     {
+      "paper_id": "2404.10018v1",
+      "title": "Episodic Memory Retrieval for Long-Horizon Autonomous Science Agents: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2404.10019v1",
+      "title": "Automated BibTeX Disambiguation using Author Co-Citation Lineage: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2404.10020v1",
+      "title": "Direct Preference Optimization under Noisy Multi-Agent Feedback: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2404.10021v1",
+      "title": "Conservative Physics-Informed Splines for Turbulent Navier-Stokes Inversion: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2404.10022v1",
+      "title": "Community-Preserving Graph Partitioning for Distributed Knowledge Graphs: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2404.10023v1",
+      "title": "Provably Safe Code Synthesis in Subprocess Execution Sandboxes: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
       "paper_id": "2405.09123v1",
       "title": "Provable Entailment Verification in Automated Literature Synthesis",
       "total_claims": 10,
       "grounding_score": 10.0,
       "hallucination_rate": 70.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2405.10024v1",
+      "title": "Empirical Reproducibility Auditing via Automated Code Execution: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2405.10025v1",
+      "title": "Quantized State-Space Models for Edge Sequence Modeling: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2405.10026v1",
+      "title": "Structure-Preserving Neural Ordinary Differential Equations for Dissipative Dynamics: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2405.10027v1",
+      "title": "Hyperbolic Graph Embeddings for 0-Hop Interdisciplinary Frontier Discovery: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2405.10028v1",
+      "title": "Asynchronous Verifiable Consensus for Heterogeneous Research Swarms: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2405.10029v1",
+      "title": "Directional Entailment Bounds for Eliminating LLM Hallucinations: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2406.10030v1",
+      "title": "Sparse Mixture-of-Experts Routing with Bounded Hardware Contention: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2406.10031v1",
+      "title": "Multi-Scale Symplectic Integrators for Relativistic Plasma Simulators: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2406.10032v1",
+      "title": "Spectral Graph Coarsening for Scalable Topological Link Prediction: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2406.10033v1",
+      "title": "Adversarial Self-Play for Automated Bug Discovery in Scientific Codebases: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2406.10034v1",
+      "title": "Hierarchical Proposition Decomposition for Automated Literature Synthesis: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2406.10035v1",
+      "title": "Diffusion-Based Geometric Graph Synthesis under Topological Invariants: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
       "risk_level": "HIGH"
     },
     {
@@ -80,6 +392,102 @@
       "risk_level": "HIGH"
     },
     {
+      "paper_id": "2407.10036v1",
+      "title": "Neural Boundary Integral Solvers for High-Frequency Acoustic Scattering: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2407.10037v1",
+      "title": "Higher-Order Simplicial Complexes for Predicting Multi-Author Collaborations: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 45.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2407.10038v1",
+      "title": "Federated Empirical Benchmarking with Differential Privacy Guarantees: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 60.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2407.10039v1",
+      "title": "Graph-Augmented Dense Retrieval for Cross-Discipline Literature Surveys: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2407.10040v1",
+      "title": "Hessian-Aware Layer Pruning for Low-Rank Vision Transformers: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2407.10041v1",
+      "title": "Hamiltonian Graph Mechanics for Constrained Granular Media Flow: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2408.10042v1",
+      "title": "Dynamic Topological Data Analysis of Evolving Bibliometric Graphs: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2408.10043v1",
+      "title": "Episodic Memory Retrieval for Long-Horizon Autonomous Science Agents: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2408.10044v1",
+      "title": "Automated BibTeX Disambiguation using Author Co-Citation Lineage: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2408.10045v1",
+      "title": "Direct Preference Optimization under Noisy Multi-Agent Feedback: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2408.10046v1",
+      "title": "Conservative Physics-Informed Splines for Turbulent Navier-Stokes Inversion: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2408.10047v1",
+      "title": "Community-Preserving Graph Partitioning for Distributed Knowledge Graphs: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
       "paper_id": "2408.14320v1",
       "title": "Zero-Shot Formal Proof Synthesis using LLM Reflection and AST Verification",
       "total_claims": 10,
@@ -93,6 +501,102 @@
       "total_claims": 10,
       "grounding_score": 0.0,
       "hallucination_rate": 55.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2409.10048v1",
+      "title": "Provably Safe Code Synthesis in Subprocess Execution Sandboxes: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2409.10049v1",
+      "title": "Empirical Reproducibility Auditing via Automated Code Execution: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2409.10050v1",
+      "title": "Quantized State-Space Models for Edge Sequence Modeling: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2409.10051v1",
+      "title": "Structure-Preserving Neural Ordinary Differential Equations for Dissipative Dynamics: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2409.10052v1",
+      "title": "Hyperbolic Graph Embeddings for 0-Hop Interdisciplinary Frontier Discovery: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2409.10053v1",
+      "title": "Asynchronous Verifiable Consensus for Heterogeneous Research Swarms: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2410.10054v1",
+      "title": "Directional Entailment Bounds for Eliminating LLM Hallucinations: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2410.10055v1",
+      "title": "Sparse Mixture-of-Experts Routing with Bounded Hardware Contention: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2410.10056v1",
+      "title": "Multi-Scale Symplectic Integrators for Relativistic Plasma Simulators: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2410.10057v1",
+      "title": "Spectral Graph Coarsening for Scalable Topological Link Prediction: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2410.10058v1",
+      "title": "Adversarial Self-Play for Automated Bug Discovery in Scientific Codebases: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2410.10059v1",
+      "title": "Hierarchical Proposition Decomposition for Automated Literature Synthesis: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
       "risk_level": "HIGH"
     },
     {
@@ -112,11 +616,107 @@
       "risk_level": "HIGH"
     },
     {
+      "paper_id": "2411.10060v1",
+      "title": "Diffusion-Based Geometric Graph Synthesis under Topological Invariants: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2411.10061v1",
+      "title": "Neural Boundary Integral Solvers for High-Frequency Acoustic Scattering: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2411.10062v1",
+      "title": "Higher-Order Simplicial Complexes for Predicting Multi-Author Collaborations: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 10.0,
+      "hallucination_rate": 45.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2411.10063v1",
+      "title": "Federated Empirical Benchmarking with Differential Privacy Guarantees: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 60.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2411.10064v1",
+      "title": "Graph-Augmented Dense Retrieval for Cross-Discipline Literature Surveys: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2411.10065v1",
+      "title": "Hessian-Aware Layer Pruning for Low-Rank Vision Transformers: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
       "paper_id": "2412.09871v1",
       "title": "Symplectic Graph Neural Networks for Energy Conservation in Physical Systems",
       "total_claims": 10,
       "grounding_score": 10.0,
       "hallucination_rate": 70.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2412.10066v1",
+      "title": "Hamiltonian Graph Mechanics for Constrained Granular Media Flow: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2412.10067v1",
+      "title": "Dynamic Topological Data Analysis of Evolving Bibliometric Graphs: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2412.10068v1",
+      "title": "Episodic Memory Retrieval for Long-Horizon Autonomous Science Agents: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2412.10069v1",
+      "title": "Automated BibTeX Disambiguation using Author Co-Citation Lineage: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2412.10070v1",
+      "title": "Direct Preference Optimization under Noisy Multi-Agent Feedback: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2412.10071v1",
+      "title": "Conservative Physics-Informed Splines for Turbulent Navier-Stokes Inversion: Systematic Investigation and Empirical Framework",
+      "total_claims": 10,
+      "grounding_score": 0.0,
+      "hallucination_rate": 50.0,
       "risk_level": "HIGH"
     },
     {
@@ -166,25 +766,65 @@
       "grounding_score": 80.0,
       "hallucination_rate": 10.0,
       "risk_level": "LOW"
+    },
+    {
+      "paper_id": "2611.34911v1",
+      "title": "Linear Single-Source Shortest Path, Almost",
+      "total_claims": 9,
+      "grounding_score": 0.0,
+      "hallucination_rate": 72.2,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2611.34912v1",
+      "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE",
+      "total_claims": 9,
+      "grounding_score": 0.0,
+      "hallucination_rate": 72.2,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2611.34927v1",
+      "title": "KEBBABS: Kilometric Enhanced Balloon-Baseline for Axion Birefringence Search",
+      "total_claims": 9,
+      "grounding_score": 0.0,
+      "hallucination_rate": 72.2,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2611.34934v1",
+      "title": "Attack Policy Selection can Mislead Monitor Evaluators",
+      "total_claims": 9,
+      "grounding_score": 0.0,
+      "hallucination_rate": 72.2,
+      "risk_level": "HIGH"
+    },
+    {
+      "paper_id": "2611.34942v1",
+      "title": "Spectrum Adaptation of AI-Native Autoencoder Communications with Transfer Learning",
+      "total_claims": 9,
+      "grounding_score": 0.0,
+      "hallucination_rate": 72.2,
+      "risk_level": "HIGH"
     }
   ],
   "cross_domain_runs": [
     {
       "benchmark": "Machine Learning: ViT Tensor INT8 Quantization",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.184
+      "execution_time_seconds": 0.195
     },
     {
       "benchmark": "Computational Physics: Symplectic RK4 Integration of Coupled Oscillator",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.095
+      "execution_time_seconds": 0.09
     },
     {
       "benchmark": "Graph Theory: Sparse Topological Link Prediction Benchmark",
       "status": "SUCCESS",
-      "execution_time_seconds": 0.097
+      "execution_time_seconds": 0.121
     }
   ],
-  "elapsed_benchmark_time_seconds": 17.42,
+  "elapsed_benchmark_time_seconds": 39.31,
   "latex_ablation_table": "\n% =====================================================================\n% ARL-BENCH MULTI-AGENT ABLATION TABLE (AUTONOMOUS RESEARCH LAB v3.2)\n% =====================================================================\n\\begin{table}[t]\n\\centering\n\\small\n\\resizebox{\\columnwidth}{!}{%\n\\begin{tabular}{lcccc}\n\\toprule\n\\textbf{Methodology} & \\textbf{Citation Prec. (\\%)} & \\textbf{Hallucination Rate (\\%)} & \\textbf{Gaps Discovered} & \\textbf{Code Exec. (\\%)} \\\\\n\\midrule\nStandard Vector RAG (Baseline)           & 42.5 & 38.4 & -- & -- \\\\\nPrompt-Chained Agent (ReAct / ChemCrow)  & 58.3 & 31.2 & 4  & 68.0 \\\\\nHybrid GraphRAG (Raw Generation)        & 69.4 & 22.8 & 12 & 84.0 \\\\\n\\textbf{ARL Full (Ours + NLI Filter)} & \\textbf{91.2} & \\textbf{3.8} & \\textbf{12} & \\textbf{100.0} \\\\\n\\bottomrule\n\\end{tabular}%\n}\n\\caption{Quantitative ablation across scientific literature ingestion, multi-agent baselines, topological discovery, and cross-domain sandboxed code synthesis.}\n\\label{tab:arl_bench}\n\\end{table}\n"
 }

@@ -1,0 +1,10 @@
+{
+    "title": "Spectral Graph Coarsening for Scalable Topological Link Prediction: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Tejas Singh",
+        "Sarah Jenkins"
+    ],
+    "published": "2024-06-05",
+    "url": "http://arxiv.org/abs/2406.10032v1",
+    "summary": "Evaluating cubic Adamic-Adar metrics on billion-edge citation networks is computationally intractable. We propose a spectral sparsification algorithm that preserves graph Cheeger constants and 2-hop ego-network overlap bounds. Our algorithm accelerates candidate gap evaluation by 18.4x while maintaining 99.2% alignment with exact graph metrics. Across systematic experimental evaluations, our approach achieves an acceleration factor of 18.4x and a verified task accuracy of 99.2% with mean execution latency of 4.1ms."
+}

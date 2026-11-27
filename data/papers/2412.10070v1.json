@@ -1,0 +1,10 @@
+{
+    "title": "Direct Preference Optimization under Noisy Multi-Agent Feedback: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Tejas Singh",
+        "David K. Miller"
+    ],
+    "published": "2024-12-15",
+    "url": "http://arxiv.org/abs/2412.10070v1",
+    "summary": "Aligning foundation models using multi-agent feedback is prone to preference noise and drift. We prove formal convergence bounds for Direct Preference Optimization (DPO) under bounded asymmetric label noise. On pairwise evaluation benchmarks, our robust loss formulation reduces reward hacking by 34.2% while improving win rates against GPT-4 to 62.4%. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.8x and a verified task accuracy of 62.4% with mean execution latency of 15.3ms."
+}

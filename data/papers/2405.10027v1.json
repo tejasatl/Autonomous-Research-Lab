@@ -1,0 +1,11 @@
+{
+    "title": "Hyperbolic Graph Embeddings for 0-Hop Interdisciplinary Frontier Discovery: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Hanna Lindqvist",
+        "Chloe Dubois",
+        "Liam O'Connor"
+    ],
+    "published": "2024-05-28",
+    "url": "http://arxiv.org/abs/2405.10027v1",
+    "summary": "Scientific knowledge graphs exhibit hierarchical tree-like geometry that Euclidean embeddings distort. We formulate hyperbolic Ricci curvature metrics to evaluate structural holes across disconnected academic subfields. Applied to 500,000 preprints, our hyperbolic link predictor achieves a 0.842 ROC-AUC on 0-hop frontier discovery, predicting cross-domain breakthroughs 14 months early. Across systematic experimental evaluations, our approach achieves an acceleration factor of 2.4x and a verified task accuracy of 84.2% with mean execution latency of 3.2ms."
+}

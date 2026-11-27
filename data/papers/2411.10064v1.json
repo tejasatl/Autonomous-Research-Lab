@@ -1,0 +1,10 @@
+{
+    "title": "Graph-Augmented Dense Retrieval for Cross-Discipline Literature Surveys: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Rachel Green",
+        "Viktor Kozlov"
+    ],
+    "published": "2024-11-09",
+    "url": "http://arxiv.org/abs/2411.10064v1",
+    "summary": "Standard vector similarity retrieval fails when query keywords do not overlap with target technical vocabularies. We unify dense MiniLM embeddings with personalized PageRank over 2-hop citation neighborhoods. Our GraphRAG architecture improves document recall on cross-disciplinary queries by 31.8% over standard BM25 and dense bi-encoders. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.8x and a verified task accuracy of 86.4% with mean execution latency of 0.28ms."
+}

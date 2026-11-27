@@ -1,0 +1,11 @@
+{
+    "title": "Hamiltonian Graph Mechanics for Constrained Granular Media Flow: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Nikhil Sharma",
+        "Mateo Rossi",
+        "Camille Moreau"
+    ],
+    "published": "2024-12-11",
+    "url": "http://arxiv.org/abs/2412.10066v1",
+    "summary": "Granular particle flow involves discontinuous contact mechanics that break standard continuous neural dynamics. We embed unilateral non-penetration constraints directly into graph Lagrangian neural networks using dual cone projections. In pebble-bed reactor simulations, our model preserves momentum conservation to within 1.2e-6 over 50,000 timesteps. Across systematic experimental evaluations, our approach achieves an acceleration factor of 2.8x and a verified task accuracy of 99.2% with mean execution latency of 8.1ms."
+}

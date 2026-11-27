@@ -1,0 +1,12 @@
+{
+    "title": "Quantized State-Space Models for Edge Sequence Modeling: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Sophia Valenzuela",
+        "Tejas Singh",
+        "Sarah Jenkins",
+        "Nikhil Sharma"
+    ],
+    "published": "2024-01-01",
+    "url": "http://arxiv.org/abs/2401.10000v1",
+    "summary": "State-space models (SSMs) offer linear-time sequence modeling but introduce substantial memory overhead during recurrent state updates. We propose an 8-bit dynamic fixed-point quantization framework for selective state-space layers. Evaluating on Long Range Arena, our quantized model preserves 99.1% language modeling perplexity while reducing KV-cache memory footprints by 3.8x on mobile ARM processors. Across systematic experimental evaluations, our approach achieves an acceleration factor of 3.8x and a verified task accuracy of 99.1% with mean execution latency of 14.2ms."
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Directional Entailment Bounds for Eliminating LLM Hallucinations: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Amina Al-Mansoor",
+        "Kenji Takahashi"
+    ],
+    "published": "2024-05-02",
+    "url": "http://arxiv.org/abs/2405.10029v1",
+    "summary": "Generative language models frequently assert unsubstantiated citations in literature synthesis. We establish directional Natural Language Inference (NLI) entailment scoring protocols over decomposed atomic propositions. Calibrating the entailment threshold to tau=0.85 reduces scientific hallucination rates to 3.8% across 1,000 benchmark claims with 91.2% precision. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.4x and a verified task accuracy of 91.2% with mean execution latency of 0.12ms."
+}

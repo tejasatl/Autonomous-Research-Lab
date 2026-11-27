@@ -1,0 +1,12 @@
+{
+    "title": "Higher-Order Simplicial Complexes for Predicting Multi-Author Collaborations: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Priya Patel",
+        "Devin Kumar",
+        "Amina Al-Mansoor",
+        "Gabriel Laurent"
+    ],
+    "published": "2024-03-13",
+    "url": "http://arxiv.org/abs/2403.10012v1",
+    "summary": "Standard graph edges only model pairwise relationships, failing to capture group scientific collaboration. We formulate simplicial homology link prediction over higher-order clique complexes of co-authorship networks. On 10-year DBLP citation data, our simplicial topological predictor outperforms pairwise link heuristics by 28.5% F1-score. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.5x and a verified task accuracy of 88.6% with mean execution latency of 7.3ms."
+}

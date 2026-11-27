@@ -1,0 +1,12 @@
+{
+    "title": "Neural Boundary Integral Solvers for High-Frequency Acoustic Scattering: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Tejas Singh",
+        "Sophia Valenzuela",
+        "Lucas Meyer",
+        "Amina Al-Mansoor"
+    ],
+    "published": "2024-07-09",
+    "url": "http://arxiv.org/abs/2407.10036v1",
+    "summary": "Solving high-frequency Helmholtz equations with neural networks suffers from spectral bias. We design a hybrid neural boundary element method combining directional wavepacket representations with boundary operator preconditioning. Our solver resolves acoustic scattering across complex aircraft geometries with 1.8e-4 L2 error in 0.42 seconds. Across systematic experimental evaluations, our approach achieves an acceleration factor of 5.2x and a verified task accuracy of 98.9% with mean execution latency of 0.42ms."
+}

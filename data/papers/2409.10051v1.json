@@ -1,0 +1,10 @@
+{
+    "title": "Structure-Preserving Neural Ordinary Differential Equations for Dissipative Dynamics: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Tejas Singh",
+        "Amina Al-Mansoor"
+    ],
+    "published": "2024-09-24",
+    "url": "http://arxiv.org/abs/2409.10051v1",
+    "summary": "Standard neural ODEs violate thermodynamic entropy production constraints when simulating open physical systems. We introduce a GENERIC-compliant neural ODE parameterization that explicitly partitions dynamics into reversible Hamiltonian and irreversible dissipative brackets. Long-term simulations of turbulent Couette flow demonstrate bounded phase-space drift below 2.1e-5. Across systematic experimental evaluations, our approach achieves an acceleration factor of 3.1x and a verified task accuracy of 99.4% with mean execution latency of 6.8ms."
+}

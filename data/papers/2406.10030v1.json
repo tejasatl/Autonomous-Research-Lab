@@ -1,0 +1,11 @@
+{
+    "title": "Sparse Mixture-of-Experts Routing with Bounded Hardware Contention: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Gabriel Laurent",
+        "Marcus Chen",
+        "Arjun Ramanathan"
+    ],
+    "published": "2024-06-03",
+    "url": "http://arxiv.org/abs/2406.10030v1",
+    "summary": "Top-k expert routing in distributed mixture-of-experts (MoE) architectures creates severe network straggler bottlenecks. We formulate a hardware-aware load-balancing routing objective that caps inter-accelerator communication buffers. Evaluated on 64-GPU clusters, our routing protocol achieves a 1.42x training throughput speedup while maintaining parity on downstream MMLU benchmark accuracy. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.42x and a verified task accuracy of 98.7% with mean execution latency of 8.4ms."
+}

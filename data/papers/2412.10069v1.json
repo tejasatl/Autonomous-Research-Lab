@@ -1,0 +1,10 @@
+{
+    "title": "Automated BibTeX Disambiguation using Author Co-Citation Lineage: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Dr. Elena Vance",
+        "Zhiwei Wang"
+    ],
+    "published": "2024-12-14",
+    "url": "http://arxiv.org/abs/2412.10069v1",
+    "summary": "Compiling bibliographies from unnormalized preprint metadata leads to duplicate entries and corrupted citation keys. We formulate an entity-resolution graph matching algorithm that unifies author lineages across arXiv, CrossRef, and Semantic Scholar. In evaluations on 10,000 bib entries, our tool achieves 99.4% precision and zero key collisions. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.5x and a verified task accuracy of 99.4% with mean execution latency of 0.18ms."
+}

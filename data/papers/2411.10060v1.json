@@ -1,0 +1,11 @@
+{
+    "title": "Diffusion-Based Geometric Graph Synthesis under Topological Invariants: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Tejas Singh",
+        "Rachel Green",
+        "Kenji Takahashi"
+    ],
+    "published": "2024-11-05",
+    "url": "http://arxiv.org/abs/2411.10060v1",
+    "summary": "Synthesizing non-Euclidean graphs with specific topological constraints is non-trivial for standard diffusion. We design an SE(3)-equivariant score-based diffusion model conditioned on persistent homology features. Our approach generates valid molecular graphs with 94.6% validity and an 82% reduction in unphysical steric clashes. Across systematic experimental evaluations, our approach achieves an acceleration factor of 4.2x and a verified task accuracy of 94.6% with mean execution latency of 12.0ms."
+}

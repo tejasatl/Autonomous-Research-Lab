@@ -1,0 +1,12 @@
+{
+    "title": "Adversarial Self-Play for Automated Bug Discovery in Scientific Codebases: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Amina Al-Mansoor",
+        "Sophia Valenzuela",
+        "Dr. Elena Vance",
+        "Arjun Ramanathan"
+    ],
+    "published": "2024-10-03",
+    "url": "http://arxiv.org/abs/2410.10058v1",
+    "summary": "Scientific simulation scripts often harbor subtle numerical precision and dimension bugs. We build an adversarial multi-agent self-play framework where fuzzer agents synthesize degenerate physical inputs while proof agents verify boundary conditions. The framework identified 41 previously undetected numerical edge cases in open-source astrophysical codes. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.9x and a verified task accuracy of 93.8% with mean execution latency of 14.5ms."
+}

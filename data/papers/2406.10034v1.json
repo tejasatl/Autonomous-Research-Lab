@@ -1,0 +1,11 @@
+{
+    "title": "Hierarchical Proposition Decomposition for Automated Literature Synthesis: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Kenji Takahashi",
+        "Thomas Becker",
+        "Tejas Singh"
+    ],
+    "published": "2024-06-07",
+    "url": "http://arxiv.org/abs/2406.10034v1",
+    "summary": "Complex scientific paragraphs contain multiple nested claims that confuse monolithic fact-checking models. We propose an AST-guided constituency parsing model that extracts fine-grained atomic propositions. On peer-reviewed manuscripts, our parser achieves 96.4% proposition extraction completeness with 0.91 inter-annotator agreement. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.6x and a verified task accuracy of 96.4% with mean execution latency of 0.45ms."
+}

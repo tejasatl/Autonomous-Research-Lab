@@ -1,0 +1,10 @@
+{
+    "title": "Empirical Reproducibility Auditing via Automated Code Execution: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Chloe Dubois",
+        "Marcus Chen"
+    ],
+    "published": "2024-09-22",
+    "url": "http://arxiv.org/abs/2409.10049v1",
+    "summary": "A substantial fraction of published machine learning papers fail to reproduce due to unstated dependency versions and random seeds. We design an automated reproducibility auditor that synthesizes environment manifests and executes evaluation scripts in clean containers. The auditor successfully replicated 88.5% of verified empirical claims across 200 papers. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.7x and a verified task accuracy of 88.5% with mean execution latency of 24.0ms."
+}

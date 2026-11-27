@@ -1,0 +1,10 @@
+{
+    "title": "Federated Empirical Benchmarking with Differential Privacy Guarantees: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Mateo Rossi",
+        "Hiroshi Tanaka"
+    ],
+    "published": "2024-11-08",
+    "url": "http://arxiv.org/abs/2411.10063v1",
+    "summary": "Sharing proprietary benchmark evaluation datasets across competing research institutions raises severe data privacy concerns. We design a Renyi differentially private federated evaluation protocol that computes Pareto frontiers without raw data exchange. At epsilon=1.5, empirical accuracy metrics match centralized evaluation to within 0.8% margin of error. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.2x and a verified task accuracy of 98.4% with mean execution latency of 18.2ms."
+}

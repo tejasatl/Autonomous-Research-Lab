@@ -1,0 +1,12 @@
+{
+    "title": "Episodic Memory Retrieval for Long-Horizon Autonomous Science Agents: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Tejas Singh",
+        "Dr. Alistair Finch",
+        "Viktor Kozlov",
+        "Liam O'Connor"
+    ],
+    "published": "2024-12-13",
+    "url": "http://arxiv.org/abs/2412.10068v1",
+    "summary": "Autonomous research agents operating over multi-week research campaigns suffer from context window saturation and goal forgetting. We construct an episodic memory graph combining semantic vector clustering with hierarchical goal trees. The agent successfully completes 40-step scientific workflows with 89.2% task completion. Across systematic experimental evaluations, our approach achieves an acceleration factor of 2.2x and a verified task accuracy of 89.2% with mean execution latency of 6.4ms."
+}

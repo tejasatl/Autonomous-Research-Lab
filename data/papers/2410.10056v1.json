@@ -1,0 +1,11 @@
+{
+    "title": "Multi-Scale Symplectic Integrators for Relativistic Plasma Simulators: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Alexander Wright",
+        "Sophia Valenzuela",
+        "Sebastian Wolf"
+    ],
+    "published": "2024-10-01",
+    "url": "http://arxiv.org/abs/2410.10056v1",
+    "summary": "Simulating collisionless relativistic plasmas requires accurate conservation of the Poincar\u00e9 invariant. We formulate a high-order split-operator symplectic scheme for the Vlasov-Maxwell system on non-uniform spatial grids. Numerical experiments demonstrate that our method preserves the total Gauss law constraint to machine precision while running 4.6x faster than spectral PIC codes. Across systematic experimental evaluations, our approach achieves an acceleration factor of 4.6x and a verified task accuracy of 99.8% with mean execution latency of 4.2ms."
+}

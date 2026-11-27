@@ -1,0 +1,11 @@
+{
+    "title": "Empirical Reproducibility Auditing via Automated Code Execution: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Fatima Zahra",
+        "Mateo Rossi",
+        "Amina Al-Mansoor"
+    ],
+    "published": "2024-05-25",
+    "url": "http://arxiv.org/abs/2405.10024v1",
+    "summary": "A substantial fraction of published machine learning papers fail to reproduce due to unstated dependency versions and random seeds. We design an automated reproducibility auditor that synthesizes environment manifests and executes evaluation scripts in clean containers. The auditor successfully replicated 88.5% of verified empirical claims across 200 papers. Across systematic experimental evaluations, our approach achieves an acceleration factor of 1.7x and a verified task accuracy of 88.5% with mean execution latency of 24.0ms."
+}

@@ -1,0 +1,11 @@
+{
+    "title": "Community-Preserving Graph Partitioning for Distributed Knowledge Graphs: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Tejas Singh",
+        "Nikhil Sharma",
+        "Marcus Chen"
+    ],
+    "published": "2024-04-23",
+    "url": "http://arxiv.org/abs/2404.10022v1",
+    "summary": "Partitioning massive citation graphs across distributed workers often breaks dense local citation motifs. We design an edge-cut minimizing partitioning objective based on balanced modularity maximization. Evaluated on 16-node compute clusters, our partitioner reduces cross-node message exchanges by 56.2% during GraphRAG retrieval. Across systematic experimental evaluations, our approach achieves an acceleration factor of 3.4x and a verified task accuracy of 94.1% with mean execution latency of 9.6ms."
+}

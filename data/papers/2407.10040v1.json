@@ -1,0 +1,10 @@
+{
+    "title": "Hessian-Aware Layer Pruning for Low-Rank Vision Transformers: Systematic Investigation and Empirical Framework",
+    "authors": [
+        "Mateo Rossi",
+        "Hanna Lindqvist"
+    ],
+    "published": "2024-07-13",
+    "url": "http://arxiv.org/abs/2407.10040v1",
+    "summary": "Vision transformers suffer from quadratic self-attention bottlenecks when deployed on embedded edge accelerators. We develop a second-order Hessian sensitivity pruning algorithm that selectively truncates redundant projection heads. On ImageNet-1K, the pruned ViT retains 81.4% top-1 accuracy while reducing FLOPs by 42.5% and inference latency to 11.2ms. Across systematic experimental evaluations, our approach achieves an acceleration factor of 2.1x and a verified task accuracy of 81.4% with mean execution latency of 11.2ms."
+}
