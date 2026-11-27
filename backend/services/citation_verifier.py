@@ -167,7 +167,7 @@ def compute_semantic_entailment(claim: str, source_sentences: List[str]) -> Dict
         verdict = "CONTRADICTION"
         confidence = round(max_sim, 3)
         explanation = f"Contradiction detected: Negation polarity mismatch against source claim."
-    elif has_numerical_hallucination and max_sim < 0.75:
+    elif has_numerical_hallucination:
         verdict = "CONTRADICTION"
         confidence = 0.85
         explanation = f"Numerical Hallucination: Metrics {list(unsupported_nums)} not found in cited source text."
@@ -244,12 +244,24 @@ class CitationVerifier:
                 best_label = labels[int(np.argmax(best_probs))]
                 best_span = source_sentences[best_idx]
                 
+                falsification_dossier = None
+                if best_label == "CONTRADICTION":
+                    dossier = FalsificationDossier(
+                        claim=claim,
+                        prior_literature=best_span,
+                        metrics={"nli_label": best_label, "confidence": round(float(np.max(best_probs)), 3)},
+                        delta_divergence=round(float(np.max(best_probs)), 3),
+                        is_falsification_anomaly=True
+                    )
+                    falsification_dossier = dossier.to_dict()
+
                 return {
                     "claim": claim,
                     "verdict": best_label,
                     "confidence": round(float(np.max(best_probs)), 3),
                     "matched_source_span": best_span,
-                    "explanation": f"Neural NLI classification: {best_label} (Confidence: {round(float(np.max(best_probs)) * 100, 1)}%)"
+                    "explanation": f"Neural NLI classification: {best_label} (Confidence: {round(float(np.max(best_probs)) * 100, 1)}%)",
+                    "falsification_dossier": falsification_dossier
                 }
             except Exception as e:
                 logger.warning(f"Neural NLI inference failed: {e}. Falling back to semantic entailment.")
@@ -261,7 +273,8 @@ class CitationVerifier:
             "verdict": result["verdict"],
             "confidence": result["confidence"],
             "matched_source_span": result["matched_source_span"],
-            "explanation": result["explanation"]
+            "explanation": result["explanation"],
+            "falsification_dossier": result.get("falsification_dossier")
         }
 
     def verify_document(self, generated_text: str, source_text: str) -> Dict[str, Any]:

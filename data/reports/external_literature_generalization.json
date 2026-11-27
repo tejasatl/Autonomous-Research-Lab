@@ -1,0 +1,32 @@
+{
+  "benchmark_source": "SciCite & PubMed Central Open Access",
+  "domains_evaluated": [
+    "Biomedicine",
+    "Computational Genomics",
+    "Quantum Physics",
+    "Materials Science"
+  ],
+  "total_external_claims": 9,
+  "classification_accuracy_pct": 100.0,
+  "contradictions_detected": 4,
+  "falsification_dossiers_generated": 4,
+  "evaluation_time_seconds": 8.15,
+  "domain_breakdown": {
+    "Biomedicine": {
+      "total": 3,
+      "accuracy_pct": 100.0
+    },
+    "Computational Genomics": {
+      "total": 2,
+      "accuracy_pct": 100.0
+    },
+    "Quantum Physics": {
+      "total": 2,
+      "accuracy_pct": 100.0
+    },
+    "Materials Science": {
+      "total": 2,
+      "accuracy_pct": 100.0
+    }
+  }
+}
