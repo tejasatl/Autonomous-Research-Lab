@@ -1,5 +1,9 @@
 # Autonomous Research Lab (ARL)
 
+<p align="center">
+  <img src="assets/logo_full.png" alt="Autonomous Research Lab Banner" width="760"/>
+</p>
+
 > **A Closed-Loop Multi-Agent Scientific Discovery Platform with Topological GraphRAG, Sandboxed Empirical Execution, and Conference Manuscript Synthesis.**
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)

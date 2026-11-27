@@ -1,51 +1,60 @@
 import React from "react";
-import Icon from "./Icons";
+import logoIcon from "../assets/logo_icon.png";
+import logoFull from "../assets/logo_full.png";
 
 /**
  * ProjectLogo Component
- * Centralized logo component for the Autonomous Research Lab.
- * When a custom image is provided in assets, it renders the custom image.
- * Otherwise, it renders a sleek, modern brand logo frame.
+ * Centralized official logo component for Autonomous Research Lab.
+ * Renders the custom circular emblem or horizontal banner lockup.
  */
-export default function ProjectLogo({ size = 38, style = {} }) {
-  // If a custom uploaded logo image is available, render it
-  // (Ready for user's logo file upload)
-  const customLogoSrc = null; // Set to "/assets/logo.png" or imported image when provided
-
-  if (customLogoSrc) {
+export default function ProjectLogo({ size = 38, variant = "icon", style = {}, className = "" }) {
+  if (variant === "full") {
     return (
       <img
-        src={customLogoSrc}
-        alt="Autonomous Lab Logo"
+        src={logoFull}
+        alt="Autonomous Research Lab"
+        className={className}
         style={{
-          width: `${size}px`,
           height: `${size}px`,
-          borderRadius: "10px",
+          width: "auto",
+          maxWidth: "100%",
           objectFit: "contain",
           display: "block",
+          borderRadius: "8px",
           ...style,
         }}
       />
     );
   }
 
+  // Circular Icon Variant
   return (
     <div
+      className={className}
       style={{
         width: `${size}px`,
         height: `${size}px`,
-        borderRadius: "12px",
-        background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 100%)",
-        display: "flex",
+        borderRadius: "50%",
+        display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        boxShadow: "0 4px 12px rgba(37, 99, 235, 0.25)",
-        color: "#ffffff",
         flexShrink: 0,
+        boxShadow: "0 4px 14px rgba(0, 180, 255, 0.22)",
+        overflow: "hidden",
+        background: "#030814",
         ...style,
       }}
     >
-      <Icon name="sparkles" size={Math.round(size * 0.52)} color="#ffffff" strokeWidth={2} />
+      <img
+        src={logoIcon}
+        alt="Autonomous Lab Emblem"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
     </div>
   );
 }

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="70%" stop-color="#050a17"/>
+      <stop offset="100%" stop-color="#02050d"/>
+    </radialGradient>
+
+    <!-- Outer Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="50%" stop-color="#0066ff"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
+    </linearGradient>
+
+    <!-- Letter A Facets -->
+    <linearGradient id="facetLeft" x1="0%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#0052cc"/>
+      <stop offset="100%" stop-color="#0099ff"/>
+    </linearGradient>
+
+    <linearGradient id="facetRight" x1="50%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="50%" stop-color="#0077ff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+
+    <linearGradient id="orbitGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#0088ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Filter Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Circular Dark Base with Soft Ambient Glow -->
+  <circle cx="250" cy="250" r="236" fill="url(#bgGlow)"/>
+
+  <!-- Outer Neon Ring with Glow -->
+  <circle cx="250" cy="250" r="218" fill="none" stroke="url(#ringGrad)" stroke-width="8" filter="url(#glow)"/>
+  <circle cx="250" cy="250" r="218" fill="none" stroke="#00f0ff" stroke-width="3" opacity="0.8"/>
+
+  <!-- Orbital Ellipse Passing Around the A -->
+  <g transform="rotate(-26 250 250)" filter="url(#glow)">
+    <ellipse cx="250" cy="250" rx="195" ry="58" fill="none" stroke="url(#orbitGrad)" stroke-width="5.5"/>
+    
+    <!-- Left Orbital Satellite Sphere -->
+    <circle cx="56" cy="250" r="13" fill="#00f0ff" filter="url(#softGlow)"/>
+    <circle cx="56" cy="250" r="8" fill="#ffffff"/>
+
+    <!-- Right Orbital Satellite Sphere -->
+    <circle cx="444" cy="250" r="11" fill="#00e5ff" filter="url(#softGlow)"/>
+    <circle cx="444" cy="250" r="6" fill="#ffffff"/>
+  </g>
+
+  <!-- Stylized Geometric "A" Glyph -->
+  <!-- Left Leg of A -->
+  <polygon points="246,132 208,132 108,358 158,358 246,160" fill="url(#facetLeft)" filter="url(#glow)"/>
+
+  <!-- Right Leg of A -->
+  <polygon points="246,132 254,132 358,358 304,358 238,212" fill="url(#facetRight)" filter="url(#glow)"/>
+
+  <!-- Central 3D Knowledge Graph / Citation Network -->
+  <g id="citationGraph" filter="url(#glow)">
+    <!-- Graph Edges -->
+    <line x1="246" y1="272" x2="204" y2="336" stroke="#00d2ff" stroke-width="3.5" opacity="0.85"/>
+    <line x1="246" y1="272" x2="288" y2="336" stroke="#00d2ff" stroke-width="3.5" opacity="0.85"/>
+    <line x1="204" y1="336" x2="288" y2="336" stroke="#00d2ff" stroke-width="3.5" opacity="0.85"/>
+    
+    <line x1="246" y1="272" x2="246" y2="362" stroke="#00d2ff" stroke-width="3.5" opacity="0.85"/>
+    <line x1="204" y1="336" x2="246" y2="362" stroke="#00d2ff" stroke-width="3.5" opacity="0.85"/>
+    <line x1="288" y1="336" x2="246" y2="362" stroke="#00d2ff" stroke-width="3.5" opacity="0.85"/>
+
+    <!-- Left external bridge node -->
+    <line x1="204" y1="336" x2="170" y2="340" stroke="#00aaff" stroke-width="3" opacity="0.7"/>
+    <!-- Top apex node -->
+    <circle cx="246" cy="272" r="10" fill="#00f0ff"/>
+    <circle cx="246" cy="272" r="5" fill="#ffffff"/>
+
+    <!-- Mid Left node -->
+    <circle cx="204" cy="336" r="9" fill="#00d2ff"/>
+    <circle cx="204" cy="336" r="4.5" fill="#ffffff"/>
+
+    <!-- Mid Right node -->
+    <circle cx="288" cy="336" r="9" fill="#00d2ff"/>
+    <circle cx="288" cy="336" r="4.5" fill="#ffffff"/>
+
+    <!-- Bottom Center node -->
+    <circle cx="246" cy="362" r="11" fill="#00f0ff" filter="url(#softGlow)"/>
+    <circle cx="246" cy="362" r="5.5" fill="#ffffff"/>
+
+    <!-- External side node -->
+    <circle cx="170" cy="340" r="7.5" fill="#00aaff"/>
+    <circle cx="170" cy="340" r="3.5" fill="#ffffff"/>
+  </g>
+</svg>
