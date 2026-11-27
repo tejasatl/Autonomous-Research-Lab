@@ -3,9 +3,27 @@ import os
 import json
 import logging
 from typing import List, Dict, Any, Optional
+from dataclasses import dataclass, asdict
 import numpy as np
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass
+class FalsificationDossier:
+    """
+    Formal Empirical Falsification Dossier according to Equation in Section 4.3:
+    D_falsify = < c_claim, s_prior, E_metrics, Delta_divergence >
+    Routes verified empirical contradictions directly to the Critic Agent committee.
+    """
+    claim: str
+    prior_literature: str
+    metrics: Dict[str, Any]
+    delta_divergence: float
+    is_falsification_anomaly: bool = True
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
 
 # Try importing NLTK sentence tokenizer with regex fallback
 try:
@@ -166,11 +184,23 @@ def compute_semantic_entailment(claim: str, source_sentences: List[str]) -> Dict
         confidence = round(1.0 - max_sim, 3)
         explanation = "Uncited / Unsupported: No corresponding evidence found in source text."
 
+    falsification_dossier = None
+    if verdict == "CONTRADICTION":
+        dossier = FalsificationDossier(
+            claim=claim,
+            prior_literature=best_source_span,
+            metrics={"contradiction_confidence": float(confidence), "polarity_mismatch": bool(polarity_mismatch)},
+            delta_divergence=round(float(confidence), 3),
+            is_falsification_anomaly=True
+        )
+        falsification_dossier = dossier.to_dict()
+
     return {
         "verdict": verdict,
         "confidence": confidence,
         "matched_source_span": best_source_span,
-        "explanation": explanation
+        "explanation": explanation,
+        "falsification_dossier": falsification_dossier
     }
 
 
