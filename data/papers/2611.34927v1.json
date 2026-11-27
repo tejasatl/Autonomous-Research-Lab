@@ -1,0 +1,11 @@
+{
+  "id": "2611.34927v1",
+  "title": "KEBBABS: Kilometric Enhanced Balloon-Baseline for Axion Birefringence Search",
+  "authors": [
+    "Tommaso Feri",
+    "Silvia Gasparotto"
+  ],
+  "summary": "We propose a broadband search for ultralight axion dark matter through the rotation of laser polarization induced by the axion--photon coupling. Two stratospheric balloons flying at altitudes of 30--40 km form a free-space optical link. One balloon sends a linearly polarized beam to the other, which reflects it back to a polarimeter on the first balloon. The long physical baseline provides an alternative to the repeated reflections used in resonant optical cavities. We target axion masses in the range $4\\times10^{-15}\\,\\mathrm{eV}\\lesssim m_a\\lesssim10^{-11}\\,\\mathrm{eV}$. The lower edge corresponds to a frequency of about $1\\,\\mathrm{Hz}$, below which gondola roll about the line of sight can mimic a polarization signal. At $m_a=10^{-14}\\,\\mathrm{eV}$, a low-cost Pathfinder using flight-demonstrated technology could probe couplings as small as $g_{a\u03b3}\\simeq2.8\\times10^{-11}\\,\\mathrm{GeV}^{-1}$, about a factor of two below the CAST bound. At the same mass, the Feasible today configuration could probe couplings just below the astrophysical bounds considered here, while the Futuristic configuration could reach $g_{a\u03b3}\\simeq6.4\\times10^{-15}\\,\\mathrm{GeV}^{-1}$, roughly two orders of magnitude below those bounds.",
+  "published": "2026-11-25",
+  "pdf": "https://arxiv.org/pdf/2611.34927v1"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "2611.34911v1",
+  "title": "Linear Single-Source Shortest Path, Almost",
+  "authors": [
+    "Iman Gholami",
+    "MohammadTaghi Hajiaghayi"
+  ],
+  "summary": "We give a comparison-addition algorithm for single-source shortest paths in undirected graphs with nonnegative real edge lengths. For each input with $n$ vertices and $m$ edges, its expected running time is $O(m+n\\log\\log\\log n)$. It terminates almost surely. Every terminating run returns exact distances and a shortest-path tree on the reachable vertices. The bound is independent of the ratio of edge lengths and is linear whenever $m=\u03a9(n\\log\\log\\log n)$.",
+  "published": "2026-11-25",
+  "pdf": "https://arxiv.org/pdf/2611.34911v1"
+}

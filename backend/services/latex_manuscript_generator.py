@@ -229,3 +229,5 @@ def get_latex_manuscript_generator() -> LatexManuscriptGenerator:
     if _generator_instance is None:
         _generator_instance = LatexManuscriptGenerator()
     return _generator_instance
+
+get_latex_generator = get_latex_manuscript_generator

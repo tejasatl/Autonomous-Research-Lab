@@ -5,28 +5,253 @@
   "nodes": [
     {
       "type": "paper",
+      "title": "Adversarial Multi-Agent Peer Review: Simulating Conference Committee Decisions",
+      "id": "2503.11420v1"
+    },
+    {
+      "type": "concept",
+      "id": "Human peer review"
+    },
+    {
+      "type": "concept",
+      "id": "Variance"
+    },
+    {
+      "type": "concept",
+      "id": "Subjective bias"
+    },
+    {
+      "type": "concept",
+      "id": "Adversarial multi-agent peer review committee"
+    },
+    {
+      "type": "concept",
+      "id": "Reviewer agents"
+    },
+    {
+      "type": "concept",
+      "id": "Theory agent"
+    },
+    {
+      "type": "concept",
+      "id": "Empirical agent"
+    },
+    {
+      "type": "concept",
+      "id": "Novelty agent"
+    },
+    {
+      "type": "concept",
+      "id": "Area Chair"
+    },
+    {
+      "type": "concept",
+      "id": "ICLR manuscripts"
+    },
+    {
+      "type": "concept",
+      "id": "Spearman correlation"
+    },
+    {
+      "type": "concept",
+      "id": "Conference decisions"
+    },
+    {
+      "type": "concept",
+      "id": "Rebuttal roadmaps"
+    },
+    {
+      "type": "concept",
+      "id": "Borderline submissions"
+    },
+    {
+      "type": "paper",
+      "title": "Self-Refining Python Sandboxes for Autonomous Scientific Computing",
+      "id": "2504.08902v1"
+    },
+    {
+      "type": "concept",
+      "id": "Autonomous AI scientists"
+    },
+    {
+      "type": "concept",
+      "id": "hypothesis validation through executable code"
+    },
+    {
+      "type": "concept",
+      "id": "self-refining execution sandbox"
+    },
+    {
+      "type": "concept",
+      "id": "AST analysis"
+    },
+    {
+      "type": "concept",
+      "id": "POSIX subprocess sandboxing"
+    },
+    {
+      "type": "concept",
+      "id": "automated reflection loops"
+    },
+    {
+      "type": "concept",
+      "id": "code execution success"
+    },
+    {
+      "type": "concept",
+      "id": "self-debugging passes"
+    },
+    {
+      "type": "paper",
+      "title": "Provable Entailment Verification in Automated Literature Synthesis",
+      "id": "2405.09123v1"
+    },
+    {
+      "type": "concept",
+      "id": "Generative language models"
+    },
+    {
+      "type": "concept",
+      "id": "Factual distortions"
+    },
+    {
+      "type": "concept",
+      "id": "Ungrounded attributions"
+    },
+    {
+      "type": "concept",
+      "id": "Citation verification"
+    },
+    {
+      "type": "concept",
+      "id": "Directional Natural Language Inference (NLI)"
+    },
+    {
+      "type": "concept",
+      "id": "Decomposed proposition sets"
+    },
+    {
+      "type": "concept",
+      "id": "Calibrated cross-encoders"
+    },
+    {
+      "type": "concept",
+      "id": "Claim-evidence pairs"
+    },
+    {
+      "type": "concept",
+      "id": "Directional entailment thresholds"
+    },
+    {
+      "type": "concept",
+      "id": "Hallucinated scientific assertions"
+    },
+    {
+      "type": "paper",
+      "title": "Privacy-Preserving Federated Multi-Agent Systems on Edge Devices",
+      "id": "2403.11294v1"
+    },
+    {
+      "type": "concept",
+      "id": "Collaborative multi-agent research systems"
+    },
+    {
+      "type": "concept",
+      "id": "Sharing parameter updates"
+    },
+    {
+      "type": "concept",
+      "id": "Distributed edge workers"
+    },
+    {
+      "type": "concept",
+      "id": "Federated optimization protocol"
+    },
+    {
+      "type": "concept",
+      "id": "Differential privacy"
+    },
+    {
+      "type": "concept",
+      "id": "Adaptive gradient clipping"
+    },
+    {
+      "type": "concept",
+      "id": "Model utility"
+    },
+    {
+      "type": "concept",
+      "id": "Centralized baselines"
+    },
+    {
+      "type": "concept",
+      "id": "Formal mathematical privacy"
+    },
+    {
+      "type": "concept",
+      "id": "Membership inference attacks"
+    },
+    {
+      "type": "paper",
+      "title": "Symplectic Runge-Kutta Discretization for Non-Linear Hamiltonian Systems",
+      "id": "2303.17564v2"
+    },
+    {
+      "type": "concept",
+      "id": "Numerical integration"
+    },
+    {
+      "type": "concept",
+      "id": "Hamiltonian systems"
+    },
+    {
+      "type": "concept",
+      "id": "non-linear dynamical systems"
+    },
+    {
+      "type": "concept",
+      "id": "energy drift"
+    },
+    {
+      "type": "concept",
+      "id": "explicit Runge-Kutta schemes"
+    },
+    {
+      "type": "concept",
+      "id": "symplectic Runge-Kutta formulations"
+    },
+    {
+      "type": "concept",
+      "id": "phase-space volume preservation"
+    },
+    {
+      "type": "concept",
+      "id": "energy conservation"
+    },
+    {
+      "type": "concept",
+      "id": "4th-order"
+    },
+    {
+      "type": "concept",
+      "id": "double pendulum"
+    },
+    {
+      "type": "concept",
+      "id": "Lotka-Volterra dynamics"
+    },
+    {
+      "type": "concept",
+      "id": "energy dissipation"
+    },
+    {
+      "type": "concept",
+      "id": "empirical convergence"
+    },
+    {
+      "type": "paper",
       "title": "A Distributed Framework for Privacy-Enhanced Vision Transformers on the Edge",
       "id": "2512.09309v1"
-    },
-    {
-      "type": "concept",
-      "id": "Visual intelligence tools"
-    },
-    {
-      "type": "concept",
-      "id": "Computational requirements"
-    },
-    {
-      "type": "concept",
-      "id": "Resource-constrained devices"
-    },
-    {
-      "type": "concept",
-      "id": "Cloud offloading"
-    },
-    {
-      "type": "concept",
-      "id": "Privacy vulnerabilities"
     },
     {
       "type": "concept",
@@ -38,6 +263,14 @@
     },
     {
       "type": "concept",
+      "id": "Privacy vulnerabilities"
+    },
+    {
+      "type": "concept",
+      "id": "Resource-constrained devices"
+    },
+    {
+      "type": "concept",
       "id": "Edge orchestrator"
     },
     {
@@ -46,15 +279,7 @@
     },
     {
       "type": "concept",
-      "id": "Multiple independent cloud servers"
-    },
-    {
-      "type": "concept",
-      "id": "Data merging and aggregation"
-    },
-    {
-      "type": "concept",
-      "id": "Segment Anything Model (SAM)"
+      "id": "Multi-cloud distribution"
     },
     {
       "type": "concept",
@@ -62,23 +287,172 @@
     },
     {
       "type": "concept",
-      "id": "Segmentation performance"
-    },
-    {
-      "type": "concept",
-      "id": "Content reconstruction risk"
-    },
-    {
-      "type": "concept",
-      "id": "User data exposure"
-    },
-    {
-      "type": "concept",
-      "id": "Scalable privacy-preserving solution"
+      "id": "Segment Anything Model (SAM)"
     },
     {
       "type": "concept",
       "id": "Edge-cloud continuum"
+    },
+    {
+      "type": "concept",
+      "id": "Content reconstruction prevention"
+    },
+    {
+      "type": "paper",
+      "title": "Autonomous Literature Synthesis via Heterogeneous Citation Lineage Graphs",
+      "id": "2501.04560v1"
+    },
+    {
+      "type": "concept",
+      "id": "Technical paradigm shifts"
+    },
+    {
+      "type": "concept",
+      "id": "temporal lineage"
+    },
+    {
+      "type": "concept",
+      "id": "scientific literature"
+    },
+    {
+      "type": "concept",
+      "id": "academic development"
+    },
+    {
+      "type": "concept",
+      "id": "directed heterogeneous lineage graph"
+    },
+    {
+      "type": "concept",
+      "id": "methods"
+    },
+    {
+      "type": "concept",
+      "id": "datasets"
+    },
+    {
+      "type": "concept",
+      "id": "claims"
+    },
+    {
+      "type": "concept",
+      "id": "AI preprints"
+    },
+    {
+      "type": "concept",
+      "id": "topological lineage engine"
+    },
+    {
+      "type": "concept",
+      "id": "emerging breakthrough paradigms"
+    },
+    {
+      "type": "concept",
+      "id": "citation explosion"
+    },
+    {
+      "type": "concept",
+      "id": "citation count velocity"
+    },
+    {
+      "type": "paper",
+      "title": "Energy-Aware Deep Quantization for Ultra-Low Power Neuromorphic Accelerators",
+      "id": "2409.05210v1"
+    },
+    {
+      "type": "concept",
+      "id": "Deep neural networks"
+    },
+    {
+      "type": "concept",
+      "id": "Edge neuromorphic hardware"
+    },
+    {
+      "type": "concept",
+      "id": "Parameter compression"
+    },
+    {
+      "type": "concept",
+      "id": "Mixed-precision integer quantization"
+    },
+    {
+      "type": "concept",
+      "id": "Dynamic bit-width scaling"
+    },
+    {
+      "type": "concept",
+      "id": "Layer-wise gradient sensitivity"
+    },
+    {
+      "type": "concept",
+      "id": "Power dissipation reduction"
+    },
+    {
+      "type": "concept",
+      "id": "ImageNet accuracy preservation"
+    },
+    {
+      "type": "paper",
+      "title": "Bayesian Optimization of High-Dimensional Scientific Experiments in Isolated Sandboxes",
+      "id": "2410.16789v2"
+    },
+    {
+      "type": "concept",
+      "id": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "type": "concept",
+      "id": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "type": "concept",
+      "id": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "type": "concept",
+      "id": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "type": "concept",
+      "id": "limit: 5"
+    },
+    {
+      "type": "concept",
+      "id": "model: gemini-2.5-flash"
+    },
+    {
+      "type": "concept",
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 58.118473402s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "type": "concept",
+      "id": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "type": "concept",
+      "id": "retry_delay {\n  seconds: 58\n}\n]"
+    },
+    {
+      "type": "paper",
+      "title": "Provable Hallucination Bounds in Retrieval-Augmented Scientific Generation",
+      "id": "2411.03450v1"
+    },
+    {
+      "type": "concept",
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 57.961219475s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "type": "concept",
+      "id": "retry_delay {\n  seconds: 57\n}\n]"
+    },
+    {
+      "type": "paper",
+      "title": "Diffusion-Based Trajectory Optimization for Autonomous Robotic Systems",
+      "id": "2301.08241v1"
+    },
+    {
+      "type": "concept",
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 57.807681038s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "type": "paper",
@@ -91,47 +465,63 @@
     },
     {
       "type": "concept",
-      "id": "Edge device deployment"
+      "id": "edge deployment"
     },
     {
       "type": "concept",
-      "id": "Model compression"
+      "id": "model compression"
     },
     {
       "type": "concept",
-      "id": "Quantization"
+      "id": "quantization"
     },
     {
       "type": "concept",
-      "id": "Pruning"
+      "id": "pruning"
     },
     {
       "type": "concept",
-      "id": "Knowledge distillation"
+      "id": "knowledge distillation"
     },
     {
       "type": "concept",
-      "id": "Sparse attention mechanisms"
+      "id": "sparse attention mechanisms"
     },
     {
       "type": "concept",
-      "id": "Hardware-aware neural architecture search"
+      "id": "mixed-precision quantization"
     },
     {
       "type": "concept",
-      "id": "Memory-bandwidth bottleneck analysis"
+      "id": "hardware-aware neural architecture search"
     },
     {
       "type": "concept",
-      "id": "Energy efficiency"
+      "id": "memory-bandwidth bottleneck"
     },
     {
       "type": "concept",
-      "id": "Real-time AI applications"
+      "id": "quantization sweet spots"
     },
     {
       "type": "concept",
-      "id": "Deployment pipelines"
+      "id": "real-time performance"
+    },
+    {
+      "type": "concept",
+      "id": "energy efficiency"
+    },
+    {
+      "type": "concept",
+      "id": "deployment pipeline"
+    },
+    {
+      "type": "concept",
+      "id": "inference latency"
+    },
+    {
+      "type": "concept",
+      "id": "model size reduction"
     },
     {
       "type": "paper",
@@ -140,63 +530,20 @@
     },
     {
       "type": "concept",
-      "id": "Quantized neural networks"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 50.335839949s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "type": "concept",
-      "id": "Mixed-precision quantization"
+      "id": "retry_delay {\n  seconds: 50\n}\n]"
+    },
+    {
+      "type": "paper",
+      "title": "Topological Data Analysis and Link Prediction in Scientific Citation Graphs",
+      "id": "2401.05832v1"
     },
     {
       "type": "concept",
-      "id": "Latency reduction"
-    },
-    {
-      "type": "concept",
-      "id": "Power consumption reduction"
-    },
-    {
-      "type": "concept",
-      "id": "Model size reduction"
-    },
-    {
-      "type": "concept",
-      "id": "Resource-constrained systems"
-    },
-    {
-      "type": "concept",
-      "id": "Loss manifold assumption"
-    },
-    {
-      "type": "concept",
-      "id": "Optimal minimum shift with precision"
-    },
-    {
-      "type": "concept",
-      "id": "Quantization as a random process"
-    },
-    {
-      "type": "concept",
-      "id": "Bit allocation as Markov Decision Process"
-    },
-    {
-      "type": "concept",
-      "id": "Hardware-aware quantization"
-    },
-    {
-      "type": "concept",
-      "id": "Neural network accuracy"
-    },
-    {
-      "type": "concept",
-      "id": "Hardware efficiency"
-    },
-    {
-      "type": "concept",
-      "id": "Accuracy-efficiency trade-off"
-    },
-    {
-      "type": "concept",
-      "id": "Automatic Mixed-Precision Quantization for Edge Devices (AMED)"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 50.039326869s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "type": "paper",
@@ -205,43 +552,51 @@
     },
     {
       "type": "concept",
-      "id": "Quantum walks"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.868347942s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "type": "concept",
-      "id": "Quadratic speedup"
+      "id": "retry_delay {\n  seconds: 49\n}\n]"
+    },
+    {
+      "type": "paper",
+      "title": "Symplectic Graph Neural Networks for Energy Conservation in Physical Systems",
+      "id": "2412.09871v1"
     },
     {
       "type": "concept",
-      "id": "Disorder"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.444370621s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "type": "paper",
+      "title": "Contrastive Graph Representations for Automated Hypothesis Generation",
+      "id": "2407.08915v2"
     },
     {
       "type": "concept",
-      "id": "Efficient transport"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.140145173s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "type": "paper",
+      "title": "Multi-Agent Consensus Protocols for Distributed Autonomous Scientific Exploration",
+      "id": "2406.12840v1"
     },
     {
       "type": "concept",
-      "id": "Cutting links"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.002123779s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "type": "paper",
+      "title": "Zero-Shot Formal Proof Synthesis using LLM Reflection and AST Verification",
+      "id": "2408.14320v1"
     },
     {
       "type": "concept",
-      "id": "Topologically protected chiral edge states"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 48.867436351s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "type": "concept",
-      "id": "Bulk Chern number"
-    },
-    {
-      "type": "concept",
-      "id": "Periodically driven lattice Hamiltonian"
-    },
-    {
-      "type": "concept",
-      "id": "Bulk topological invariant"
-    },
-    {
-      "type": "concept",
-      "id": "Quasienergy winding"
+      "id": "retry_delay {\n  seconds: 48\n}\n]"
     },
     {
       "type": "paper",
@@ -250,70 +605,284 @@
     },
     {
       "type": "concept",
-      "id": "Generative Artificial Intelligence (GenAI)"
-    },
-    {
-      "type": "concept",
-      "id": "Large Language Model (LLM)"
-    },
-    {
-      "type": "concept",
-      "id": "Foundation Model (FM)"
-    },
-    {
-      "type": "concept",
-      "id": "Cloud server"
-    },
-    {
-      "type": "concept",
-      "id": "Edge devices"
-    },
-    {
-      "type": "concept",
-      "id": "Model size"
-    },
-    {
-      "type": "concept",
-      "id": "Computational resource requirements"
-    },
-    {
-      "type": "concept",
-      "id": "Software optimization"
-    },
-    {
-      "type": "concept",
-      "id": "Hardware optimization"
-    },
-    {
-      "type": "concept",
-      "id": "Frameworks"
+      "id": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 48.716424776s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     }
   ],
   "edges": [
     {
       "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Visual intelligence tools"
+      "source": "2503.11420v1",
+      "target": "Human peer review"
     },
     {
       "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Computational requirements"
+      "source": "2503.11420v1",
+      "target": "Variance"
     },
     {
       "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Resource-constrained devices"
+      "source": "2503.11420v1",
+      "target": "Subjective bias"
     },
     {
       "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Cloud offloading"
+      "source": "2503.11420v1",
+      "target": "Adversarial multi-agent peer review committee"
     },
     {
       "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Privacy vulnerabilities"
+      "source": "2503.11420v1",
+      "target": "Reviewer agents"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Theory agent"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Empirical agent"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Novelty agent"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Area Chair"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "ICLR manuscripts"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Spearman correlation"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Conference decisions"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Rebuttal roadmaps"
+    },
+    {
+      "relation": "uses",
+      "source": "2503.11420v1",
+      "target": "Borderline submissions"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "Autonomous AI scientists"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "hypothesis validation through executable code"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "self-refining execution sandbox"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "AST analysis"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "POSIX subprocess sandboxing"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "automated reflection loops"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "code execution success"
+    },
+    {
+      "relation": "uses",
+      "source": "2504.08902v1",
+      "target": "self-debugging passes"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Generative language models"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Factual distortions"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Ungrounded attributions"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Citation verification"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Directional Natural Language Inference (NLI)"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Decomposed proposition sets"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Calibrated cross-encoders"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Claim-evidence pairs"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Directional entailment thresholds"
+    },
+    {
+      "relation": "uses",
+      "source": "2405.09123v1",
+      "target": "Hallucinated scientific assertions"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Collaborative multi-agent research systems"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Sharing parameter updates"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Distributed edge workers"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Federated optimization protocol"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Differential privacy"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Adaptive gradient clipping"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Model utility"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Centralized baselines"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Formal mathematical privacy"
+    },
+    {
+      "relation": "uses",
+      "source": "2403.11294v1",
+      "target": "Membership inference attacks"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "Numerical integration"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "Hamiltonian systems"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "non-linear dynamical systems"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "energy drift"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "explicit Runge-Kutta schemes"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "symplectic Runge-Kutta formulations"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "phase-space volume preservation"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "energy conservation"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "4th-order"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "double pendulum"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "Lotka-Volterra dynamics"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "energy dissipation"
+    },
+    {
+      "relation": "uses",
+      "source": "2303.17564v2",
+      "target": "empirical convergence"
     },
     {
       "relation": "uses",
@@ -328,6 +897,16 @@
     {
       "relation": "uses",
       "source": "2512.09309v1",
+      "target": "Privacy vulnerabilities"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Resource-constrained devices"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
       "target": "Edge orchestrator"
     },
     {
@@ -338,17 +917,7 @@
     {
       "relation": "uses",
       "source": "2512.09309v1",
-      "target": "Multiple independent cloud servers"
-    },
-    {
-      "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Data merging and aggregation"
-    },
-    {
-      "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Segment Anything Model (SAM)"
+      "target": "Multi-cloud distribution"
     },
     {
       "relation": "uses",
@@ -358,27 +927,257 @@
     {
       "relation": "uses",
       "source": "2512.09309v1",
-      "target": "Segmentation performance"
-    },
-    {
-      "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Content reconstruction risk"
-    },
-    {
-      "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "User data exposure"
-    },
-    {
-      "relation": "uses",
-      "source": "2512.09309v1",
-      "target": "Scalable privacy-preserving solution"
+      "target": "Segment Anything Model (SAM)"
     },
     {
       "relation": "uses",
       "source": "2512.09309v1",
       "target": "Edge-cloud continuum"
+    },
+    {
+      "relation": "uses",
+      "source": "2512.09309v1",
+      "target": "Content reconstruction prevention"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "Technical paradigm shifts"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "temporal lineage"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "scientific literature"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "academic development"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "directed heterogeneous lineage graph"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "methods"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "datasets"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "claims"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "AI preprints"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "topological lineage engine"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "emerging breakthrough paradigms"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "citation explosion"
+    },
+    {
+      "relation": "uses",
+      "source": "2501.04560v1",
+      "target": "citation count velocity"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "Deep neural networks"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "Edge neuromorphic hardware"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "Parameter compression"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "Mixed-precision integer quantization"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "Dynamic bit-width scaling"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "Layer-wise gradient sensitivity"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "Power dissipation reduction"
+    },
+    {
+      "relation": "uses",
+      "source": "2409.05210v1",
+      "target": "ImageNet accuracy preservation"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "limit: 5"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 58.118473402s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2410.16789v2",
+      "target": "retry_delay {\n  seconds: 58\n}\n]"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "limit: 5"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 57.961219475s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2411.03450v1",
+      "target": "retry_delay {\n  seconds: 57\n}\n]"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "limit: 5"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 57.807681038s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2301.08241v1",
+      "target": "retry_delay {\n  seconds: 57\n}\n]"
     },
     {
       "relation": "uses",
@@ -388,237 +1187,437 @@
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Edge device deployment"
+      "target": "edge deployment"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Model compression"
+      "target": "model compression"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Quantization"
+      "target": "quantization"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Pruning"
+      "target": "pruning"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Knowledge distillation"
+      "target": "knowledge distillation"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Sparse attention mechanisms"
+      "target": "sparse attention mechanisms"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Hardware-aware neural architecture search"
+      "target": "mixed-precision quantization"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Memory-bandwidth bottleneck analysis"
+      "target": "hardware-aware neural architecture search"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Energy efficiency"
+      "target": "memory-bandwidth bottleneck"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Real-time AI applications"
+      "target": "quantization sweet spots"
     },
     {
       "relation": "uses",
       "source": "2601.03290v1",
-      "target": "Deployment pipelines"
+      "target": "real-time performance"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "energy efficiency"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "deployment pipeline"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "inference latency"
+    },
+    {
+      "relation": "uses",
+      "source": "2601.03290v1",
+      "target": "model size reduction"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Quantized neural networks"
+      "target": "LLM generation failed: 429 You exceeded your current quota"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Mixed-precision quantization"
+      "target": "please check your plan and billing details. For more information on this error"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Latency reduction"
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Power consumption reduction"
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Model size reduction"
+      "target": "limit: 5"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Resource-constrained systems"
+      "target": "model: gemini-2.5-flash"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Loss manifold assumption"
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 50.335839949s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Optimal minimum shift with precision"
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
     },
     {
       "relation": "uses",
       "source": "2205.15437v2",
-      "target": "Quantization as a random process"
+      "target": "retry_delay {\n  seconds: 50\n}\n]"
     },
     {
       "relation": "uses",
-      "source": "2205.15437v2",
-      "target": "Bit allocation as Markov Decision Process"
+      "source": "2401.05832v1",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
     },
     {
       "relation": "uses",
-      "source": "2205.15437v2",
-      "target": "Hardware-aware quantization"
+      "source": "2401.05832v1",
+      "target": "please check your plan and billing details. For more information on this error"
     },
     {
       "relation": "uses",
-      "source": "2205.15437v2",
-      "target": "Neural network accuracy"
+      "source": "2401.05832v1",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
     },
     {
       "relation": "uses",
-      "source": "2205.15437v2",
-      "target": "Hardware efficiency"
+      "source": "2401.05832v1",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
     },
     {
       "relation": "uses",
-      "source": "2205.15437v2",
-      "target": "Accuracy-efficiency trade-off"
+      "source": "2401.05832v1",
+      "target": "limit: 5"
     },
     {
       "relation": "uses",
-      "source": "2205.15437v2",
-      "target": "Automatic Mixed-Precision Quantization for Edge Devices (AMED)"
+      "source": "2401.05832v1",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2401.05832v1",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 50.039326869s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2401.05832v1",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2401.05832v1",
+      "target": "retry_delay {\n  seconds: 50\n}\n]"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Quantum walks"
+      "target": "LLM generation failed: 429 You exceeded your current quota"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Quadratic speedup"
+      "target": "please check your plan and billing details. For more information on this error"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Disorder"
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Efficient transport"
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Cutting links"
+      "target": "limit: 5"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Topologically protected chiral edge states"
+      "target": "model: gemini-2.5-flash"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Bulk Chern number"
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.868347942s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Periodically driven lattice Hamiltonian"
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
     },
     {
       "relation": "uses",
       "source": "1411.3958v3",
-      "target": "Bulk topological invariant"
+      "target": "retry_delay {\n  seconds: 49\n}\n]"
     },
     {
       "relation": "uses",
-      "source": "1411.3958v3",
-      "target": "Quasienergy winding"
+      "source": "2412.09871v1",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "limit: 5"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.444370621s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2412.09871v1",
+      "target": "retry_delay {\n  seconds: 49\n}\n]"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "limit: 5"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.140145173s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2407.08915v2",
+      "target": "retry_delay {\n  seconds: 49\n}\n]"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "limit: 5"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 49.002123779s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2406.12840v1",
+      "target": "retry_delay {\n  seconds: 49\n}\n]"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "LLM generation failed: 429 You exceeded your current quota"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "please check your plan and billing details. For more information on this error"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "limit: 5"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "model: gemini-2.5-flash"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 48.867436351s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
+    },
+    {
+      "relation": "uses",
+      "source": "2408.14320v1",
+      "target": "retry_delay {\n  seconds: 48\n}\n]"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Generative Artificial Intelligence (GenAI)"
+      "target": "LLM generation failed: 429 You exceeded your current quota"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Large Language Model (LLM)"
+      "target": "please check your plan and billing details. For more information on this error"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Foundation Model (FM)"
+      "target": "head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Cloud server"
+      "target": "head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Edge devices"
+      "target": "limit: 5"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Resource-constrained systems"
+      "target": "model: gemini-2.5-flash"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Model size"
+      "target": "description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 48.716424776s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Computational resource requirements"
+      "target": "violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 5\n}"
     },
     {
       "relation": "uses",
       "source": "2502.15816v1",
-      "target": "Software optimization"
-    },
-    {
-      "relation": "uses",
-      "source": "2502.15816v1",
-      "target": "Hardware optimization"
-    },
-    {
-      "relation": "uses",
-      "source": "2502.15816v1",
-      "target": "Frameworks"
+      "target": "retry_delay {\n  seconds: 48\n}\n]"
     }
   ]
 }
