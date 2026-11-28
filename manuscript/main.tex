@@ -69,11 +69,11 @@ Reflexion~\cite{shinn2023reflexion} established that linguistic reinforcement vi
 
 ARL is organized into five decoupled layers:
 \begin{enumerate}
-    \item \textbf{Presentation Layer}: A light neumorphic studio interface built in React 18 and Vite, featuring an interactive 2D Force-Directed Graph canvas and a zero-emoji vector design system.
+    \item \textbf{Presentation Layer}: A responsive graphical research workbench built in React 18 and Vite, featuring an interactive 2D Force-Directed Graph canvas, real-time multi-agent telemetry monitors, and SVG vector iconography.
     \item \textbf{Gateway Layer}: An asynchronous FastAPI backend providing JWT authentication and runtime switching between Google Gemini, local Ollama, Groq, and OpenAI.
     \item \textbf{Multi-Agent Swarm}: A collective of specialized agents: \textit{Research Director} (PI oversight), \textit{Idea Agent} (divergence), \textit{Hypothesis Agent} (formalization), \textit{Planner Agent} (protocol design), \textit{Critic Agent} (peer review), and \textit{Proposal Agent} (LaTeX synthesis).
     \item \textbf{Hybrid Knowledge Core}: Integrates sentence-transformer dense vector embeddings with topological NetworkX citation graphs and dual-mode Neo4j Cypher storage.
-    \item \textbf{Execution \& Daemon Layer}: A POSIX-isolated subprocess runner with automated traceback reflection, headless Matplotlib rendering, and an autonomous daily arXiv ingestion daemon.
+    \item \textbf{Execution \& Daemon Layer}: A POSIX-isolated subprocess runner with automated traceback reflection, headless Matplotlib rendering, and an autonomous scheduled background service for continuous arXiv literature indexing.
 \end{enumerate}
 
 \section{Mathematical Methodology}
@@ -137,6 +137,13 @@ where weights $\omega = [0.5, 0.3, 0.2]$ balance degree-penalized bridges, neigh
 \end{algorithmic}
 \end{algorithm}
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/topological_affinity.png}
+\caption{Distribution of topological link prediction scores (Adamic-Adar and Jaccard) across literature pairs. ARL isolates 0-hop frontier intersections possessing strong structural resonance.}
+\label{fig:topological_affinity}
+\end{figure}
+
 \subsection{Hybrid Graph-Augmented Generation (GraphRAG)}
 To maintain contextual grounding, ARL scores each candidate document $d_i$ against query $q$ by coupling dense vector cosine similarity with PageRank structural centrality and neighborhood relevance:
 \begin{equation}
@@ -191,13 +198,6 @@ A common failure mode in topological network algorithms on large bibliometric gr
 \mathcal{O}\left( |\Gamma(u)| + |\Gamma(v)| \right) \le \mathcal{O}(2 d_{\text{cap}})
 \end{equation}
 Summing over all $|E_{\text{cand}}|$ generated pairs in $\mathcal{C}(u)$, the total link prediction runtime is strictly bounded by $\mathcal{O}(|E_{\text{cand}}| \cdot d_{\text{cap}})$, maintaining sub-second inference latencies (0.121s on 100-node networks; 4.3ms on 5,000-node benchmarks) and preventing computational bottlenecks on large-scale literature graphs. Furthermore, compiling adjacency representations into Compressed Sparse Row (CSR) format with 32-bit integer addressing guarantees practical memory scalability: a large bibliometric network of $|V| = 100,000$ papers and $|E| = 2,500,000$ citations requires strictly $(|V| + 1) \times 4\text{ bytes} + |E| \times 4\text{ bytes} \approx 10.4\text{ MB}$ of physical RAM, demonstrating that ARL executes entirely in memory on commodity workstations without requiring distributed graph clusters. $\blacksquare$
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figures/topological_affinity.png}
-\caption{Distribution of topological link prediction scores (Adamic-Adar and Jaccard) across literature pairs. ARL isolates 0-hop frontier intersections possessing strong structural resonance.}
-\label{fig:topological_affinity}
-\end{figure}
 
 \section{Empirical Evaluation: ARL-Bench}
 
@@ -285,6 +285,13 @@ Materials Science & SciCite / Nature Comm & 100.0 & 1/1 (100\%) \\
 \label{tab:external_generalization}
 \end{table}
 
+\section{Cross-Domain Empirical Case Studies}
+
+To validate that ARL generalizes across disparate scientific disciplines, the closed-loop engine was evaluated across two distinct empirical domains:
+
+\subsection{Domain 1: Machine Learning (Edge Vision Transformers)}
+ARL explored the frontier: \textit{``Quantized Vision Transformers for Resource-Constrained Edge Hardware''}.
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/pareto_frontier.png}
@@ -292,12 +299,6 @@ Materials Science & SciCite / Nature Comm & 100.0 & 1/1 (100\%) \\
 \label{fig:pareto_frontier}
 \end{figure}
 
-\section{Cross-Domain Empirical Case Studies}
-
-To validate that ARL generalizes across disparate scientific disciplines, the closed-loop engine was evaluated across two distinct empirical domains:
-
-\subsection{Domain 1: Machine Learning (Edge Vision Transformers)}
-ARL explored the frontier: \textit{``Quantized Vision Transformers for Resource-Constrained Edge Hardware''}.
 \begin{enumerate}
     \item \textbf{Topological Discovery}: The topological engine identified high Adamic-Adar affinity ($AA = 0.76$) between ViT patch attention~\cite{vaswani2017attention} and 8-bit symmetric matrix decomposition~\cite{dettmers2022llmint8}.
     \item \textbf{Hypothesis Formalization}: The Hypothesis Agent derived a formal proposition stating that symmetric INT8 projection preserves $>98.5\%$ classification fidelity while reducing memory footprints by $3.9\times$.
